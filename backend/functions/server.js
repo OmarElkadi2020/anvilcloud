@@ -1,10 +1,11 @@
-import express from 'express';
-import nodemailer from 'nodemailer';
-import fetch from 'node-fetch';
-import bodyParser from 'body-parser';
-import cors from 'cors';
-import morgan from 'morgan';
-import winston from 'winston';
+const serverless = require('serverless-http');
+const express = require('express');
+const nodemailer = require('nodemailer');
+const fetch = require('node-fetch');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const morgan = require('morgan');
+const winston = require('winston');
 
 const app = express();
 
@@ -27,8 +28,13 @@ const logger = winston.createLogger({
   ],
 });
 
+app.use(morgan('combined', {
+  stream: {
+    write: (message) => logger.info(message.trim()),
+  },
+}));
 
-// Configure your email transporter (example uses SendGrid)
+// Configure your email transporter (example uses Gmail)
 const transporter = nodemailer.createTransport({
   service: 'gmail', // or another provider
   auth: {
@@ -37,15 +43,22 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-// Your Microsoft Teams Incoming Webhook URL
-// const teamsWebhookUrl = 'https://outlook.office.com/webhook/your-webhook-url';
-
+// Define your /contact route as before
 app.post('/contact', async (req, res) => {
   const { name, email, company, phone, inquiry, message } = req.body;
   logger.info('Received contact form submission', { name, email, company, phone, inquiry });
-  const text = `We have received a new contact form submission form, Here are the details:\n\n- Inquiry Type: ${inquiry}\n- Sender Name: ${name}\n- Sender Email: ${email}\n- Senders' Company: ${company}\n- Senders' Phone: ${phone}\n\nMessage:\n\n\t${message}`
+  
+  const text = `We have received a new contact form submission. Here are the details:
+  
+- Inquiry Type: ${inquiry}
+- Sender Name: ${name}
+- Sender Email: ${email}
+- Sender's Company: ${company}
+- Sender's Phone: ${phone}
 
-  // Prepare the email
+Message:
+${message}`;
+
   const mailOptions = {
     from: 'elkadi.omar.oe@gmail.com',
     to: 'elkadi.omar.oe2@gmail.com',
@@ -61,37 +74,37 @@ app.post('/contact', async (req, res) => {
   };
 
   try {
-    // Send email
     await transporter.sendMail(mailOptions);
     await transporter.sendMail(mailOptions2);
     logger.info('Email sent successfully');
 
-    // Post message to MS Teams
-//     const teamsMessage = {
-//       text: `**New Contact Form Submission:**  
-// **Name:** ${name}  
-// **Email:** ${email}  
-// **Company:** ${company}  
-// **Phone:** ${phone}  
-// **Inquiry:** ${inquiry}  
-// **Message:** ${message}`
-//     };
-
-//     await fetch(teamsWebhookUrl, {
-//       method: 'POST',
-//       headers: { 'Content-Type': 'application/json' },
-//       body: JSON.stringify(teamsMessage)
-//     });
-//     logger.info('Message posted to Microsoft Teams successfully');
-  
-  res.status(200).json({ success: true, message: 'Submission processed.' });
-  } catch (error: unknown) {
+    // If you want to post to MS Teams, you can uncomment and configure the following:
+    /*
+    const teamsWebhookUrl = 'https://outlook.office.com/webhook/your-webhook-url';
+    const teamsMessage = {
+      text: `**New Contact Form Submission:**  
+**Name:** ${name}  
+**Email:** ${email}  
+**Company:** ${company}  
+**Phone:** ${phone}  
+**Inquiry:** ${inquiry}  
+**Message:** ${message}`
+    };
+    await fetch(teamsWebhookUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(teamsMessage)
+    });
+    logger.info('Message posted to Microsoft Teams successfully');
+    */
+    
+    res.status(200).json({ success: true, message: 'Submission processed.' });
+  } catch (error) {
     const errorMessage = error instanceof Error ? error.message : String(error);
     logger.error('Error processing contact form submission', { error: errorMessage });
     res.status(500).json({ success: false, error: errorMessage });
   }
 });
 
-app.listen(3000, () => {
-  logger.info('Server listening on port 3000');
-});
+// Instead of app.listen(), export the serverless handler:
+module.exports.handler = serverless(app);

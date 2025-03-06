@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const timeoutId = setTimeout(() => controller.abort(), 10000);
 
       try {
-        const response = await fetch('http://localhost:3000/contact', {
+        const response = await fetch('https://anvilcloud.netlify.app/.netlify/functions/contact', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data),

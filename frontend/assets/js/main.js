@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
         company: document.getElementById('company').value.trim(),
         phone: document.getElementById('phone').value.trim(),
         inquiry: document.getElementById('inquiry').value,
-        message: document.getElementById('message').value.trim(),
+        message: document.getElementById('message').value.trim()
       };
 
       console.log('Form data:', data);
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const timeoutId = setTimeout(() => controller.abort(), 10000);
 
       try {
-        const response = await fetch('https://anvilcloud.netlify.app/.netlify/functions/contact', {
+        const response = await fetch('https://anvilcloud.netlify.app/.netlify/functions/server/contact', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data),

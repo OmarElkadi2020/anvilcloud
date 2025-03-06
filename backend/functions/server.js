@@ -1,7 +1,6 @@
 const serverless = require('serverless-http');
 const express = require('express');
 const nodemailer = require('nodemailer');
-const fetch = require('node-fetch');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const morgan = require('morgan');

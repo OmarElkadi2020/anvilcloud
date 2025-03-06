@@ -107,3 +107,4 @@ ${message}`;
 
 // Instead of app.listen(), export the serverless handler:
 module.exports.handler = serverless(app);
+console.log('Server running');

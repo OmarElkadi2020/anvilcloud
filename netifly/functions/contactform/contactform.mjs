@@ -96,15 +96,18 @@ const serverlessHandler = serverlessHttp(app);
 const allowedApiKey = process.env.API_KEY;
 
 export const handler = async (event, context) => {
-
+  // Check if the request is coming
+  // from your Netlify site
   const origin = event.headers.origin || event.headers.referer;
   if (!origin || !origin.includes('anvilcloud.netlify.app')) {
+    logger.error('Forbidden request', { origin });
     return {
       statusCode: 403,
       body: JSON.stringify({ error: 'Forbidden' }),
     };
   }
 
+  // Check if the request includes the correct API key
   const apiKey = event.headers['x-api-key'];
   if (apiKey !== allowedApiKey) {
     logger.error('Forbidden request', { apiKey });

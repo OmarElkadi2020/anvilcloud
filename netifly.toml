@@ -1,6 +1,3 @@
 [build]
   publish = "netifly"        # This is your custom publish folder
   functions = "netifly/functions"  # (or your functions folder path)
-
-[[plugins]]
-  package = "@netlify/plugin-functions-install-core"

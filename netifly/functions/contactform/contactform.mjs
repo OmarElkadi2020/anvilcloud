@@ -66,7 +66,7 @@ ${message}`;
 
   const mailOptions = {
     from: process.env.GMAIL_USER,
-    to: 'elkadi.omar.oe2@example.com', // Change to your destination email
+    to: 'elkadi.omar.oe2@gmail.com', // Change to your destination email
     subject: `${inquiry} from ${name}`,
     text,
   };

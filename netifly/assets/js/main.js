@@ -119,10 +119,10 @@ document.addEventListener('DOMContentLoaded', function () {
       const timeoutId = setTimeout(() => controller.abort(), 10000);
 
       try {
+      
         const response = await fetch('https://anvilcloud.netlify.app/.netlify/functions/contactform', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json',
-                     'x-api-key': process.env.API_KEY // Add your API key here
                     },
           body: JSON.stringify(data),
           signal: controller.signal

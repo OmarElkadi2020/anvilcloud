@@ -55,7 +55,10 @@ app.post('/', async (req, res) => {
     inquiry,
   });
 
-  const text = `Inquiry: ${inquiry}
+  const text = `
+New Contact Form Submission:
+
+Inquiry: ${inquiry}
 Name: ${name}
 Email: ${email}
 Company: ${company}

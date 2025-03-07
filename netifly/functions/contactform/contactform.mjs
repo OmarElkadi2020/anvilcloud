@@ -93,14 +93,15 @@ app.post('/', async (req, res) => {
   });
 
   const text = `New Contact Form Submission:
-                Inquiry: ${inquiry}
-                Name: ${name}
-                Email: ${email}
-                Company: ${company}
-                Phone: ${phone}
+    
+    Inquiry: ${inquiry}
+    Name: ${name}
+    Email: ${email}
+    Company: ${company}
+    Phone: ${phone}
 
-                Message:
-                ${message}`;
+    Message:
+    ${message}`;
 
   const mailOptions_omar = {
     from: process.env.GMAIL_USER,

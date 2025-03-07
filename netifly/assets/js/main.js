@@ -141,15 +141,16 @@ document.addEventListener('DOMContentLoaded', function () {
           formResponse.classList.remove('text-green-500');
           formResponse.classList.add('text-red-500');
           formResponse.textContent = 'Request timed out. Please try again later.';
+
         } else {
           formResponse.classList.remove('text-green-500');
           formResponse.classList.add('text-red-500');
           formResponse.textContent = 'An unexpected error occurred. Please try again later.';
         }
+        contactForm.reset();
       } finally {
         submitButton.disabled = false;
         submitButton.textContent = originalButtonText;
-        contactForm.reset();
       }
     });
 

@@ -45,7 +45,7 @@ app.get('/', (req, res) => {
   res.send('Hello from contactform!');
 });
 
-app.post('/contact', async (req, res) => {
+app.post('/', async (req, res) => {
   const { name, email, company, phone, inquiry, message } = req.body;
   logger.info('Received contact form submission', {
     name,

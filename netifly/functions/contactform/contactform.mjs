@@ -6,7 +6,6 @@ import cors from 'cors';
 import morgan from 'morgan';
 import winston from 'winston';
 import helmet from 'helmet';
-import rateLimit from 'express-rate-limit';
 
 
 const app = express();
@@ -23,7 +22,7 @@ const corsOptions = {
     }
   },
   optionsSuccessStatus: 200,
-};capitalize
+};
 app.use(cors(corsOptions));
 
 // HTTPS enforcement (if necessary)
@@ -84,12 +83,17 @@ app.post('/', async (req, res) => {
     inquiry,
   });
 
+  function capitalizeFirstLetter(string) {
+    if (typeof string !== 'string') return;
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  } 
+
   const text = `Someone submitted the contact form on your website:
     
-    Inquiry Type: ${inquiry}
-    Sender's Name: ${name}
+    Inquiry Type: ${capitalizeFirstLetter(inquiry)}
+    Sender's Name: ${capitalizeFirstLetter(name)}
     Sender's Email: ${email}
-    Sender's Company: ${company}
+    Sender's Company: ${capitalizeFirstLetter(company)}
     Sender's Phone: ${phone}
 
     Message:

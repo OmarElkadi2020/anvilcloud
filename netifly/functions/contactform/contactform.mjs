@@ -11,7 +11,7 @@ import rateLimit from 'express-rate-limit';
 
 const app = express();
 
-const allowedOrigins = ['https://anvilcloud.netlify.app', 'https://main--anvilcloud.netlify.app'];
+const allowedOrigins = ['https://anvilcloud.netlify.app'];
 const corsOptions = {
   origin: function (origin, callback) {
     // Allow requests with no origin (like mobile apps or curl requests)
@@ -48,6 +48,7 @@ const limiter = rateLimit({
   message: { error: 'Too many requests, please try again later.' }
 });
 app.use(limiter);
+app.set('trust proxy', true);
 
 // Set up Winston logger
 const logger = winston.createLogger({

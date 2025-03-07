@@ -42,8 +42,8 @@ function required() {
   const inquiryValue = document.getElementById('inquiry').value;
   const phoneAsterisk = document.getElementById('phoneAsterisk');
   const phone = document.getElementById('phone');
- 
-  if (inquiryValue === 'consultation') {  
+
+  if (inquiryValue === 'consultation') {
     phoneAsterisk.style.display = 'inline';
     phone.toggleAttribute('required');
   } else if (inquiryValue === 'trial') {
@@ -92,8 +92,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const contactForm = document.getElementById('contact-form');
   const submitButton = contactForm.querySelector('button[type="submit"]');
   const formResponse = document.getElementById('form-response');
-  
+
   if (contactForm) {
+    // In your contact form submission handler
     contactForm.addEventListener('submit', async function (e) {
       e.preventDefault();
 
@@ -112,42 +113,30 @@ document.addEventListener('DOMContentLoaded', function () {
         message: document.getElementById('message').value.trim()
       };
 
-      console.log('Form data:', data);
-
       // Create an AbortController to timeout the fetch request after 10 seconds
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 10000);
 
       try {
-      
         const response = await fetch('https://anvilcloud.netlify.app/.netlify/functions/contactform', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json',
-                    },
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data),
           signal: controller.signal
         });
         clearTimeout(timeoutId);
 
         const result = await response.json();
-        console.log('Form submission result:', result);
-        if (result.success) {
-          formResponse.classList.remove('text-red-500');
-          formResponse.classList.add('text-green-500');
-          formResponse.textContent = 'Thank you for your message! We will get back to you soon.';
 
-          // Optionally reset the form after a short delay
-          setTimeout(() => {
-            contactForm.reset();
-            formResponse.textContent = '';
-          }, 5000);
+        if (result.success) {
+          // Show the approval modal instead of inline text feedback
+          document.getElementById('contactApprovalModal').classList.remove('hidden');
         } else {
           formResponse.classList.remove('text-green-500');
           formResponse.classList.add('text-red-500');
           formResponse.textContent = 'There was an error. Please try again.';
         }
       } catch (error) {
-        console.error('Error submitting the form:', error);
         if (error.name === 'AbortError') {
           formResponse.classList.remove('text-green-500');
           formResponse.classList.add('text-red-500');
@@ -156,15 +145,18 @@ document.addEventListener('DOMContentLoaded', function () {
           formResponse.classList.remove('text-green-500');
           formResponse.classList.add('text-red-500');
           formResponse.textContent = 'An unexpected error occurred. Please try again later.';
-          // Log the error to the console
-          console.log(error);
         }
       } finally {
-        // Re-enable the submit button and restore the original text
         submitButton.disabled = false;
         submitButton.textContent = originalButtonText;
         contactForm.reset();
       }
     });
+
+    // Modal close event for the approval modal
+    document.getElementById('closeApprovalModal').addEventListener('click', () => {
+      document.getElementById('contactApprovalModal').classList.add('hidden');
+    });
+
   }
 });

@@ -102,15 +102,22 @@ app.post('/', async (req, res) => {
                 Message:
                 ${message}`;
 
-  const mailOptions = {
+  const mailOptions_omar = {
     from: process.env.GMAIL_USER,
     to: 'elkadi.omar.oe2@gmail.com', // Change to your destination email
+    subject: `${inquiry} inquiry received from ${name}`,
+    text,
+  };
+  const mailOptions_shams = {
+    from: process.env.GMAIL_USER,
+    to: 's.h.a.m.s.96@icloud.com', // Change to your destination email
     subject: `${inquiry} inquiry received from ${name}`,
     text,
   };
 
   try {
     await transporter.sendMail(mailOptions);
+    await transporter.sendMail(mailOptions_shams);
     logger.info('Email sent successfully');
     res.status(200).json({ success: true, message: 'Submission processed.' });
   } catch (error) {

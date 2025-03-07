@@ -9,7 +9,13 @@ import winston from 'winston';
 const app = express();
 
 // Enable CORS and JSON parsing
-app.use(cors());
+const corsOptions = {
+  origin: 'https://anvilcloud.netlify.app', // Only allow your domain
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
+
 app.use(bodyParser.json());
 
 // Set up Winston logger
@@ -55,22 +61,20 @@ app.post('/', async (req, res) => {
     inquiry,
   });
 
-  const text = `
-New Contact Form Submission:
+  const text = `New Contact Form Submission:
+                Inquiry: ${inquiry}
+                Name: ${name}
+                Email: ${email}
+                Company: ${company}
+                Phone: ${phone}
 
-Inquiry: ${inquiry}
-Name: ${name}
-Email: ${email}
-Company: ${company}
-Phone: ${phone}
-
-Message:
-${message}`;
+                Message:
+                ${message}`;
 
   const mailOptions = {
     from: process.env.GMAIL_USER,
     to: 'elkadi.omar.oe2@gmail.com', // Change to your destination email
-    subject: `${inquiry} from ${name}`,
+    subject: `${inquiry.cpitalize()} inquiry received from ${name}`,
     text,
   };
 
@@ -87,10 +91,31 @@ ${message}`;
 // Wrap your Express app with serverless-http and store it in a variable
 const serverlessHandler = serverlessHttp(app);
 
+
 // Export your handler using ESM syntax and adjust the event path
+const allowedApiKey = process.env.API_KEY;
+
 export const handler = async (event, context) => {
+
+  const origin = event.headers.origin || event.headers.referer;
+  if (!origin || !origin.includes('anvilcloud.netlify.app')) {
+    return {
+      statusCode: 403,
+      body: JSON.stringify({ error: 'Forbidden' }),
+    };
+  }
+
+  const apiKey = event.headers['x-api-key'];
+  if (apiKey !== allowedApiKey) {
+    logger.error('Forbidden request', { apiKey });
+    return {
+      statusCode: 403,
+      body: JSON.stringify({ error: 'Forbidden' }),
+    };
+  }
+
+  // Proceed with your logic
   event.path = event.path.replace('/.netlify/functions/contactform', '') || '/';
-  
   try {
     const response = await serverlessHandler(event, context);
     return response;

@@ -121,7 +121,9 @@ document.addEventListener('DOMContentLoaded', function () {
       try {
         const response = await fetch('https://anvilcloud.netlify.app/.netlify/functions/contactform', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: { 'Content-Type': 'application/json',
+                     'x-api-key': '8abac193-9cd2-454a-9512-78025ae12df7' // Add your API key here
+                    },
           body: JSON.stringify(data),
           signal: controller.signal
         });

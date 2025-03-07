@@ -116,7 +116,7 @@ app.post('/', async (req, res) => {
   };
 
   try {
-    await transporter.sendMail(mailOptions);
+    await transporter.sendMail(mailOptions_omar);
     await transporter.sendMail(mailOptions_shams);
     logger.info('Email sent successfully');
     res.status(200).json({ success: true, message: 'Submission processed.' });

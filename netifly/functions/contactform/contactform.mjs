@@ -41,15 +41,6 @@ app.use(bodyParser.json());
 // Add Helmet to secure HTTP headers
 app.use(helmet());
 
-// Rate limiting middleware to protect against too many requests
-const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100, // limit each IP to 100 requests per windowMs
-  message: { error: 'Too many requests, please try again later.' }
-});
-app.use(limiter);
-app.set('trust proxy', true);
-
 // Set up Winston logger
 const logger = winston.createLogger({
   level: 'info',

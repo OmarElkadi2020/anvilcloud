@@ -5,18 +5,41 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import morgan from 'morgan';
 import winston from 'winston';
+import helmet from 'helmet';
+import rateLimit from 'express-rate-limit';
+
 
 const app = express();
 
-// Enable CORS and JSON parsing
+// Enable CORS with your specific options
 const corsOptions = {
   origin: 'https://anvilcloud.netlify.app', // Only allow your domain
   optionsSuccessStatus: 200,
 };
-
 app.use(cors(corsOptions));
 
+// HTTPS enforcement (if necessary)
+app.use((req, res, next) => {
+  if (req.headers['x-forwarded-proto'] !== 'https') {
+    logger.info('Redirecting request from HTTP to HTTPS');
+    return res.redirect(`https://${req.headers.host}${req.url}`);
+  }
+  next();
+});
+
+// Parse JSON bodies
 app.use(bodyParser.json());
+
+// Add Helmet to secure HTTP headers
+app.use(helmet());
+
+// Rate limiting middleware to protect against too many requests
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // limit each IP to 100 requests per windowMs
+  message: { error: 'Too many requests, please try again later.' }
+});
+app.use(limiter);
 
 // Set up Winston logger
 const logger = winston.createLogger({
@@ -91,45 +114,40 @@ app.post('/', async (req, res) => {
 // Wrap your Express app with serverless-http and store it in a variable
 const serverlessHandler = serverlessHttp(app);
 
-
-// Export your handler using ESM syntax and adjust the event path
-const allowedApiKey = process.env.API_KEY;
-
+// Export your serverless handler
 export const handler = async (event, context) => {
+
+  // Check if the incoming request is using HTTPS via the x-forwarded-proto header
+  if (event.headers['x-forwarded-proto'] !== 'https') {
+    logger.warn('Redirecting request from HTTP to HTTPS');
+    return {
+      statusCode: 400,
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ error: 'HTTPS is required.' }),
+    };
+  }
+
   // Check if the request is coming
   // from your Netlify site
+  const allowedOrigin = process.env.ALLOWED_ORIGIN;
   const origin = event.headers.origin || event.headers.referer;
-  if (!origin || !origin.includes('anvilcloud.netlify.app')) {
-    logger.error('Forbidden request', { origin });
-    return {
-      statusCode: 403,
-      body: JSON.stringify({ error: 'Forbidden' }),
-    };
+  if (!origin || !origin.startsWith(allowedOrigin)) {
+    logger.warn('Forbidden request', { origin });
+    return { statusCode: 403, body: JSON.stringify({ error: 'Forbidden: invalid origin' }) };
   }
 
-  // Check if the request includes the correct API key
-  const apiKey = event.headers['x-api-key'];
-  if (apiKey !== allowedApiKey) {
-    logger.error('Forbidden request', { apiKey });
-    return {
-      statusCode: 403,
-      body: JSON.stringify({ error: 'Forbidden' }),
-    };
-  }
-
-  // Proceed with your logic
-  event.path = event.path.replace('/.netlify/functions/contactform', '') || '/';
-  try {
-    const response = await serverlessHandler(event, context);
-    return response;
-  } catch (error) {
-    return {
-      statusCode: 500,
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        success: false,
-        error: error.message || 'Internal Server Error',
-      }),
-    };
-  }
-};
+// Proceed with your logic
+event.path = event.path.replace('/.netlify/functions/contactform', '') || '/';
+try {
+  const response = await serverlessHandler(event, context);
+  return response;
+} catch (error) {
+  return {
+    statusCode: 500,
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      success: false,
+      error: error.message || 'Internal Server Error',
+    }),
+  };
+}};

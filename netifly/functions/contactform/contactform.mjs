@@ -90,7 +90,7 @@ app.post('/', async (req, res) => {
 
   const text = `Someone submitted the contact form on your website:
     
-    Inquiry Type: ${capitalizeFirstLetter(inquiry)}
+    Inquiry Type: ${capitalizeFirstLetter(inquiry)} Inquiry
     Sender's Name: ${capitalizeFirstLetter(name)}
     Sender's Email: ${email}
     Sender's Company: ${capitalizeFirstLetter(company)}

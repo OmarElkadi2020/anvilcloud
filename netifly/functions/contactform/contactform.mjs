@@ -85,9 +85,20 @@ ${message}`;
 const serverlessHandler = serverlessHttp(app);
 
 // Export your handler using ESM syntax and adjust the event path
-export const handler = (event, context) => {
-  // Remove the base function path.
+export const handler = async (event, context) => {
   event.path = event.path.replace('/.netlify/functions/contactform', '') || '/';
-  return serverlessHandler(event, context);
+  
+  try {
+    const response = await serverlessHandler(event, context);
+    return response;
+  } catch (error) {
+    return {
+      statusCode: 500,
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        success: false,
+        error: error.message || 'Internal Server Error',
+      }),
+    };
+  }
 };
-

@@ -11,9 +11,17 @@ import rateLimit from 'express-rate-limit';
 
 const app = express();
 
-// Enable CORS with your specific options
+const allowedOrigins = ['https://anvilcloud.netlify.app', 'https://main--anvilcloud.netlify.app'];
 const corsOptions = {
-  origin: 'https://anvilcloud.netlify.app', // Only allow your domain
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) !== -1) {
+      return callback(null, true);
+    } else {
+      return callback(new Error('Not allowed by CORS'), false);
+    }
+  },
   optionsSuccessStatus: 200,
 };
 app.use(cors(corsOptions));
@@ -129,25 +137,33 @@ export const handler = async (event, context) => {
 
   // Check if the request is coming
   // from your Netlify site
-  const allowedOrigin = process.env.ALLOWED_ORIGIN;
+  const allowedOrigin = process.env.ALLOWED_ORIGIN || 'https://anvilcloud.netlify.app' || 'https://main--anvilcloud.netlify.app';
   const origin = event.headers.origin || event.headers.referer;
   if (!origin || !origin.startsWith(allowedOrigin)) {
     logger.warn('Forbidden request', { origin });
-    return { statusCode: 403, body: JSON.stringify({ error: 'Forbidden: invalid origin' }) };
+    return {
+      statusCode: 403,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': allowedOrigin,
+      },
+      body: JSON.stringify({ error: 'Forbidden: invalid origin' }),
+    };
   }
 
-// Proceed with your logic
-event.path = event.path.replace('/.netlify/functions/contactform', '') || '/';
-try {
-  const response = await serverlessHandler(event, context);
-  return response;
-} catch (error) {
-  return {
-    statusCode: 500,
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      success: false,
-      error: error.message || 'Internal Server Error',
-    }),
-  };
-}};
+  // Proceed with your logic
+  event.path = event.path.replace('/.netlify/functions/contactform', '') || '/';
+  try {
+    const response = await serverlessHandler(event, context);
+    return response;  
+  } catch (error) {
+    return {
+      statusCode: 500,
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        success: false,
+        error: error.message || 'Internal Server Error',
+      }),
+    };
+  }
+};

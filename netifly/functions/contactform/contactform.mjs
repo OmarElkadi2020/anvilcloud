@@ -105,7 +105,7 @@ app.post('/', async (req, res) => {
   const mailOptions = {
     from: process.env.GMAIL_USER,
     to: 'elkadi.omar.oe2@gmail.com', // Change to your destination email
-    subject: `${inquiry.cpitalize()} inquiry received from ${name}`,
+    subject: `${inquiry} inquiry received from ${name}`,
     text,
   };
 

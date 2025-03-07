@@ -23,7 +23,7 @@ const corsOptions = {
     }
   },
   optionsSuccessStatus: 200,
-};
+};capitalize
 app.use(cors(corsOptions));
 
 // HTTPS enforcement (if necessary)
@@ -84,16 +84,16 @@ app.post('/', async (req, res) => {
     inquiry,
   });
 
-  const text = `New Contact Form Submission:
+  const text = `Someone submitted the contact form on your website:
     
-    Inquiry: ${inquiry}
-    Name: ${name}
-    Email: ${email}
-    Company: ${company}
-    Phone: ${phone}
+    Inquiry Type: ${inquiry}
+    Sender's Name: ${name}
+    Sender's Email: ${email}
+    Sender's Company: ${company}
+    Sender's Phone: ${phone}
 
     Message:
-    ${message}`;
+      ${message}`;
 
   const mailOptions_omar = {
     from: process.env.GMAIL_USER,

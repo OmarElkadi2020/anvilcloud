@@ -8,45 +8,55 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const express_1 = __importDefault(require("express"));
-const nodemailer_1 = __importDefault(require("nodemailer"));
-const body_parser_1 = __importDefault(require("body-parser"));
-const cors_1 = __importDefault(require("cors"));
-const winston_1 = __importDefault(require("winston"));
-const app = (0, express_1.default)();
+const serverless = require('serverless-http');
+const express = require('express');
+const nodemailer = require('nodemailer');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const morgan = require('morgan');
+const winston = require('winston');
+const app = express();
 // Set up CORS and JSON parsing
-app.use((0, cors_1.default)());
-app.use(body_parser_1.default.json());
+app.use(cors());
+app.use(bodyParser.json());
 // Configure Morgan to use Winston for HTTP request logging
-const logger = winston_1.default.createLogger({
+const logger = winston.createLogger({
     level: 'info',
-    format: winston_1.default.format.combine(winston_1.default.format.timestamp(), winston_1.default.format.json()),
+    format: winston.format.combine(winston.format.timestamp(), winston.format.json()),
     transports: [
-        new winston_1.default.transports.Console(),
+        new winston.transports.Console(),
         // Optionally, add file transports:
         // new winston.transports.File({ filename: 'error.log', level: 'error' }),
         // new winston.transports.File({ filename: 'combined.log' })
     ],
 });
-// Configure your email transporter (example uses SendGrid)
-const transporter = nodemailer_1.default.createTransport({
+app.use(morgan('combined', {
+    stream: {
+        write: (message) => logger.info(message.trim()),
+    },
+}));
+// Configure your email transporter (example uses Gmail)
+const transporter = nodemailer.createTransport({
     service: 'gmail', // or another provider
     auth: {
         user: 'elkadi.omar.oe@gmail.com',
         pass: 'vfbexpwzunihtsxj'
     }
 });
-// Your Microsoft Teams Incoming Webhook URL
-// const teamsWebhookUrl = 'https://outlook.office.com/webhook/your-webhook-url';
+// Define your /contact route as before
 app.post('/contact', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { name, email, company, phone, inquiry, message } = req.body;
     logger.info('Received contact form submission', { name, email, company, phone, inquiry });
-    const text = `We have received a new contact form submission form, Here are the details:\n\n- Inquiry Type: ${inquiry}\n- Sender Name: ${name}\n- Sender Email: ${email}\n- Senders' Company: ${company}\n- Senders' Phone: ${phone}\n\nMessage:\n\n\t${message}`;
-    // Prepare the email
+    const text = `We have received a new contact form submission. Here are the details:
+  
+                - Inquiry Type: ${inquiry}
+                - Sender Name: ${name}
+                - Sender Email: ${email}
+                - Sender's Company: ${company}
+                - Sender's Phone: ${phone}
+
+                Message:
+                ${message}`;
     const mailOptions = {
         from: 'elkadi.omar.oe@gmail.com',
         to: 'elkadi.omar.oe2@gmail.com',
@@ -60,26 +70,28 @@ app.post('/contact', (req, res) => __awaiter(void 0, void 0, void 0, function* (
         text: text
     };
     try {
-        // Send email
         yield transporter.sendMail(mailOptions);
         yield transporter.sendMail(mailOptions2);
         logger.info('Email sent successfully');
-        // Post message to MS Teams
-        //     const teamsMessage = {
-        //       text: `**New Contact Form Submission:**  
-        // **Name:** ${name}  
-        // **Email:** ${email}  
-        // **Company:** ${company}  
-        // **Phone:** ${phone}  
-        // **Inquiry:** ${inquiry}  
-        // **Message:** ${message}`
-        //     };
-        //     await fetch(teamsWebhookUrl, {
-        //       method: 'POST',
-        //       headers: { 'Content-Type': 'application/json' },
-        //       body: JSON.stringify(teamsMessage)
-        //     });
-        //     logger.info('Message posted to Microsoft Teams successfully');
+        // If you want to post to MS Teams, you can uncomment and configure the following:
+        /*
+        const teamsWebhookUrl = 'https://outlook.office.com/webhook/your-webhook-url';
+        const teamsMessage = {
+          text: `**New Contact Form Submission:**
+    **Name:** ${name}
+    **Email:** ${email}
+    **Company:** ${company}
+    **Phone:** ${phone}
+    **Inquiry:** ${inquiry}
+    **Message:** ${message}`
+        };
+        await fetch(teamsWebhookUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(teamsMessage)
+        });
+        logger.info('Message posted to Microsoft Teams successfully');
+        */
         res.status(200).json({ success: true, message: 'Submission processed.' });
     }
     catch (error) {
@@ -88,6 +100,9 @@ app.post('/contact', (req, res) => __awaiter(void 0, void 0, void 0, function* (
         res.status(500).json({ success: false, error: errorMessage });
     }
 }));
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+});
 app.listen(3000, () => {
-    logger.info('Server listening on port 3000');
+    console.log('Server is running on http://localhost:3000');
 });

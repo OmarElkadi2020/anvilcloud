@@ -1,7 +1,6 @@
 const serverless = require('serverless-http');
 const express = require('express');
 const nodemailer = require('nodemailer');
-const fetch = require('node-fetch');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const morgan = require('morgan');
@@ -30,7 +29,7 @@ const logger = winston.createLogger({
 
 app.use(morgan('combined', {
   stream: {
-    write: (message) => logger.info(message.trim()),
+    write: (message: string) => logger.info(message.trim()),
   },
 }));
 
@@ -44,20 +43,20 @@ const transporter = nodemailer.createTransport({
 });
 
 // Define your /contact route as before
-app.post('/contact', async (req, res) => {
+app.post('/contact', async (req: any, res: any) => {
   const { name, email, company, phone, inquiry, message } = req.body;
   logger.info('Received contact form submission', { name, email, company, phone, inquiry });
   
   const text = `We have received a new contact form submission. Here are the details:
   
-- Inquiry Type: ${inquiry}
-- Sender Name: ${name}
-- Sender Email: ${email}
-- Sender's Company: ${company}
-- Sender's Phone: ${phone}
+                - Inquiry Type: ${inquiry}
+                - Sender Name: ${name}
+                - Sender Email: ${email}
+                - Sender's Company: ${company}
+                - Sender's Phone: ${phone}
 
-Message:
-${message}`;
+                Message:
+                ${message}`;
 
   const mailOptions = {
     from: 'elkadi.omar.oe@gmail.com',
@@ -106,5 +105,10 @@ ${message}`;
   }
 });
 
-// Instead of app.listen(), export the serverless handler:
-module.exports.handler = serverless(app);
+app.get('/', (req: any, res: any) => {
+  res.send('Hello World!');
+});
+
+app.listen(3000, () => {
+  console.log('Server is running on http://localhost:3000');
+});

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Content Management SPA</title>
+  <style>
+    /* Global styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #333;
+    }
+
+    /* Navigation styling */
+    nav {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-right: 20px;
+      cursor: pointer;
+    }
+
+    nav ul li:hover,
+    nav ul li.active {
+      text-decoration: underline;
+    }
+
+    /* Form styling */
+    form.inline-form {
+      margin-bottom: 20px;
+      padding: 10px;
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    form.inline-form label {
+      display: inline-block;
+      width: 80px;
+      font-weight: bold;
+    }
+
+    form.inline-form input[type="text"] {
+      width: 150px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-right: 10px;
+    }
+
+    form.inline-form button {
+      padding: 6px 10px;
+      border: none;
+      background: #333;
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    form.inline-form button:hover {
+      background: #555;
+    }
+
+    /* Table styling */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    th,
+    td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #eee;
+    }
+
+    td input[type="text"] {
+      width: 90%;
+      padding: 4px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    /* Section visibility */
+    .section {
+      display: none;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    /* Result area styling */
+    #result {
+      margin-top: 20px;
+      background: #eef;
+      padding: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccd;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li data-target="view" class="active">View/Edit Records</li>
+      <li data-target="upload">Upload HTML</li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>Content Management Single Page App</h1>
+
+    <!-- View / Edit Records Section -->
+    <div id="view" class="section active">
+      <h2>View/Edit Records (Page: main)</h2>
+      <!-- New Record Inline Form -->
+      <form id="newRecordForm" class="inline-form">
+        <div style="clear: both">
+          <label for="newSection">Section:</label>
+          <input type="text" id="newSection" required placeholder="e.g., news" style="width: 40%;">
+        </div>
+        <div style="clear: both; margin-top: 10px;">
+          <label for="newId">ID:</label>
+          <input type="text" id="newId" required placeholder="unique id" style="width: 40%;">
+        </div>
+        <div style="clear: both; margin-top: 10px;">
+          <label for="newContent">Content:</label>
+          <textarea id="newContent" required placeholder="enter content" style="display: block; width: 100%; height: 20px;" > </textarea>
+          <button type="submit" style="margin-top: 10px;">Add Record</button>
+        </div>
+      </form>
+      <button id="loadContentBtn">Refresh Content</button>
+      <div id="contentTables"></div>
+    </div>
+
+    <!-- Upload HTML Section -->
+    <div id="upload" class="section">
+      <h2>Upload HTML and Extract IDs</h2>
+      <form id="uploadForm" class="inline-form">
+        <label for="htmlFile">HTML File:</label>
+        <input type="file" id="htmlFile" accept=".html" required>
+        <button type="submit">Upload & Extract</button>
+      </form>
+    </div>
+
+    <!-- API response results -->
+    <div id="result"></div>
+  </div>
+
+  <script>
+    // Navigation switching
+    const navItems = document.querySelectorAll('nav ul li');
+    const sections = document.querySelectorAll('.section');
+    navItems.forEach(item => {
+      item.addEventListener('click', () => {
+        navItems.forEach(nav => nav.classList.remove('active'));
+        item.classList.add('active');
+        const target = item.getAttribute('data-target');
+        sections.forEach(section => {
+          section.classList.toggle('active', section.id === target);
+        });
+      });
+    });
+
+    const resultDiv = document.getElementById('result');
+    const contentTablesDiv = document.getElementById('contentTables');
+
+    function displayResult(message) {
+      resultDiv.innerHTML = '<pre>' + message + '</pre>';
+    }
+
+    // Load content for page "main"
+    async function loadContent() {
+      try {
+        const response = await fetch('/content?page=main');
+        const data = await response.json();
+        contentTablesDiv.innerHTML = '';
+        for (const section in data) {
+          let html = `<h3>Section: ${section}</h3>`;
+          html += `<table>
+                    <tr>
+                      <th>ID</th>
+                      <th>Content</th>
+                      <th>Actions</th>
+                    </tr>`;
+          for (const id in data[section]) {
+            const content = data[section][id];
+            html += `<tr>
+                      <td>${id}</td>
+                      <td>
+                        <input value="${content}" id="content_${section}_${id}">
+                      </td>
+                      <td>
+                        <button onclick='saveUpdate("main", "${section}", "${id}")'>Update</button>
+                        <button onclick="deleteRecord('main','${section}','${id}')">Delete</button>
+                      </td>
+                    </tr>`;
+          }
+          html += `</table>`;
+          contentTablesDiv.innerHTML += html;
+        }
+      } catch (error) {
+        displayResult('Error loading content: ' + error);
+      }
+    }
+
+    // Save update from the editable table row
+    async function saveUpdate(page, section, id) {
+      const inputField = document.getElementById(`content_${section}_${id}`);
+      const newContent = inputField.value;
+      try {
+        const response = await fetch(`/content/${page}/${section}/${id}`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ content: newContent })
+        });
+        const data = await response.json();
+        displayResult(JSON.stringify(data, null, 2));
+        loadContent();
+      } catch (error) {
+        displayResult('Error updating content: ' + error);
+      }
+    }
+
+    // Delete record from the table
+    async function deleteRecord(page, section, id) {
+      try {
+        const response = await fetch(`/content/${page}/${section}/${id}`, { method: 'DELETE' });
+        const data = await response.json();
+        displayResult(JSON.stringify(data, null, 2));
+        loadContent();
+      } catch (error) {
+        displayResult('Error deleting record: ' + error);
+      }
+    }
+
+    // Add new record using inline form in view section
+    document.getElementById('newRecordForm').addEventListener('submit', async function (event) {
+      event.preventDefault();
+      const page = 'main';
+      const section = document.getElementById('newSection').value;
+      const id = document.getElementById('newId').value;
+      const content = document.getElementById('newContent').value;
+      try {
+        const response = await fetch('/content', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ page, section, id, content })
+        });
+        const data = await response.json();
+        displayResult(JSON.stringify(data, null, 2));
+        document.getElementById('newRecordForm').reset();
+        loadContent();
+      } catch (error) {
+        displayResult('Error adding record: ' + error);
+      }
+    });
+
+    // Upload HTML file and extract IDs
+    document.getElementById('uploadForm').addEventListener('submit', async function (event) {
+      event.preventDefault();
+      const page = 'main';
+      const fileInput = document.getElementById('htmlFile');
+      if (!fileInput.files || !fileInput.files[0]) {
+        displayResult('Please select an HTML file.');
+        return;
+      }
+      const file = fileInput.files[0];
+      const reader = new FileReader();
+      reader.onload = async function (e) {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(e.target.result, 'text/html');
+        // Extract all elements with an id attribute
+        const elementsWithId = doc.querySelectorAll('[id]');
+        const ids = new Set();
+        elementsWithId.forEach(el => {
+          if (el.id.startsWith('text-')) ids.add(el.id);
+        });
+        const idArray = Array.from(ids);
+        let results = [];
+        for (const id of idArray) {
+          // Use the element's tag name as default content
+          const element = doc.getElementById(id);
+          const defaultContent = element ? element.textContent.trim() : '';
+          var section = doc.getElementById(id).closest('section');
+          section = section ? section.getAttribute('id') : 'default';
+          try {
+            const response = await fetch('/content', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ page, section, id, content: defaultContent })
+            });
+            const data = await response.json();
+            results.push({ id, status: data.message || data.error });
+          } catch (error) {
+            results.push({ id, status: 'Error: ' + error });
+          }
+        }
+        displayResult(JSON.stringify(results, null, 2));
+        loadContent();
+      };
+      reader.onerror = function () {
+        displayResult('Error reading file.');
+      };
+      reader.readAsText(file);
+    });
+
+    document.getElementById('loadContentBtn').addEventListener('click', loadContent);
+
+    // Initial load
+    loadContent();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+{
+  "en": {
+    "nav": {
+      "brand": "M365 Support",
+      "home": "Home",
+      "services": "Services",
+      "solutions": "Solutions",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "hero": {
+      "accelerate": "ACCELERATE THE USER EXPERIENCE",
+      "hero-slider-1": "Technology to power your business",
+      "hero-slider-2": "Software to power your business",
+      "hero-slider-3": "Hardware to power your business",
+      "description": "Try now our free trial membership. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "consultationButton": "Free Consultation",
+      "trialButton": "Free Trial"
+    },
+    "servicesOverview": {
+      "heading": "Our Services",
+      "viewAllServices": "View All Services",
+      "smartSoftwaresTitle": "Smart Softwares",
+      "smartSoftwaresDesc": "Duis aute irure dolor in repreherita ineto.",
+      "trustedSecurityTitle": "Trusted Security",
+      "trustedSecurityDesc": "Lorem consectetur adipi elitsed tempono.",
+      "awardsTitle": "Awards Winners",
+      "awardsDesc": "Ariento mesfato prodo arte e eli.",
+      "experienceTitle": "Great Experience",
+      "experienceDesc": "Lorem consectetur adipiscing elitsed pro."
+    },
+    "servicesCards": {
+      "troubleshootingTitle": "Troubleshooting",
+      "troubleshootingDesc": "Rapid resolution of issues to minimize downtime.",
+      "migrationTitle": "Migration Services",
+      "migrationDesc": "Seamless migration of email, files, and apps with minimal disruption.",
+      "managedSupportTitle": "Managed Support",
+      "managedSupportDesc": "Ongoing monitoring, maintenance, and support for all applications."
+    },
+    "servicesDetail": {
+      "heading": "Detailed Services",
+      "troubleshootingSupport": "Troubleshooting & Support",
+      "migrationServices": "Migration Services",
+      "managedSupport": "Managed Support",
+      "adoptionTraining": "Adoption & Training",
+      "securityCompliance": "Security & Compliance",
+      "licensingOptimization": "Licensing & Cost Optimization",
+      "customIntegration": "Custom Integration/Workflow Automation"
+    },
+    "solutionsApproach": {
+      "heading": "Our Approach",
+      "proactiveMethodology": "Proactive Methodology",
+      "tailoredApproach": "Tailored Approach",
+      "benefitsHeading": "Outcomes & Benefits",
+      "benefit1Title": "Increased Productivity",
+      "benefit1Desc": "Streamlined processes for enhanced efficiency.",
+      "benefit2Title": "Reduced Downtime",
+      "benefit2Desc": "Proactive support minimizes disruptions.",
+      "benefit3Title": "Cost Savings",
+      "benefit3Desc": "Optimized licensing cuts expenses."
+    },
+    "about": {
+      "heading": "About Us",
+      "ourStoryTitle": "Our Story",
+      "ourStoryDesc": "Founded with a passion for technology, our mission is to deliver top-tier Microsoft 365 support with innovation and reliability. We empower businesses to achieve seamless digital transformation.",
+      "teamTitle": "Team"
+    },
+    "contact": {
+      "heading": "Get in Touch",
+      "nameLabel": "Name",
+      "emailLabel": "Email",
+      "companyLabel": "Company",
+      "phoneLabel": "Phone Number",
+      "inquiryLabel": "Type of Inquiry",
+      "messageLabel": "Message",
+      "submitButton": "Send Message"
+    },
+    "pricing": {
+      "heading": "Pricing",
+      "subtitle": "Choose Your Suitable Plan",
+      "basicTitle": "Basic",
+      "standardTitle": "Standard",
+      "premiumTitle": "Premium",
+      "choosePlanBtn": "Choose plan"
+    },
+    "footer": {
+      "socialHint": "Follow us on social media",
+      "copyright": "© 2025 Microsoft 365 Support. All rights reserved.",
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service"
+    }
+  },
+  "de": {
+    "nav": {
+      "brand": "M365 Support",
+      "home": "Startseite",
+      "services": "Dienstleistungen",
+      "solutions": "Lösungen",
+      "about": "Über uns",
+      "contact": "Kontakt"
+    },
+    "hero": {
+      "accelerate": "BESCHLEUNIGEN SIE DAS NUTZERERLEBNIS",
+      "slider1": "Technologie, die Ihr Unternehmen antreibt",
+      "slider2": "Software, die Ihr Unternehmen antreibt",
+      "slider3": "Hardware, die Ihr Unternehmen antreibt",
+      "description": "Testen Sie jetzt unsere kostenlose Testmitgliedschaft. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "consultationButton": "Kostenlose Beratung",
+      "trialButton": "Kostenlose Testversion"
+    },
+    "servicesOverview": {
+      "heading": "Unsere Dienstleistungen",
+      "viewAllServices": "Alle Dienstleistungen anzeigen",
+      "smartSoftwaresTitle": "Intelligente Software",
+      "smartSoftwaresDesc": "Duis aute irure dolor in repreherita ineto.",
+      "trustedSecurityTitle": "Vertrauenswürdige Sicherheit",
+      "trustedSecurityDesc": "Lorem consectetur adipi elitsed tempono.",
+      "awardsTitle": "Preisgekrönte Lösungen",
+      "awardsDesc": "Ariento mesfato prodo arte e eli.",
+      "experienceTitle": "Großartige Erfahrung",
+      "experienceDesc": "Lorem consectetur adipiscing elitsed pro."
+    },
+    "servicesCards": {
+      "troubleshootingTitle": "Fehlersuche",
+      "troubleshootingDesc": "Schnelle Problembehebung zur Minimierung von Ausfallzeiten.",
+      "migrationTitle": "Migrationsdienste",
+      "migrationDesc": "Nahtlose Migration von E-Mail, Dateien und Apps mit minimalen Unterbrechungen.",
+      "managedSupportTitle": "Verwalteter Support",
+      "managedSupportDesc": "Laufende Überwachung, Wartung und Support für alle Anwendungen."
+    },
+    "servicesDetail": {
+      "heading": "Detaillierte Dienstleistungen",
+      "troubleshootingSupport": "Fehlersuche & Support",
+      "migrationServices": "Migrationsdienste",
+      "managedSupport": "Verwalteter Support",
+      "adoptionTraining": "Einführung & Schulung",
+      "securityCompliance": "Sicherheit & Compliance",
+      "licensingOptimization": "Lizenzierung & Kostenoptimierung",
+      "customIntegration": "Individuelle Integration/Workflow-Automatisierung"
+    },
+    "solutionsApproach": {
+      "heading": "Unser Ansatz",
+      "proactiveMethodology": "Proaktive Methodik",
+      "tailoredApproach": "Individuelle Vorgehensweise",
+      "benefitsHeading": "Ergebnisse & Vorteile",
+      "benefit1Title": "Gesteigerte Produktivität",
+      "benefit1Desc": "Optimierte Prozesse für höhere Effizienz.",
+      "benefit2Title": "Weniger Ausfallzeiten",
+      "benefit2Desc": "Proaktiver Support minimiert Störungen.",
+      "benefit3Title": "Kosteneinsparungen",
+      "benefit3Desc": "Optimierte Lizenzierung reduziert Ausgaben."
+    },
+    "about": {
+      "heading": "Über uns",
+      "ourStoryTitle": "Unsere Geschichte",
+      "ourStoryDesc": "Gegründet aus Leidenschaft für Technologie, ist es unser Ziel, erstklassigen Support für Microsoft 365 mit Innovation und Zuverlässigkeit zu bieten. Wir befähigen Unternehmen, eine nahtlose digitale Transformation zu erreichen.",
+      "teamTitle": "Team"
+    },
+    "contact": {
+      "heading": "Kontakt aufnehmen",
+      "nameLabel": "Name",
+      "emailLabel": "E-Mail",
+      "companyLabel": "Unternehmen",
+      "phoneLabel": "Telefonnummer",
+      "inquiryLabel": "Anfragetyp",
+      "messageLabel": "Nachricht",
+      "submitButton": "Nachricht senden"
+    },
+    "pricing": {
+      "heading": "Preise",
+      "subtitle": "Wählen Sie Ihren passenden Tarif",
+      "basicTitle": "Basic",
+      "standardTitle": "Standard",
+      "premiumTitle": "Premium",
+      "choosePlanBtn": "Tarif wählen"
+    },
+    "footer": {
+      "socialHint": "Folgen Sie uns in den sozialen Medien",
+      "copyright": "© 2025 Microsoft 365 Support. Alle Rechte vorbehalten.",
+      "privacyPolicy": "Datenschutzerklärung",
+      "termsOfService": "Nutzungsbedingungen"
+    }
+  }
+}

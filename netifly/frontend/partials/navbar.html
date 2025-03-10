@@ -1,0 +1,88 @@
+<div class="container mx-auto px-4">
+  <div class="flex items-center justify-between py-4">
+    <!-- Brand Section -->
+    <div class="flex items-center space-x-3">
+      <a href="#"><i
+          class="fa-solid fa-cloud icon-hover text-3xl hover:text-[#009DAE] text-white transition"></i></a>
+      <div>
+        <a href="#" class="text-2xl font-bold text-white hover:text-gray-300 transition">Anvilcloud</a>
+        <p class="text-white text-[14px] font-bold hover:text-gray-300 animate-bounce"><a href="#">MS365
+            Professionals</a></p>
+      </div>
+    </div>
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex space-x-8">
+      <a href="#hero" class="text-white hover:text-gray-300 transition">
+        <i class="fa-solid fa-house mr-1"></i> Home
+      </a>
+      <a href="#services" class="text-white hover:text-gray-300 transition">
+        <i class="fa-solid fa-cogs mr-1"></i> Services
+      </a>
+      <a href="#solutions" class="text-white hover:text-gray-300 transition">
+        <i class="fa-solid fa-sitemap mr-1"></i> Solutions
+      </a>
+      <a href="#about" class="text-white hover:text-gray-300 transition">
+        <i class="fa-solid fa-user mr-1"></i> About
+      </a>
+      <a href="#contact" class="text-white hover:text-gray-300 transition">
+        <i class="fa-solid fa-envelope mr-1"></i> Contact
+      </a>
+    </div>
+    <div class="hidden md:flex space-x-3 items-center">
+      <!-- English Button -->
+      <button onclick="switchLang('en')"
+        class="flex items-center space-x-1 focus:outline-none hover:opacity-80 transition" title="English">
+        <!-- Flag Icon (16x12) from flagcdn.com -->
+        <img src="https://flagcdn.com/16x12/gb.png" alt="English Flag" class="inline-block h-4 w-auto" />
+        <span class="text-white">EN</span>
+      </button>
+
+      <!-- German Button -->
+      <button onclick="switchLang('de')"
+        class="flex items-center space-x-1 focus:outline-none hover:opacity-80 transition" title="Deutsch">
+        <img src="https://flagcdn.com/16x12/de.png" alt="German Flag" class="inline-block h-4 w-auto" />
+        <span class="text-white">DE</span>
+      </button>
+    </div>
+    <!-- Mobile Menu Toggle -->
+    <div class="md:hidden">
+      <button id="menu-btn" class="text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden md:hidden bg-blue-600">
+  <a id="nav-home" href="#hero"  class="block px-4 py-2 text-white hover:bg-blue-500 transition">
+    <i class="fa-solid fa-house mr-1"></i> Home
+  </a>
+  <a id = "nav-services" href="#services" class="block px-4 py-2 text-white hover:bg-blue-500 transition">
+    <i class="fa-solid fa-cogs mr-1"></i> Services
+  </a>
+  <a id = "nav-solutions" href="#solutions" class="block px-4 py-2 text-white hover:bg-blue-500 transition">
+    <i class="fa-solid fa-sitemap mr-1"></i> Solutions
+  </a>
+  <a id="nav-about" href="#about" class="block px-4 py-2 text-white hover:bg-blue-500 transition">
+    <i class="fa-solid fa-user mr-1"></i> About
+  </a>
+  <a id = "nav-contact" href="#contact" class="block px-4 py-2 text-white hover:bg-blue-500 transition">
+    <i class="fa-solid fa-envelope mr-1"></i> Contact
+  </a>
+
+  <!-- Language Switcher (Mobile) -->
+  <div class="flex items-center px-4 py-2 space-x-3 bg-blue-600">
+    <button onclick="switchLang('en')"
+      class="flex items-center space-x-1 focus:outline-none hover:opacity-80 transition" title="English">
+      <img src="https://flagcdn.com/16x12/gb.png" alt="English Flag" class="inline-block h-4 w-auto" />
+      <span class="text-white">EN</span>
+    </button>
+    <button onclick="switchLang('de')"
+      class="flex items-center space-x-1 focus:outline-none hover:opacity-80 transition" title="Deutsch">
+      <img src="https://flagcdn.com/16x12/de.png" alt="German Flag" class="inline-block h-4 w-auto" />
+      <span class="text-white">DE</span>
+    </button>
+  </div>
+</div>

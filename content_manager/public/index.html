@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">  
-
 <head>
   <meta charset="UTF-8">
   <title>Content Management SPA</title>
@@ -9,13 +8,13 @@
   <!-- Font Awesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
-
 <body class="bg-gray-100">
   <!-- Navigation Bar -->
   <nav class="bg-gray-800 text-white px-4 py-3">
     <ul class="flex space-x-6">
       <li data-target="view" class="cursor-pointer hover:underline active">View/Edit Records</li>
       <li data-target="upload" class="cursor-pointer hover:underline">Upload HTML</li>
+      <li data-target="updatePage" class="cursor-pointer hover:underline">Update Page</li>
     </ul>
   </nav>
 
@@ -29,25 +28,21 @@
       <form id="newRecordForm" class="mb-4 bg-gray-50 p-4 border border-gray-200 rounded">
         <div class="mb-3">
           <label for="newSection" class="block font-semibold text-gray-600 mb-1">Section:</label>
-          <input type="text" id="newSection" required placeholder="e.g., news"
-            class="w-1/4 p-2 border border-gray-300 rounded">
+          <input type="text" id="newSection" required placeholder="e.g., news" class="w-1/4 p-2 border border-gray-300 rounded">
         </div>
         <div class="mb-3">
           <label for="newId" class="block font-semibold text-gray-600 mb-1">ID:</label>
-          <input type="text" id="newId" required placeholder="unique id"
-            class="w-1/4 p-2 border border-gray-300 rounded">
+          <input type="text" id="newId" required placeholder="unique id" class="w-1/4 p-2 border border-gray-300 rounded">
         </div>
         <div class="mb-3">
           <label for="newContent" class="block font-semibold text-gray-600 mb-1">EN:</label>
-          <textarea id="newContent" required placeholder="enter English content"
-            class="w-full p-2 border border-gray-300 rounded h-20"></textarea>
+          <textarea id="newContent" required placeholder="enter English content" class="w-full p-2 border border-gray-300 rounded h-20"></textarea>
         </div>
         <button type="submit" class="mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
           <i class="fa-solid fa-plus"></i>
         </button>
       </form>
-      <button type="button" id="loadContentBtn"
-        class="mb-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">
+      <button id="loadContentBtn" class="mb-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">
         <i class="fa-solid fa-arrows-rotate"></i>
       </button>
       <div id="contentTables"></div>
@@ -65,6 +60,25 @@
           <i class="fa-solid fa-upload"></i>
         </button>
       </form>
+    </div>
+
+    <!-- Update Page Section -->
+    <div id="updatePage" class="section hidden">
+      <h2 class="text-2xl font-semibold text-gray-700 mb-4">Update HTML Page with JSON Content</h2>
+      <form id="updatePageForm" class="mb-4 bg-gray-50 p-4 border border-gray-200 rounded">
+        <div class="mb-3">
+          <label for="updateHtmlFile" class="block font-semibold text-gray-600 mb-1">HTML File:</label>
+          <input type="file" id="updateHtmlFile" accept=".html" required class="w-full p-2 border border-gray-300 rounded">
+        </div>
+        <button type="submit" class="mt-2 px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">
+          <i class="fa-solid fa-wand-magic-sparkles"></i> Update Page
+        </button>
+      </form>
+      <h3 class="text-xl font-semibold text-gray-700 mb-2">Updated HTML Preview</h3>
+      <textarea id="updatedHtmlContent" class="w-full p-4 border border-gray-300 rounded h-64"></textarea>
+      <button id="downloadUpdatedHtml" class="mt-2 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">
+        <i class="fa-solid fa-download"></i> Download Updated HTML
+      </button>
     </div>
 
     <!-- API response results -->
@@ -127,7 +141,7 @@
                       <td class="border border-gray-300 p-2">
                         <input type="text" value="${deContent}" id="de_${section}_${id}" class="w-full p-1 border border-gray-300 rounded" onblur="autoUpdateDE('main', '${section}', '${id}')">
                       </td>
-                      <td class="border border-gray-300 p-2 space-x-1 flex justify-center items-center">
+                      <td class="border border-gray-300 p-2 flex justify-center items-center space-x-1">
                         <button onclick='translateRecord("main", "${section}", "${id}")' class="px-1 py-1 hover:bg-purple-600">
                           <i class="fa-solid fa-language text-purple-600"></i>
                         </button>
@@ -157,7 +171,6 @@
         });
         const data = await response.json();
         displayResult(JSON.stringify(data, null, 2));
-        // Optionally, you may call loadContent() here
       } catch (error) {
         displayResult('Error updating English content: ' + error);
       }
@@ -226,8 +239,69 @@
       }
     });
 
-    // Upload HTML file and extract IDs
-    document.getElementById('uploadForm').addEventListener('submit', async function (event) {
+    // Update Page Feature:
+    // 1. Read uploaded HTML file.
+    // 2. Fetch the JSON (English) content.
+    // 3. Flatten the nested JSON to a mapping from id -> content.
+    // 4. Parse the HTML, replace innerHTML of any element whose id is found.
+    // 5. Display updated HTML in textarea and enable download.
+    document.getElementById('updatePageForm').addEventListener('submit', async function (event) {
+      event.preventDefault();
+      const page = 'main';
+      // Fetch English content JSON
+      let jsonData = {};
+      try {
+        const response = await fetch(`/content?page=${page}`);
+        const data = await response.json();
+        // Flatten nested JSON: {section: {id: content}} -> { id: content }
+        for (const section in data) {
+          Object.assign(jsonData, data[section]);
+        }
+      } catch (error) {
+        displayResult('Error fetching JSON content: ' + error);
+        return;
+      }
+      const fileInput = document.getElementById('updateHtmlFile');
+      if (!fileInput.files || !fileInput.files[0]) {
+        displayResult('Please select an HTML file.');
+        return;
+      }
+      const file = fileInput.files[0];
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(e.target.result, 'text/html');
+        // For every element that has an id attribute, if its id exists in jsonData, update its innerHTML.
+        doc.querySelectorAll('[id]').forEach(el => {
+          const key = el.id;
+          if (jsonData[key] !== undefined) {
+            el.innerHTML = jsonData[key];
+          }
+        });
+        // Serialize the updated HTML back to string
+        const serializer = new XMLSerializer();
+        const updatedHtml = serializer.serializeToString(doc);
+        document.getElementById('updatedHtmlContent').value = updatedHtml;
+      };
+      reader.onerror = function() {
+        displayResult('Error reading HTML file.');
+      };
+      reader.readAsText(file);
+    });
+
+    // Download updated HTML file
+    document.getElementById('downloadUpdatedHtml').addEventListener('click', function() {
+      const updatedHtml = document.getElementById('updatedHtmlContent').value;
+      const blob = new Blob([updatedHtml], { type: 'text/html' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'updated_page.html';
+      link.click();
+      URL.revokeObjectURL(url);
+    });
+
+    document.getElementById('uploadForm').addEventListener('submit', async function(event) {
       event.preventDefault();
       const page = 'main';
       const fileInput = document.getElementById('htmlFile');
@@ -237,14 +311,14 @@
       }
       const file = fileInput.files[0];
       const reader = new FileReader();
-      reader.onload = async function (e) {
+      reader.onload = async function(e) {
         const parser = new DOMParser();
         const doc = parser.parseFromString(e.target.result, 'text/html');
         // Extract all elements with an id attribute that start with 'text-'
         const elementsWithId = doc.querySelectorAll('[id]');
         const ids = new Set();
         elementsWithId.forEach(el => {
-          if (el.id.startsWith('text-')) ids.add(el.id);
+          if(el.id.startsWith('text-')) ids.add(el.id);
         });
         const idArray = Array.from(ids);
         let results = [];
@@ -253,7 +327,7 @@
           const defaultContent = element ? element.textContent.trim() : '';
           let section = 'default';
           const sectionEl = element.closest('section');
-          if (sectionEl && sectionEl.id) {
+          if(sectionEl && sectionEl.id) {
             section = sectionEl.id;
           }
           try {
@@ -271,7 +345,7 @@
         displayResult(JSON.stringify(results, null, 2));
         loadContent();
       };
-      reader.onerror = function () {
+      reader.onerror = function() {
         displayResult('Error reading file.');
       };
       reader.readAsText(file);
@@ -282,5 +356,4 @@
     loadContent();
   </script>
 </body>
-
 </html>

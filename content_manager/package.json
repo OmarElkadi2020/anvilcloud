@@ -9,7 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.21.2"
+    "@vitalets/google-translate-api": "^9.2.1",
+    "express": "^4.21.2",
+    "jsdom": "^26.0.0"
   },
   "description": ""
 }

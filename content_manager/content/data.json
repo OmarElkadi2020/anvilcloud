@@ -1,7 +1,7 @@
 {
   "main": {
     "hero": {
-      "text-hero-subtitle": "ACCELERATE THE USER EXPERIENCE",
+      "text-hero-subtitle": "ACCELERATE THE USER EXPERIENCE ",
       "text-slide-technology": "Technology to power your business",
       "text-slide-software": "Software to power your business",
       "text-slide-hardware": "Hardware to power your business",
@@ -12,7 +12,7 @@
     "services": {
       "text-grid-smart-softwares-title": "Smart Softwares",
       "text-grid-smart-softwares-desc": "Duis aute irure dolor in repreherita ineto.",
-      "text-grid-trusted-security-title": "Trusted Security",
+      "text-grid-trusted-security-title": "Trusted Securit",
       "text-grid-trusted-security-desc": "Lorem consectetur adipi elitsed tempono.",
       "text-grid-awards-winners-title": "Awards Winners",
       "text-grid-awards-winners-desc": "Ariento mesfato prodo arte e eli.",
@@ -20,15 +20,15 @@
       "text-grid-great-experience-desc": "Lorem consectetur adipiscing elitsed pro.",
       "text-our-services-title": "Our Services",
       "text-service-troubleshooting-title": "Troubleshooting",
-      "text-service-troubleshooting-desc": "Rapid resolution of issues to minimize\n              downtime.",
+      "text-service-troubleshooting-desc": "Rapid resolution of issues to minimize downtime.",
       "text-service-migration-title": "Migration Services",
-      "text-service-migration-desc": "Seamless migration of email, files, and apps with\n              minimal disruption.",
+      "text-service-migration-desc": "Seamless migration of email, files, and apps with minimal disruption.",
       "text-service-managed-support-title": "Managed Support",
-      "text-service-managed-support-desc": "Ongoing monitoring, maintenance, and support\n              for all applications.",
+      "text-service-managed-support-desc": "Ongoing monitoring, maintenance, and support for all applications.",
       "text-view-all-services-link": "View All Services"
     },
     "services-detail": {
-      "text-detailed-services-title": "Detailed\n        Services",
+      "text-detailed-services-title": "Detailed Services",
       "text-detail-troubleshooting-support-title": "Troubleshooting & Support",
       "text-detail-troubleshooting-support-desc": "Rapid issue resolution with expert technical assistance to\n            minimize downtime.",
       "text-detail-migration-services-title": "Migration Services",
@@ -41,7 +41,7 @@
       "text-detail-security-compliance-desc": "Enhanced threat protection and compliance solutions to secure\n            your business.",
       "text-detail-licensing-cost-opt-title": "Licensing & Cost Optimization",
       "text-detail-licensing-cost-opt-desc": "Expert advice on selecting licenses and maximizing\n            cost-efficiency.",
-      "text-detail-custom-integration-title": "Custom Integration/Workflow\n            Automation",
+      "text-detail-custom-integration-title": "Custom Integration/Workflow Automation",
       "text-detail-custom-integration-desc": "Tailored automation using Microsoft Power Platform to streamline\n            processes."
     },
     "solutions": {
@@ -51,7 +51,7 @@
       "text-tailored-approach-desc": "Every client’s needs are evaluated individually to craft flexible,\n            budget-friendly plans.",
       "text-outcomes-benefits-title": "Outcomes & Benefits",
       "text-outcome-increased-productivity-title": "Increased Productivity",
-      "text-outcome-increased-productivity-desc": "Streamlined processes for enhanced\n                efficiency.",
+      "text-outcome-increased-productivity-desc": "Streamlined processes for enhanced  efficiency.",
       "text-outcome-reduced-downtime-title": "Reduced Downtime",
       "text-outcome-reduced-downtime-desc": "Proactive support minimizes disruptions.",
       "text-outcome-cost-savings-title": "Cost Savings",
@@ -60,11 +60,11 @@
     "about": {
       "text-about-title": "About Us",
       "text-our-story-title": "Our Story",
-      "text-our-story-desc": "Founded with a passion for technology, our mission is to deliver top-tier Microsoft 365 support with\n            innovation and reliability. We empower businesses to achieve seamless digital transformation.",
+      "text-our-story-desc": "Founded with a passion for technology, our mission is to deliver top-tier Microsoft 365 support with            innovation and reliability. We empower businesses to achieve seamless digital transformation.",
       "text-team-title": "Team",
       "text-team-member-alex-name": "Alex",
       "text-team-member-alex-role": "Tech Lead",
-      "text-team-member-jordan-name": "Jordan",
+      "text-team-member-jordan-name": "Tech LeadTech Lead",
       "text-team-member-jordan-role": "Support Specialist",
       "text-team-member-taylor-name": "Taylor",
       "text-team-member-taylor-role": "Migration Expert",
@@ -77,7 +77,7 @@
       "text-contact-email-label": "Email",
       "text-contact-company-label": "Company",
       "text-contact-phone-label": "Phone Number",
-      "text-contact-inquiry-label": "Type of\n              Inquiry",
+      "text-contact-inquiry-label": "Type of              Inquiry",
       "text-contact-message-label": "Message",
       "text-contact-send-message": "Send Message"
     },
@@ -88,7 +88,7 @@
       "text-basic-plan-title": "Basic",
       "text-basic-plan-price": "$20",
       "text-basic-plan-month": "/month",
-      "text-basic-plan-desc": "It’s easier to reach your savings goals when you have\n              the right savings.",
+      "text-basic-plan-desc": "It’s easier to reach your savings goals when you have              the right savings.",
       "text-basic-plan-feature1": "Unlimited subscribers",
       "text-basic-plan-feature2": "Up to 62K emails per month",
       "text-basic-plan-feature3": "24/7 Contact support",
@@ -96,10 +96,10 @@
       "text-basic-plan-feature5": "Enterprise Agile Planning",
       "text-basic-plan-button": "Choose plan",
       "text-standard-plan-title": "Standard",
-      "text-standard-plan-price-container": "$199\n              /month",
+      "text-standard-plan-price-container": "$199 /Monat",
       "text-standard-plan-price": "$199",
       "text-standard-plan-month": "/month",
-      "text-standard-plan-desc": "Sed ut in perspiciatis unde omnis iste natus error\n              sit tatem laudantium.",
+      "text-standard-plan-desc": "Sed ut in perspiciatis unde omnis iste natus error sit tatem laudantium.",
       "text-standard-plan-feature1": "Unlimited subscribers",
       "text-standard-plan-feature2": "Up to 62K emails per month",
       "text-standard-plan-feature3": "24/7 Contact support",
@@ -109,7 +109,7 @@
       "text-premium-plan-title": "Premium",
       "text-premium-plan-price": "$399",
       "text-premium-plan-month": "/month",
-      "text-premium-plan-desc": "It’s no secret that the digital industry is booming.\n              From to global brands.",
+      "text-premium-plan-desc": "It’s no secret that the digital industry is booming. From to global brands.",
       "text-premium-plan-feature1": "Unlimited subscribers",
       "text-premium-plan-feature2": "Up to 62K emails per month",
       "text-premium-plan-feature3": "24/7 Contact support",
@@ -123,28 +123,45 @@
       "text-footer-solutions": "Solutions",
       "text-footer-about": "About",
       "text-footer-contact": "Contact",
-      "text-footer-copy": "© 2025 Microsoft 365 Support. All rights reserved.\n          Privacy Policy |\n          Terms of Service",
+      "text-footer-copy": "© 2025 Microsoft 365 Support. All rights reserved.",
       "text-privacy-policy-link": "Privacy Policy",
       "text-terms-service-link": "Terms of Service"
     },
     "terms-service-modal": {
-      "text-privacyPolicy-modal-title": "Privacy Policy / Datenschutzerklärung",
-      "text-privacyPolicy-modal-intro": "This Privacy Policy explains how we handle your personal data in accordance with the General Data Protection\n          Regulation (GDPR) and the German Federal Data Protection Act (BDSG).",
+      "text-privacyPolicy-modal-title": "Privacy Policy",
+      "text-privacyPolicy-modal-intro": "This Privacy Policy explains how we handle your personal data in accordance with the General Data Protection          Regulation (GDPR) and the German Federal Data Protection Act (BDSG).",
       "text-privacyPolicy-data-controller-title": "1. Data Controller",
-      "text-privacyPolicy-data-controller-desc": "[Your Company Name]\n          [Your Address]\n          Email: conatact@anvilcloud.de",
       "text-privacyPolicy-email": "conatact@anvilcloud.de",
       "text-privacyPolicy-data-collection-title": "2. Data Collection and Processing",
       "text-privacyPolicy-data-collection-desc": "We collect and process personal data solely for providing our services and in accordance with applicable law.",
       "text-privacyPolicy-no-cookies-title": "3. No Cookies Usage",
       "text-privacyPolicy-no-cookies-desc": "Our website does not use cookies to track your browsing behavior.",
       "text-privacyPolicy-your-rights-title": "4. Your Rights",
-      "text-privacyPolicy-your-rights-desc": "You have the right to access, correct, or delete your personal data. For any inquiries or to exercise your\n          rights, please contact us.",
+      "text-privacyPolicy-your-rights-desc": "You have the right to access, correct, or delete your personal data. For any inquiries or to exercise your          rights, please contact us.",
       "text-privacyPolicy-changes-title": "5. Changes to this Policy",
-      "text-privacyPolicy-changes-desc": "We may update this policy from time to time. Any changes will be posted on this page."
+      "text-privacyPolicy-changes-desc": "We may update this policy from time to time. Any changes will be posted on this page.",
+      "text-privacyPolicy-data-controller-name": "Anvilcloud",
+      "text-privacyPolicy-data-controller-address": "[Your Address]"
     },
     "contact-approval-modal": {
       "text-contact-approval-title": "Contact Received",
-      "text-contact-approval-desc": "Thank you for reaching out! Your message has been received, and\n          we\n          will get back to you shortly."
+      "text-contact-approval-desc": "Thank you for reaching out! Your message haas been received, and          we          will get back to you shortly."
+    },
+    "navbar": {
+      "text-nav-home": "Home",
+      "text-nav-services": "Services",
+      "text-nav-solutions": "Solutions",
+      "text-nav-about": "About",
+      "text-nav-contact": "Contact",
+      "text-mobile-home": "Home",
+      "text-mobile-services": "Services",
+      "text-mobile-solutions": "Solutions",
+      "text-mobile-about": "About",
+      "text-mobile-contact": "Contact"
+    },
+    "default": {
+      "text-brand-name": "Anvilcloud",
+      "text-brand-tagline": "MS365 Professionals"     
     }
   }
 }

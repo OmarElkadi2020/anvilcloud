@@ -32,6 +32,10 @@ const consultation = () => {
   document.getElementById('message').value =
     'Dear Anvilcloud Administrator,\nI would like to request a consultation. Do you have time on xx.xx.xxxx at xx:xx or on xx.xx.xxxx at xx:xx?';
 }
+/*************  ✨ Codeium Command ⭐  *************/
+/**
+
+/******  f64e1d5d-6b68-4b45-8839-78b2f74c9817  *******/
 const trial = () => {
   document.getElementById('inquiry').value = 'trial';
   document.getElementById('message').innerText =
@@ -159,5 +163,15 @@ document.addEventListener('DOMContentLoaded', function () {
       document.getElementById('contactApprovalModal').classList.add('hidden');
     });
 
+
+
   }
+
 });
+
+function changeLanguage(lang) {
+  // Remove the current language segment (assumes the path starts with /en or /de)
+  let path = window.location.pathname.replace(/^\/(en|de)/, "");
+  // Redirect to the new language version while preserving the rest of the path
+  window.location.href = `/${lang}${path}`;
+}

@@ -44,7 +44,7 @@ const trial = () => {
 
 function required() {
   const inquiryValue = document.getElementById('inquiry').value;
-  const phoneAsterisk = document.getElementById('phoneAsterisk');
+  const phoneAsterisk = document.getElementById('contact-phone-asterisk');
   const phone = document.getElementById('phone');
 
   if (inquiryValue === 'consultation') {

@@ -1,11 +1,11 @@
-# Serve the English version if the browser language is English
+<!-- # Serve the English version if the browser language is English
 /index.html   /en/index.html  200!  Language=en
 /             /en/index.html  200!  Language=en
 
 # Serve the German version if the browser language is German
 /index.html   /de/index.html  200!  Language=de
-/             /de/index.html  200!  Language=de
+/             /de/index.html  200!  Language=de -->
 
 # Fallback to English if no language condition matches
-/index.html   /en/index.html  200!
-/             /en/index.html  200!
+/index.html   /de/index.html  200!
+/             /de/index.html  200!

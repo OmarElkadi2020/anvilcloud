@@ -29,18 +29,28 @@ menuBtn.addEventListener('click', () => {
 
 const consultation = () => {
   document.getElementById('inquiry').value = 'consultation';
-  document.getElementById('message').value =
-    'Dear Anvilcloud Administrator,\nI would like to request a consultation. Do you have time on xx.xx.xxxx at xx:xx or on xx.xx.xxxx at xx:xx?';
-}
+  if (window.location.href.includes('de')) {
+    document.getElementById('message').value =
+      'Sehr geehrte Anvilcloud Administrator,\nIch möchte eine Beratung anfordern. Haben Sie Zeit am xx.xx.xxxx um xx:xx oder am xx.xx.xxxx um xx:xx?'
+  } else {
+    document.getElementById('message').value =
+      'Dear Anvilcloud Administrator,\nI would like to request a consultation. Do you have time on xx.xx.xxxx at xx:xx or on xx.xx.xxxx at xx:xx?';
+  }
+};
 /*************  ✨ Codeium Command ⭐  *************/
 /**
 
 /******  f64e1d5d-6b68-4b45-8839-78b2f74c9817  *******/
 const trial = () => {
   document.getElementById('inquiry').value = 'trial';
-  document.getElementById('message').innerText =
-    'Dear Anvilcloud Administrator,\nI would like to request a free trial';
-}
+  if (window.location.href.includes('de')) {
+    document.getElementById('message').value =
+      'Sehr geehrte Anvilcloud Administrator,\nIch möchte eine kostenlose Testversion anfordern';
+  } else {
+    document.getElementById('message').innerText =
+      'Dear Anvilcloud Administrator,\nI would like to request a free trial';
+  }
+};
 
 function required() {
   const inquiryValue = document.getElementById('inquiry').value;

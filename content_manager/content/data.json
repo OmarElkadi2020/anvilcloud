@@ -1,17 +1,17 @@
 {
   "main": {
     "hero": {
-      "text-hero-subtitle": "ACCELERATE THE USER EXPERIENCE ",
+      "text-hero-subtitle": "IMPROVE THE USER EXPERIENCE",
       "text-slide-technology": "Technology to power your business",
       "text-slide-software": "Software to power your business",
       "text-slide-hardware": "Hardware to power your business",
       "text-hero-description": "Try now our free trial membership. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum\n              dolore eu fugiat nulla pariatur.",
       "text-consultation-link": "Free Consultation",
-      "text-trial-link": "Free Trial"
+      "text-trial-link": "Free Trialx"
     },
     "services": {
-      "text-grid-smart-softwares-title": "Smart Softwares",
-      "text-grid-smart-softwares-desc": "Duis aute irure dolor in repreherita ineto.",
+      "text-grid-smart-softwares-title": "Microsoft 365",
+      "text-grid-smart-softwares-desc": "Your Microsoft 365 Proffissionals",
       "text-grid-trusted-security-title": "Trusted Securit",
       "text-grid-trusted-security-desc": "Lorem consectetur adipi elitsed tempono.",
       "text-grid-awards-winners-title": "Awards Winners",
@@ -161,7 +161,7 @@
     },
     "default": {
       "text-brand-name": "Anvilcloud",
-      "text-brand-tagline": "MS365 Professionals"     
+      "text-brand-tagline": "MS365 Professionals"
     }
   }
 }

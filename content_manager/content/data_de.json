@@ -1,17 +1,17 @@
 {
   "main": {
     "hero": {
-      "text-hero-subtitle": "Beschleunigen Sie die Benutzererfahrung",
+      "text-hero-subtitle": "Benutzererfahrung Verbessern",
       "text-slide-technology": "Technologie, um Ihr Geschäft zu versorgen",
       "text-slide-software": "Software, um Ihr Unternehmen zu versorgen",
       "text-slide-hardware": "Hardware, um Ihr Unternehmen zu versorgen",
       "text-hero-description": "Versuchen Sie es jetzt unsere kostenlose Probe -Mitgliedschaft. DUIS AUTE IRURE DOLOR IN VERREHENTENIT IN VOLUPTATE VELIT ESSE CILLUM              Dolore Eu Fugiat Nulla Pariatur.",
       "text-consultation-link": "Kostenlose Beratung",
-      "text-trial-link": "Kostenlos Testen"
+      "text-trial-link": "Kostenlos Testenx"
     },
     "services": {
-      "text-grid-smart-softwares-title": "Smart Software",
-      "text-grid-smart-softwares-desc": "DUIS AUTE IRURE DOLOR IN Repreerita Ineto.",
+      "text-grid-smart-softwares-title": "Microsoft 365",
+      "text-grid-smart-softwares-desc": "Ihre Microsoft 365 Proffissionals",
       "text-grid-trusted-security-title": "Vertrauenswürdige Securit",
       "text-grid-trusted-security-desc": "LOREM ConSectetur Adipi Elitsed Tempono.",
       "text-grid-awards-winners-title": "Preissieger",

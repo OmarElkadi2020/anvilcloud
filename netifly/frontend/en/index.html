@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Microsoft 365 Support - Modern Tech Style</title>
@@ -15,9 +12,10 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
   <!-- Font Awesome Icons CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icon-css@4.1.7/css/flag-icons.min.css">  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icon-css@4.1.7/css/flag-icons.min.css">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../assets/css/main.css">
+
 </head>
 
 <body class="text-gray-800">
@@ -31,8 +29,7 @@
             <i class="fa-solid fa-cloud icon-hover text-3xl hover:text-[#009DAE] text-white transition"></i>
           </a>
           <div>
-            <a href="#" id="text-brand-name"
-              class="text-2xl font-bold text-white hover:text-gray-300 transition">Anvilcloud</a>
+            <a href="#" id="text-brand-name" class="text-2xl font-bold text-white hover:text-gray-300 transition">Anvilcloud</a>
             <p class="text-white text-[14px] font-bold hover:text-gray-300 animate-bounce">
               <a href="#" id="text-brand-tagline">MS365 Professionals</a>
             </p>
@@ -55,13 +52,11 @@
           <a href="#contact" class="text-white hover:text-gray-300 transition">
             <i class="fa-solid fa-envelope mr-1"></i> <span id="text-nav-contact">Contact</span>
           </a>
-          <button onclick="changeLanguage('en')"
-            class="flex items-center space-x-2 text-gray-700 hover:text-blue-500 focus:outline-none">
+          <button onclick="changeLanguage('en')" class="flex items-center space-x-2 text-gray-700 hover:text-blue-500 focus:outline-none">
             <span class="flag-icon flag-icon-us"></span>
           </button>
           <!-- German Button -->
-          <button onclick="changeLanguage('de')"
-            class="flex items-center space-x-2 text-gray-700 hover:text-blue-500 focus:outline-none">
+          <button onclick="changeLanguage('de')" class="flex items-center space-x-2 text-gray-700 hover:text-blue-500 focus:outline-none">
             <span class="flag-icon flag-icon-de"></span>
           </button>
         </div>
@@ -77,88 +72,87 @@
       </div>
     </div>
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-blue-600">
+    <div id="mobile-menu" class="hidden md:hidden bg-blue-600  text-center">
       <a href="#hero" id="text-mobile-home" class="block px-4 py-2 text-white hover:bg-blue-500 transition">Home</a>
-      <a href="#services" id="text-mobile-services"
-        class="block px-4 py-2 text-white hover:bg-blue-500 transition">Services</a>
-      <a href="#solutions" id="text-mobile-solutions"
-        class="block px-4 py-2 text-white hover:bg-blue-500 transition">Solutions</a>
+      <a href="#services" id="text-mobile-services" class="block px-4 py-2 text-white hover:bg-blue-500 transition">Services</a>
+      <a href="#solutions" id="text-mobile-solutions" class="block px-4 py-2 text-white hover:bg-blue-500 transition">Solutions</a>
       <a href="#about" id="text-mobile-about" class="block px-4 py-2 text-white hover:bg-blue-500 transition">About</a>
-      <a href="#contact" id="text-mobile-contact"
-        class="block px-4 py-2 text-white hover:bg-blue-500 transition">Contact</a>
+      <a href="#contact" id="text-mobile-contact" class="block px-4 py-2 text-white hover:bg-blue-500 transition">Contact</a>
+      <button onclick="changeLanguage('en')" class="items-center space-x-2 text-gray-700 hover:text-blue-500 focus:outline-none">
+        <span class="flag-icon flag-icon-us"></span>
+      </button>
+      <!-- German Button -->
+      <button onclick="changeLanguage('de')" class="items-center space-x-2 text-gray-700 hover:text-blue-500 focus:outline-none">
+        <span class="flag-icon flag-icon-de"></span>
+      </button>
     </div>
   </nav>
 
-
   <!-- HERO SECTION WITH SLIDER -->
-  <section id="hero" class="section relative h-screen flex lg:items-center">
+  <section id="hero" class="relative flex lg:items-center h-screen md:max-h-[750px] mb-0">
     <div class="container">
-      <!-- Background Image & Overlay -->
-      <div class="absolute inset-0"
-        style="background: url('https://templates.themekit.dev/execoore/media/hd-1.jpg') center/cover no-repeat;"></div>
+      <!-- Background Video & Overlay -->
+      <div class="absolute inset-0 overflow-hidden">
+        <video autoplay="" loop="" muted="" playsinline="" class="absolute inset-0 w-full h-full object-cover">
+          <source src="../assets/vid/office.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="absolute inset-0 bg-black opacity-50"></div> <!-- Optional overlay for better readability -->
+      </div>
       <!-- Hero Content -->
       <div class="container relative" data-aos="fade-up">
         <div class="row flex flex-col lg:flex-row items-center">
           <!-- Left Column: Text & Slider -->
           <div class="w-full lg:w-5/12">
             <hr class="my-8">
-            <h3 id="text-hero-subtitle" class="text-color-2 text-lg uppercase tracking-wide">ACCELERATE THE USER
-              EXPERIENCE </h3>
+            <h3 id="text-hero-subtitle" class="text-color-2 text-lg uppercase tracking-wide">IMPROVE THE USER EXPERIENCE</h3>
             <!-- Glide Slider -->
             <div class="glide mt-4" id="hero-slider">
               <div class="glide__track" data-glide-el="track">
                 <ul class="glide__slides">
                   <li class="glide__slide">
-                    <h1 id="text-slide-technology" class="text-4xl lg:text-5xl font-bold uppercase">Technology to power
-                      your business</h1>
+                    <h1 id="text-slide-technology" class="text-4xl lg:text-5xl font-bold uppercase text-white">Technology to power your business</h1>
                   </li>
                   <li class="glide__slide">
-                    <h1 id="text-slide-software" class="text-4xl lg:text-5xl font-bold uppercase">Software to power your
-                      business</h1>
+                    <h1 id="text-slide-software" class="text-4xl lg:text-5xl font-bold uppercase text-white">Software to power your business</h1>
                   </li>
                   <li class="glide__slide">
-                    <h1 id="text-slide-hardware" class="text-4xl lg:text-5xl font-bold uppercase">Hardware to power your
-                      business</h1>
+                    <h1 id="text-slide-hardware" class="text-4xl lg:text-5xl font-bold uppercase text-white">Hardware to power your business</h1>
                   </li>
                 </ul>
               </div>
             </div>
-            <p id="text-hero-description" class="mt-4 text-gray-700">Try now our free trial membership. Duis aute irure
-              dolor in reprehenderit in voluptate velit esse cillum
+            <p id="text-hero-description" class="mt-4 text-gray-700 text-white">Try now our free trial membership. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
               dolore eu fugiat nulla pariatur.</p>
             <hr class="my-6">
             <div class="flex flex-col sm:flex-row gap-4">
-              <a id="text-consultation-link" href="#contact"
-                class="px-6 py-2 bg-[#009DAE] hover:bg-[#008494] text-white font-bold rounded text-center"
-                onclick="consultation()">Free Consultation</a>
-              <a id="text-trial-link" href="#contact"
-                class="px-6 py-2 border border-white text-white hover:bg-white hover:text-gray-800 font-bold rounded text-center"
-                onclick="trial()">Free Trial</a>
+              <a id="text-consultation-link" href="#contact" class="px-6 py-2 bg-[#009DAE] hover:bg-[#008494] text-white font-bold rounded text-center" onclick="consultation()">Free Consultation</a>
+              <a id="text-trial-link" href="#contact" class="px-6 py-2 border border-white text-white hover:bg-white hover:text-gray-800 font-bold rounded text-center" onclick="trial()">Free Trialx</a>
             </div>
             <hr class="my-8">
           </div>
           <!-- Right Column: Image -->
-          <div class="flex-col flex w-full lg:w-7/12 hidden md:block">
+          <!-- <div class="flex-col flex w-full lg:w-7/12 hidden md:block">
             <hr class="space-sm">
-            <img src="https://citsystems.de/images/beitraege/Microsoft_365_Applications_Overview_Rework.png"
-              alt="Hero Image" class="mx-auto slide-image" data-anima="" data-time="1000">
-          </div>
+            <img src="https://citsystems.de/images/beitraege/Microsoft_365_Applications_Overview_Rework.png" alt="Hero Image" class="mx-auto slide-image" data-anima="" data-time="1000">
+          </div> -->
         </div>
       </div>
     </div>
   </section>
 
+
   <!-- SERVICES OVERVIEW SECTION -->
-  <section id="services" class="section bg-[#F5F5F5] py-16">
-    <div class="container">
-      <div class="grid-list" data-columns="4" data-columns-md="2" data-columns-sm="1">
+  <section id="features" class="section bg-[#F5F5F5] sm:py-16">
+    <div class="container" data-aos="fade-up">
+      <div class="grid-list features-container mb-12" data-columns="4" data-columns-md="2" data-columns-sm="1">
         <div class="grid-box">
           <div class="grid-item">
             <div class="cnt-box cnt-box-top-icon boxed">
               <i class="fa-solid fa-laptop-code"></i>
               <div class="caption">
-                <h2 id="text-grid-smart-softwares-title">Smart Softwares</h2>
-                <p id="text-grid-smart-softwares-desc">Duis aute irure dolor in repreherita ineto.</p>
+                <h2 id="text-grid-smart-softwares-title">Microsoft 365</h2>
+                <p id="text-grid-smart-softwares-desc">Your Microsoft 365 Proffissionals</p>
               </div>
             </div>
           </div>
@@ -191,7 +185,7 @@
           </div>
         </div>
       </div>
-      <div class="container mt-12">
+      <div class="container">
         <h2 id="text-our-services-title" class="text-3xl font-bold text-center mb-12 text-[#003EAA]">Our Services</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- Service Card: Troubleshooting -->
@@ -200,8 +194,7 @@
               <i class="fa-solid fa-wrench fa-2x icon-hover"></i>
             </div>
             <h3 id="text-service-troubleshooting-title" class="text-xl font-bold mb-2 text-center">Troubleshooting</h3>
-            <p id="text-service-troubleshooting-desc" class="text-center">Rapid resolution of issues to minimize
-              downtime.</p>
+            <p id="text-service-troubleshooting-desc" class="text-center">Rapid resolution of issues to minimize downtime.</p>
           </div>
           <!-- Service Card: Migration Services -->
           <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
@@ -209,8 +202,7 @@
               <i class="fa-solid fa-arrow-right-arrow-left fa-2x icon-hover"></i>
             </div>
             <h3 id="text-service-migration-title" class="text-xl font-bold mb-2 text-center">Migration Services</h3>
-            <p id="text-service-migration-desc" class="text-center">Seamless migration of email, files, and apps with
-              minimal disruption.</p>
+            <p id="text-service-migration-desc" class="text-center">Seamless migration of email, files, and apps with minimal disruption.</p>
           </div>
           <!-- Service Card: Managed Support -->
           <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
@@ -218,65 +210,71 @@
               <i class="fa-solid fa-headset fa-2x icon-hover"></i>
             </div>
             <h3 id="text-service-managed-support-title" class="text-xl font-bold mb-2 text-center">Managed Support</h3>
-            <p id="text-service-managed-support-desc" class="text-center">Ongoing monitoring, maintenance, and support
-              for all applications.</p>
+            <p id="text-service-managed-support-desc" class="text-center">Ongoing monitoring, maintenance, and support for all applications.</p>
           </div>
         </div>
         <div class="text-center mt-12">
-          <a id="text-view-all-services-link" href="#services-detail"
-            class="text-[#009DAE] font-bold hover:underline transition">View All Services</a>
+          <a id="text-view-all-services-link" href="#services-detail" class="text-[#009DAE] font-bold hover:underline transition">View All Services</a>
         </div>
       </div>
     </div>
   </section>
 
 
+  <style>
+    @media screen and (min-height: 600px) {
+      .features-container {
+        transform: translateY(-150px);
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+      }
+    }
+
+    .cnt-box {
+      height: 200px;
+    }
+  </style>
+
   <!-- DETAILED SERVICES SECTION -->
   <section id="services-detail" class="section py-16">
     <div class="container" data-aos="fade-up">
-      <h2 id="text-detailed-services-title" class="text-3xl font-bold text-center mb-12 text-[#003EAA]">Detailed
-        Services</h2>
+      <h2 id="text-detailed-services-title" class="text-3xl font-bold text-center mb-12 text-[#003EAA]">Detailed Services</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- Detailed Service Block -->
         <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl transition">
-          <h3 id="text-detail-troubleshooting-support-title" class="text-2xl font-bold mb-2 flex items-center">
-            Troubleshooting &amp; Support</h3>
+          <h3 id="text-detail-troubleshooting-support-title" class="text-2xl font-bold mb-2 flex items-center">Troubleshooting &amp; Support</h3>
           <p id="text-detail-troubleshooting-support-desc">Rapid issue resolution with expert technical assistance to
             minimize downtime.</p>
         </div>
         <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl transition">
-          <h3 id="text-detail-migration-services-title" class="text-2xl font-bold mb-2 flex items-center">Migration
-            Services</h3>
+          <h3 id="text-detail-migration-services-title" class="text-2xl font-bold mb-2 flex items-center">Migration Services</h3>
           <p id="text-detail-migration-services-desc">Seamless migration of emails, files, and applications to Microsoft
             365.</p>
         </div>
         <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl transition">
-          <h3 id="text-detail-managed-support-title" class="text-2xl font-bold mb-2 flex items-center">Managed Support
-          </h3>
+          <h3 id="text-detail-managed-support-title" class="text-2xl font-bold mb-2 flex items-center">Managed Support</h3>
           <p id="text-detail-managed-support-desc">Continuous monitoring and proactive support for all your Microsoft
             365 apps.</p>
         </div>
         <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl transition">
-          <h3 id="text-detail-adoption-training-title" class="text-2xl font-bold mb-2 flex items-center">Adoption &amp;
-            Training</h3>
+          <h3 id="text-detail-adoption-training-title" class="text-2xl font-bold mb-2 flex items-center">Adoption &amp; Training</h3>
           <p id="text-detail-adoption-training-desc">Workshops, webinars, and guides to maximize your team’s
             productivity.</p>
         </div>
         <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl transition">
-          <h3 id="text-detail-security-compliance-title" class="text-2xl font-bold mb-2 flex items-center">Security
-            &amp; Compliance</h3>
+          <h3 id="text-detail-security-compliance-title" class="text-2xl font-bold mb-2 flex items-center">Security &amp; Compliance</h3>
           <p id="text-detail-security-compliance-desc">Enhanced threat protection and compliance solutions to secure
             your business.</p>
         </div>
         <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl transition">
-          <h3 id="text-detail-licensing-cost-opt-title" class="text-2xl font-bold mb-2 flex items-center">Licensing
-            &amp; Cost Optimization</h3>
+          <h3 id="text-detail-licensing-cost-opt-title" class="text-2xl font-bold mb-2 flex items-center">Licensing &amp; Cost Optimization</h3>
           <p id="text-detail-licensing-cost-opt-desc">Expert advice on selecting licenses and maximizing
             cost-efficiency.</p>
         </div>
         <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl transition md:col-span-2">
-          <h3 id="text-detail-custom-integration-title" class="text-2xl font-bold mb-2 flex items-center">Custom
-            Integration/Workflow Automation</h3>
+          <h3 id="text-detail-custom-integration-title" class="text-2xl font-bold mb-2 flex items-center">Custom Integration/Workflow Automation</h3>
           <p id="text-detail-custom-integration-desc">Tailored automation using Microsoft Power Platform to streamline
             processes.</p>
         </div>
@@ -310,8 +308,7 @@
             </div>
           </div>
           <div class="flex-1 mt-8 md:mt-0">
-            <img src="../assets/images/kelly-sikkema-Cg60_WXjvC4-unsplash.jpg" alt="Flowchart"
-              class="mx-auto rounded-lg">
+            <img src="../assets/images/kelly-sikkema-Cg60_WXjvC4-unsplash.jpg" alt="Flowchart" class="mx-auto rounded-lg">
           </div>
         </div>
         <div class="mt-12">
@@ -325,8 +322,7 @@
             <div class="bg-white p-4 rounded-lg shadow text-center">
               <i class="fa-solid fa-chart-line fa-lg text-[#009DAE] mb-2 icon-hover"></i>
               <h4 id="text-outcome-increased-productivity-title" class="font-bold">Increased Productivity</h4>
-              <p id="text-outcome-increased-productivity-desc" class="text-sm">Streamlined processes for enhanced
-                efficiency.</p>
+              <p id="text-outcome-increased-productivity-desc" class="text-sm">Streamlined processes for enhanced  efficiency.</p>
             </div>
             <div class="bg-white p-4 rounded-lg shadow text-center">
               <i class="fa-solid fa-power-off fa-lg text-[#009DAE] mb-2 icon-hover"></i>
@@ -353,9 +349,7 @@
         <!-- Left column: Our Story -->
         <div class="md:flex-1 mb-8 md:mb-0" data-aos="fade-right">
           <h3 id="text-our-story-title" class="text-2xl font-bold mb-4">Our Story</h3>
-          <p id="text-our-story-desc">Founded with a passion for technology, our mission is to deliver top-tier
-            Microsoft 365 support with innovation and reliability. We empower businesses to achieve seamless digital
-            transformation.</p>
+          <p id="text-our-story-desc">Founded with a passion for technology, our mission is to deliver top-tier Microsoft 365 support with            innovation and reliability. We empower businesses to achieve seamless digital transformation.</p>
         </div>
         <!-- Right column: Team -->
         <div class="md:flex-1" data-aos="fade-left">
@@ -363,37 +357,25 @@
           <div class="grid grid-cols-2 gap-6 md:gap-8">
             <!-- Team Member Card -->
             <div class="text-center group" data-aos="zoom-in" data-aos-delay="100">
-              <img
-                src="https://blog.pincel.app/wp-content/uploads/2024/02/smiling_full_body_professional_headshot_with_soft_lighting_blurred_office_background_formal_white_shirt.jpeg"
-                alt="Team Member"
-                class="rounded-full mx-auto mb-2 w-36 h-36 md:w-48 md:h-48 object-cover transform transition duration-300 ease-in-out group-hover:scale-105">
+              <img src="https://blog.pincel.app/wp-content/uploads/2024/02/smiling_full_body_professional_headshot_with_soft_lighting_blurred_office_background_formal_white_shirt.jpeg" alt="Team Member" class="rounded-full mx-auto mb-2 w-36 h-36 md:w-48 md:h-48 object-cover transform transition duration-300 ease-in-out group-hover:scale-105">
               <p id="text-team-member-alex-name" class="font-bold">Alex</p>
               <p id="text-team-member-alex-role" class="text-sm">Tech Lead</p>
             </div>
             <!-- Team Member Card -->
             <div class="text-center group" data-aos="zoom-in" data-aos-delay="200">
-              <img
-                src="https://blog.pincel.app/wp-content/uploads/2024/02/smiling_full_body_professional_headshot_with_soft_lighting_blurred_office_background_formal_white_shirt.jpeg"
-                alt="Team Member"
-                class="rounded-full mx-auto mb-2 w-36 h-36 md:w-48 md:h-48 object-cover transform transition duration-300 ease-in-out group-hover:scale-105">
+              <img src="https://blog.pincel.app/wp-content/uploads/2024/02/smiling_full_body_professional_headshot_with_soft_lighting_blurred_office_background_formal_white_shirt.jpeg" alt="Team Member" class="rounded-full mx-auto mb-2 w-36 h-36 md:w-48 md:h-48 object-cover transform transition duration-300 ease-in-out group-hover:scale-105">
               <p id="text-team-member-jordan-name" class="font-bold">Tech LeadTech Lead</p>
               <p id="text-team-member-jordan-role" class="text-sm">Support Specialist</p>
             </div>
             <!-- Team Member Card -->
             <div class="text-center group" data-aos="zoom-in" data-aos-delay="300">
-              <img
-                src="https://blog.pincel.app/wp-content/uploads/2024/02/smiling_full_body_professional_headshot_with_soft_lighting_blurred_office_background_formal_white_shirt.jpeg"
-                alt="Team Member"
-                class="rounded-full mx-auto mb-2 w-36 h-36 md:w-48 md:h-48 object-cover transform transition duration-300 ease-in-out group-hover:scale-105">
+              <img src="https://blog.pincel.app/wp-content/uploads/2024/02/smiling_full_body_professional_headshot_with_soft_lighting_blurred_office_background_formal_white_shirt.jpeg" alt="Team Member" class="rounded-full mx-auto mb-2 w-36 h-36 md:w-48 md:h-48 object-cover transform transition duration-300 ease-in-out group-hover:scale-105">
               <p id="text-team-member-taylor-name" class="font-bold">Taylor</p>
               <p id="text-team-member-taylor-role" class="text-sm">Migration Expert</p>
             </div>
             <!-- Team Member Card -->
             <div class="text-center group" data-aos="zoom-in" data-aos-delay="400">
-              <img
-                src="https://blog.pincel.app/wp-content/uploads/2024/02/smiling_full_body_professional_headshot_with_soft_lighting_blurred_office_background_formal_white_shirt.jpeg"
-                alt="Team Member"
-                class="rounded-full mx-auto mb-2 w-36 h-36 md:w-48 md:h-36 md:h-48 object-cover transform transition duration-300 ease-in-out group-hover:scale-105">
+              <img src="https://blog.pincel.app/wp-content/uploads/2024/02/smiling_full_body_professional_headshot_with_soft_lighting_blurred_office_background_formal_white_shirt.jpeg" alt="Team Member" class="rounded-full mx-auto mb-2 w-36 h-36 md:w-48 md:h-36 md:h-48 object-cover transform transition duration-300 ease-in-out group-hover:scale-105">
               <p id="text-team-member-morgan-name" class="font-bold">Morgan</p>
               <p id="text-team-member-morgan-role" class="text-sm">Customer Success</p>
             </div>
@@ -413,37 +395,28 @@
           <!-- First Row: Name and Email -->
           <div class="flex flex-wrap -mx-2 mb-4">
             <div class="w-full md:w-1/2 px-2 mb-4 md:mb-0">
-              <label id="text-contact-name-label" for="name" class="text-gray-700 font-semibold">Name</label><span
-                id="contact-name-asterisk" class="text-red-500 ml-1">*</span>
+              <label id="text-contact-name-label" for="name" class="text-gray-700 font-semibold">Name</label><span id="contact-name-asterisk" class="text-red-500 ml-1">*</span>
               <input type="text" id="name" class="w-full p-2 border rounded" placeholder="Your Name" required="">
             </div>
             <div class="w-full md:w-1/2 px-2">
-              <label id="text-contact-email-label" for="email"
-                class="text-gray-700 font-semibold">Email</label><span id="contact-email-asterisk"
-                class="text-red-500 ml-1">*</span>
-              <input type="email" id="email" class="w-full p-2 border rounded" placeholder="you@example.com"
-                required="">
+              <label id="text-contact-email-label" for="email" class="text-gray-700 font-semibold">Email</label><span id="contact-email-asterisk" class="text-red-500 ml-1">*</span>
+              <input type="email" id="email" class="w-full p-2 border rounded" placeholder="you@example.com" required="">
             </div>
           </div>
           <!-- Second Row: Company and Phone Number -->
           <div class="flex flex-wrap -mx-2 mb-4">
             <div class="w-full md:w-1/2 px-2 mb-4 md:mb-0">
-              <label id="text-contact-company-label" for="company"
-                class="text-gray-700 font-semibold">Company</label><span id="contact-company-asterisk"
-                class="text-red-500 ml-1">*</span>
+              <label id="text-contact-company-label" for="company" class="text-gray-700 font-semibold">Company</label><span id="contact-company-asterisk" class="text-red-500 ml-1">*</span>
               <input type="text" id="company" class="w-full p-2 border rounded" placeholder="Your Company" required="">
             </div>
             <div class="w-full md:w-1/2 px-2">
-              <label id="text-contact-phone-label" for="phone" class="text-gray-700 font-semibold">Phone
-                Number</label><span id="contact-phone-asterisk" class="text-red-500 ml-1"
-                style="display: none;">*</span>
+              <label id="text-contact-phone-label" for="phone" class="text-gray-700 font-semibold">Phone Number</label><span id="contact-phone-asterisk" class="text-red-500 ml-1" style="display: none;">*</span>
               <input type="tel" id="phone" class="w-full p-2 border rounded" placeholder="Your Phone Number">
             </div>
           </div>
           <!-- Inquiry Selection -->
           <div class="mb-4" onchange="required()">
-            <label id="text-contact-inquiry-label" for="inquiry" class="text-gray-700 font-semibold">Type of
-              Inquiry</label>
+            <label id="text-contact-inquiry-label" for="inquiry" class="text-gray-700 font-semibold">Type of              Inquiry</label>
             <select id="inquiry" class="w-full p-2 border rounded">
               <option value="general">General Question</option>
               <option value="support">Support Issue</option>
@@ -453,15 +426,11 @@
           </div>
           <!-- Message Textarea -->
           <div class="mb-4">
-            <label id="text-contact-message-label" for="message"
-              class="block text-gray-700 font-semibold">Message</label>
-            <textarea id="message" class="w-full p-2 border rounded" rows="5" placeholder="Your Message"
-              required="">Dear Anvilcloud Administrator,</textarea>
+            <label id="text-contact-message-label" for="message" class="block text-gray-700 font-semibold">Message</label>
+            <textarea id="message" class="w-full p-2 border rounded" rows="5" placeholder="Your Message" required="">Dear Anvilcloud Administrator,</textarea>
           </div>
           <!-- Submit Button -->
-          <button type="submit" id="text-contact-send-message"
-            class="w-full bg-[#009DAE] hover:bg-[#008494] text-white font-bold py-3 rounded transition">Send
-            Message</button>
+          <button type="submit" id="text-contact-send-message" class="w-full bg-[#009DAE] hover:bg-[#008494] text-white font-bold py-3 rounded transition">Send Message</button>
         </form>
         <div id="text-contact-form-response" class="mt-4 text-center"></div>
       </div>
@@ -474,8 +443,7 @@
       <h2 id="text-pricing-title" class="text-3xl font-bold text-center mb-12 text-[#003EAA]">Pricing</h2>
       <div class="grid grid-cols-12 mb-12">
         <div class="col-span-12 lg:col-span-6 lg:col-start-4 text-center">
-          <h2 id="text-pricing-subtitle" class="text-3xl leading-none md:text-[45px] font-bold mb-4">Choose Your
-            Suitable Plan</h2>
+          <h2 id="text-pricing-subtitle" class="text-3xl leading-none md:text-[45px] font-bold mb-4">Choose Your Suitable Plan</h2>
           <p id="text-pricing-description">Choice suitable plan for you.</p>
         </div>
       </div>
@@ -488,8 +456,7 @@
               <span id="text-basic-plan-price" class="text-3xl font-bold">$20</span>
               <span id="text-basic-plan-month" class="ml-2 opacity-50">/month</span>
             </div>
-            <p id="text-basic-plan-desc" class="opacity-50 mb-6">It’s easier to reach your savings goals when you have
-              the right savings.</p>
+            <p id="text-basic-plan-desc" class="opacity-50 mb-6">It’s easier to reach your savings goals when you have              the right savings.</p>
             <ul class="flex flex-col">
               <li class="mb-4">
                 <span class="fas fa-check text-blue-600 mr-2"></span>
@@ -512,9 +479,7 @@
                 <span id="text-basic-plan-feature5" class="opacity-50">Enterprise Agile Planning</span>
               </li>
             </ul>
-            <button id="text-basic-plan-button"
-              class="border border-blue-600 text-blue-600 rounded-md px-7 py-3 w-full mt-6 hover:bg-blue-600 hover:text-white duration-300">Choose
-              plan</button>
+            <button id="text-basic-plan-button" class="border border-blue-600 text-blue-600 rounded-md px-7 py-3 w-full mt-6 hover:bg-blue-600 hover:text-white duration-300">Choose plan</button>
           </div>
         </div>
         <!-- Standard Plan Card -->
@@ -522,8 +487,7 @@
           <div class="bg-blue-50 dark:bg-[#101D2C] p-4 lg:p-12">
             <h3 id="text-standard-plan-title" class="font-bold mb-2 text-3xl text-blue-600">Standard</h3>
             <div id="text-standard-plan-price-container" class="mb-3 text-blue-600">$199 /Monat</div>
-            <p id="text-standard-plan-desc" class="opacity-50 mb-6">Sed ut in perspiciatis unde omnis iste natus error
-              sit tatem laudantium.</p>
+            <p id="text-standard-plan-desc" class="opacity-50 mb-6">Sed ut in perspiciatis unde omnis iste natus error sit tatem laudantium.</p>
             <ul class="flex flex-col">
               <li class="mb-4">
                 <span class="fas fa-check text-blue-600 mr-2"></span>
@@ -546,9 +510,7 @@
                 <span id="text-standard-plan-feature5" class="opacity-50">Enterprise Agile Planning</span>
               </li>
             </ul>
-            <button id="text-standard-plan-button"
-              class="bg-blue-600 text-white border border-blue-600 hover:bg-opacity-90 py-3 px-7 rounded-md duration-300 w-full mt-6">Choose
-              plan</button>
+            <button id="text-standard-plan-button" class="bg-blue-600 text-white border border-blue-600 hover:bg-opacity-90 py-3 px-7 rounded-md duration-300 w-full mt-6">Choose plan</button>
           </div>
         </div>
         <!-- Premium Plan Card -->
@@ -559,8 +521,7 @@
               <span id="text-premium-plan-price" class="text-3xl font-bold">$399</span>
               <span id="text-premium-plan-month" class="ml-2 opacity-50">/month</span>
             </div>
-            <p id="text-premium-plan-desc" class="opacity-50 mb-6">It’s no secret that the digital industry is booming.
-              From to global brands.</p>
+            <p id="text-premium-plan-desc" class="opacity-50 mb-6">It’s no secret that the digital industry is booming. From to global brands.</p>
             <ul class="flex flex-col">
               <li class="mb-4">
                 <span class="fas fa-check text-blue-600 mr-2"></span>
@@ -583,9 +544,7 @@
                 <span id="text-premium-plan-feature5" class="opacity-50">Enterprise Agile Planning</span>
               </li>
             </ul>
-            <button id="text-premium-plan-button"
-              class="border border-blue-600 text-blue-600 rounded-md px-7 py-3 w-full mt-6 hover:bg-blue-600 hover:text-white duration-300">Choose
-              plan</button>
+            <button id="text-premium-plan-button" class="border border-blue-600 text-blue-600 rounded-md px-7 py-3 w-full mt-6 hover:bg-blue-600 hover:text-white duration-300">Choose plan</button>
           </div>
         </div>
       </div>
@@ -609,13 +568,10 @@
         </div>
         <div class="mb-4">
           <a href="#hero" id="text-footer-home" class="mx-2 text-gray-700 hover:text-[#009DAE] transition">Home</a>
-          <a href="#services" id="text-footer-services"
-            class="mx-2 text-gray-700 hover:text-[#009DAE] transition">Services</a>
-          <a href="#solutions" id="text-footer-solutions"
-            class="mx-2 text-gray-700 hover:text-[#009DAE] transition">Solutions</a>
+          <a href="#services" id="text-footer-services" class="mx-2 text-gray-700 hover:text-[#009DAE] transition">Services</a>
+          <a href="#solutions" id="text-footer-solutions" class="mx-2 text-gray-700 hover:text-[#009DAE] transition">Solutions</a>
           <a href="#about" id="text-footer-about" class="mx-2 text-gray-700 hover:text-[#009DAE] transition">About</a>
-          <a href="#contact" id="text-footer-contact"
-            class="mx-2 text-gray-700 hover:text-[#009DAE] transition">Contact</a>
+          <a href="#contact" id="text-footer-contact" class="mx-2 text-gray-700 hover:text-[#009DAE] transition">Contact</a>
         </div>
         <p id="text-footer-copy" class="text-sm text-gray-600">© 2025 Microsoft 365 Support. All rights reserved.</p>
         <a href="#" id="text-privacy-policy-link" class="underline">Privacy Policy</a> |
@@ -635,8 +591,7 @@
 
   <!-- PRIVACY POLICY MODAL -->
   <section id="privacy-policy-modal">
-    <div id="privacyPolicyModal"
-      class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
+    <div id="privacyPolicyModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
       <div class="bg-white rounded-lg p-8 max-w-3xl mx-4 overflow-y-auto max-h-screen">
         <h2 class="text-2xl font-bold mb-4">Privacy Policy / Datenschutzerklärung</h2>
         <p class="mb-4">
@@ -666,8 +621,7 @@
         <p class="mb-4">
           We may update this policy from time to time. Any changes will be posted on this page.
         </p>
-        <button id="closePrivacyPolicy"
-          class="mt-4 bg-[#009DAE] hover:bg-[#008494] text-white font-bold py-2 px-4 rounded">
+        <button id="closePrivacyPolicy" class="mt-4 bg-[#009DAE] hover:bg-[#008494] text-white font-bold py-2 px-4 rounded">
           Close
         </button>
       </div>
@@ -676,35 +630,25 @@
 
   <!-- TERMS OF SERVICE MODAL -->
   <section id="terms-service-modal">
-    <div id="privacyPolicyModal"
-      class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
+    <div id="privacyPolicyModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
       <div class="bg-white rounded-lg p-8 max-w-3xl mx-4 overflow-y-auto max-h-screen">
         <h2 id="text-privacyPolicy-modal-title" class="text-2xl font-bold mb-4">Privacy Policy</h2>
-        <p id="text-privacyPolicy-modal-intro" class="mb-4">This Privacy Policy explains how we handle your personal
-          data in accordance with the General Data Protection Regulation (GDPR) and the German Federal Data Protection
-          Act (BDSG).</p>
+        <p id="text-privacyPolicy-modal-intro" class="mb-4">This Privacy Policy explains how we handle your personal data in accordance with the General Data Protection          Regulation (GDPR) and the German Federal Data Protection Act (BDSG).</p>
         <h3 id="text-privacyPolicy-data-controller-title" class="font-semibold mb-2">1. Data Controller</h3>
         <div id="privacyPolicy-data-controller-desc" class="mb-4">
           <p id="text-privacyPolicy-data-controller-name">Anvilcloud</p>
           <p id="text-privacyPolicy-data-controller-address">[Your Address]</p>
-          <p>Email: <a href="mailto:conatact@anvilcloud.de" id="text-privacyPolicy-email"
-              class="text-blue-500">conatact@anvilcloud.de</a></p>
+          <p>Email: <a href="mailto:conatact@anvilcloud.de" id="text-privacyPolicy-email" class="text-blue-500">conatact@anvilcloud.de</a></p>
         </div>
-        <h3 id="text-privacyPolicy-data-collection-title" class="font-semibold mb-2">2. Data Collection and Processing
-        </h3>
-        <p id="text-privacyPolicy-data-collection-desc" class="mb-4">We collect and process personal data solely for
-          providing our services and in accordance with applicable law.</p>
+        <h3 id="text-privacyPolicy-data-collection-title" class="font-semibold mb-2">2. Data Collection and Processing</h3>
+        <p id="text-privacyPolicy-data-collection-desc" class="mb-4">We collect and process personal data solely for providing our services and in accordance with applicable law.</p>
         <h3 id="text-privacyPolicy-no-cookies-title" class="font-semibold mb-2">3. No Cookies Usage</h3>
-        <p id="text-privacyPolicy-no-cookies-desc" class="mb-4">Our website does not use cookies to track your browsing
-          behavior.</p>
+        <p id="text-privacyPolicy-no-cookies-desc" class="mb-4">Our website does not use cookies to track your browsing behavior.</p>
         <h3 id="text-privacyPolicy-your-rights-title" class="font-semibold mb-2">4. Your Rights</h3>
-        <p id="text-privacyPolicy-your-rights-desc" class="mb-4">You have the right to access, correct, or delete your
-          personal data. For any inquiries or to exercise your rights, please contact us.</p>
+        <p id="text-privacyPolicy-your-rights-desc" class="mb-4">You have the right to access, correct, or delete your personal data. For any inquiries or to exercise your          rights, please contact us.</p>
         <h3 id="text-privacyPolicy-changes-title" class="font-semibold mb-2">5. Changes to this Policy</h3>
-        <p id="text-privacyPolicy-changes-desc" class="mb-4">We may update this policy from time to time. Any changes
-          will be posted on this page.</p>
-        <button id="closePrivacyPolicy"
-          class="mt-4 bg-[#009DAE] hover:bg-[#008494] text-white font-bold py-2 px-4 rounded">
+        <p id="text-privacyPolicy-changes-desc" class="mb-4">We may update this policy from time to time. Any changes will be posted on this page.</p>
+        <button id="closePrivacyPolicy" class="mt-4 bg-[#009DAE] hover:bg-[#008494] text-white font-bold py-2 px-4 rounded">
           Close
         </button>
       </div>
@@ -715,12 +659,10 @@
 
   <!-- CONTACT APPROVAL MODAL -->
   <section id="contact-approval-modal">
-    <div id="contactApprovalModal"
-      class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
+    <div id="contactApprovalModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
       <div class="bg-white rounded-lg p-8 max-w-lg mx-4 text-center">
         <h2 id="text-contact-approval-title" class="text-2xl font-bold mb-4 text-[#003EAA]">Contact Received</h2>
-        <p id="text-contact-approval-desc" class="mb-6">Thank you for reaching out! Your message haas been received, and
-          we will get back to you shortly.</p>
+        <p id="text-contact-approval-desc" class="mb-6">Thank you for reaching out! Your message haas been received, and          we          will get back to you shortly.</p>
         <button id="closeApprovalModal" class="bg-[#009DAE] hover:bg-[#008494] text-white font-bold py-2 px-4 rounded">
           OK
         </button>
@@ -739,7 +681,4 @@
   <script src="../assets/js/main.js"></script>
 
 
-
-</body>
-
-</html>
+</body></html>

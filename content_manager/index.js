@@ -53,6 +53,9 @@ function updateHtmlFile(lang) {
   } else {
     return;
   }
+
+  sourceHtmlFilePath = path.join(__dirname, 'content', 'index.html');
+
   // We assume we're updating the "main" page content
   const pageData = jsonData['main'] || {};
   // Flatten the nested JSON: { section: { id: content } } => { id: content }
@@ -60,11 +63,11 @@ function updateHtmlFile(lang) {
   for (const section in pageData) {
     Object.assign(lookup, pageData[section]);
   }
-  if (!fs.existsSync(htmlFilePath)) {
-    logger.error(`HTML file not found at ${htmlFilePath}`);
+  if (!fs.existsSync(sourceHtmlFilePath)) {
+    logger.error(`HTML file not found at ${sourceHtmlFilePath}`);
     return;
   }
-  const htmlContent = fs.readFileSync(htmlFilePath, 'utf8');
+  const htmlContent = fs.readFileSync(sourceHtmlFilePath, 'utf8');
   const dom = new JSDOM(htmlContent);
   const document = dom.window.document;
   // For every element with an id attribute, if a matching key is found, update its innerHTML.
@@ -243,4 +246,5 @@ app.put('/translate/:page/:section/:id', (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
+  console.log('You can access the frontend at http://localhost:3000');
 });

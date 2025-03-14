@@ -101,3 +101,7 @@ main > section {
 .section {
   margin-bottom: 2rem;
 }
+
+.cnt-box {
+  height: 200px;
+}

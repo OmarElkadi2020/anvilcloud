@@ -26,7 +26,7 @@
         <!-- Brand Section -->
         <div class="flex items-center space-x-3">
           <a href="#">
-            <i class="fa-solid fa-cloud icon-hover text-3xl hover:text-[#009DAE] text-white transition"></i>
+            <i class="fa-solid fa-cloud icon-hover text-3xl hover:text-gray-300 text-white transition"></i>
           </a>
           <div>
             <a href="#" id="text-brand-name" class="text-2xl font-bold text-white hover:text-gray-300 transition">Erfolg 365</a>
@@ -38,43 +38,43 @@
         <!-- Desktop Menu -->
         <div class="hidden md:flex space-x-6">
           <div class="hidden md:flex space-x-6">
-            <a href="#hero" class="text-white hover:text-gray-300 hover:scale-125 transition delay-300">
+            <a href="#hero" class="text-white hover:scale-100 hover:text-cyan-500 hover:font-bold">
               <i class="fa-solid fa-house mr-1"></i><span id="text-nav-home">Startseite</span>
             </a>
-            <a href="#services" class="text-white hover:text-gray-300 hover:scale-125 transition delay-300 ease-in-out">
+            <a href="#services" class="text-white hover:scale-100  hover:font-bold hover:text-cyan-500">
               <i class="fa-solid fa-cogs mr-1"></i><span id="text-nav-services">Dienstleistungen</span>
             </a>
-            <a href="#solutions" class="text-white hover:text-gray-300 hover:scale-125 transition delay-300 ease-in-out">
+            <a href="#solutions" class="text-white  hover:scale-100 hover:font-bold hover:text-cyan-500 ">
               <i class="fa-solid fa-sitemap mr-1"></i><span id="text-nav-solutions">Lösungen</span>
             </a>
-            <a href="#about" class="text-white hover:text-gray-300 hover:scale-125 transition delay-300 ease-in-out">
+            <a href="#about" class="text-white hover:scale-100  hover:font-bold hover:text-cyan-500">
               <i class="fa-solid fa-user mr-1"></i><span id="text-nav-about">Über uns</span>
             </a>
-            <a href="#contact" class="text-white hover:text-gray-300 hover:scale-125 transition delay-300 ease-in-out">
+            <a href="#contact" class="text-white hover:scale-100 hover:font-bold hover:text-cyan-500">
               <i class="fa-solid fa-envelope mr-1"></i> <span id="text-nav-contact">Kontakt</span>
             </a>
           </div>
           <div class="hidden md:flex space-x-2"></div>
           <button onclick="changeLanguage('en')" class="flex items-center text-gray-700 hover:text-blue-500 focus:outline-none">
-            <span class="flag-icon flag-icon-us hover:scale-125 transition delay-300 ease-in-out"></span>
-          </button> 
+            <span class="flag-icon flag-icon-us hover:scale-125 hover:text-cyan-500 hover:font-bold"></span>
+          </button>
           <span class="text-white">|</span>
           <!-- German Button -->
           <button onclick="changeLanguage('de')" class="flex items-center text-gray-700 hover:text-blue-500 focus:outline-none">
-            <span class="flag-icon flag-icon-de hover:scale-125 transition delay-300 ease-in-out"></span>
-          </button>
-          </div>
-        </div>
-        <!-- Mobile Menu Toggle -->
-        <div class="md:hidden">
-          <button id="menu-btn" class="text-white focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-              </path>
-            </svg>
+            <span class="flag-icon flag-icon-de hover:scale-125 hover:text-cyan-500 hover:font-bold"></span>
           </button>
         </div>
       </div>
+      <!-- Mobile Menu Toggle -->
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-white focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+            </path>
+          </svg>
+        </button>
+      </div>
+    </div>
     
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-blue-600  text-center">
@@ -147,9 +147,9 @@
 
 
   <!-- SERVICES OVERVIEW SECTION -->
-  <section id="features" class="section bg-[#F5F5F5] sm:py-16">
-    <div class="container" data-aos="fade-up">
-      <div class="grid-list features-container mb-12" data-columns="4" data-columns-md="2" data-columns-sm="1">
+  <section id="features" class="section bg-[#F5F5F5]">
+    <div class="container translate-y-[-150px]">
+      <div class="grid-list mb-12" data-columns="4" data-columns-md="2" data-columns-sm="1">
         <div class="grid-box">
           <div class="grid-item">
             <div class="cnt-box cnt-box-top-icon boxed">
@@ -189,7 +189,7 @@
           </div>
         </div>
       </div>
-      <div class="container">
+      <div class="container" data-aos="fade-up">
         <h2 id="text-our-services-title" class="text-3xl font-bold text-center mb-12 text-[#003EAA]">Unsere Dienste</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- Service Card: Troubleshooting -->
@@ -223,23 +223,6 @@
       </div>
     </div>
   </section>
-
-
-  <style>
-    @media screen and (min-height: 600px) {
-      .features-container {
-        transform: translateY(-150px);
-        padding-top: 0px !important;
-        padding-bottom: 0px !important;
-        margin-top: 0px !important;
-        margin-bottom: 0px !important;
-      }
-    }
-
-    .cnt-box {
-      height: 200px;
-    }
-  </style>
 
   <!-- DETAILED SERVICES SECTION -->
   <section id="services-detail" class="section py-16">

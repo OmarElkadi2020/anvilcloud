@@ -244,7 +244,17 @@ app.put('/translate/:page/:section/:id', (req, res) => {
   logger.info('German content updated successfully');
 });
 
+
+
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
   console.log('You can access the frontend at http://localhost:3000');
+    // Watch the source HTML file for modifications and update German HTML accordingly.
+    const sourceHtmlFilePath = path.join(__dirname, 'content', 'index.html');
+    fs.watchFile(sourceHtmlFilePath, (curr, prev) => {
+      logger.info(`Source HTML file ${sourceHtmlFilePath} has been modified.`);
+      updateHtmlFile('de');
+      updateHtmlFile('en');
+    });
 });

@@ -7,7 +7,7 @@
       "text-slide-hardware": "Hardware to power your business",
       "text-hero-description": "Try now our free trial membership. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum\n              dolore eu fugiat nulla pariatur.",
       "text-consultation-link": "Free Consultation",
-      "text-trial-link": "Free Trialx"
+      "text-trial-link": "Free Trial"
     },
     "services": {
       "text-grid-smart-softwares-title": "Microsoft 365",
@@ -160,7 +160,7 @@
       "text-mobile-contact": "Contact"
     },
     "default": {
-      "text-brand-name": "Anvilcloud",
+      "text-brand-name": "Erfolg 365",
       "text-brand-tagline": "MS365 Professionals"
     }
   }

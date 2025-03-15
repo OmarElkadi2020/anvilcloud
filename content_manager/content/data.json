@@ -81,7 +81,7 @@
       "inquiry-option-3": "Free Trial"
     },
     "pricing": {
-      "text-pricing-title": "Pricing",
+      "text-pricing-title": "Our Pricing Plans",
       "text-pricing-subtitle": "Choose Your Suitable Plan",
       "text-basic-plan-title": "Basic",
       "text-basic-plan-price": "€50",
@@ -149,7 +149,7 @@
       "text-nav-home": "Home",
       "text-nav-services": "Services",
       "text-nav-about": "About",
-      "text-nav-pricing": "pricing",
+      "text-nav-pricing": "Plans",
       "text-nav-contact": "Contact",
       "text-nav-home-mobile": "Home",
       "text-nav-services-mobile": "Services",

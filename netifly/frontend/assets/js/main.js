@@ -37,10 +37,7 @@ const consultation = () => {
       'Dear Anvilcloud Administrator,\nI would like to request a consultation. Do you have time on xx.xx.xxxx at xx:xx or on xx.xx.xxxx at xx:xx?';
   }
 };
-/*************  ✨ Codeium Command ⭐  *************/
-/**
 
-/******  f64e1d5d-6b68-4b45-8839-78b2f74c9817  *******/
 const trial = () => {
   document.getElementById('inquiry').value = 'trial';
   if (window.location.href.includes('de')) {

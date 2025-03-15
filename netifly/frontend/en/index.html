@@ -44,11 +44,11 @@
             <a href="#services" class="text-white hover:scale-100  hover:font-bold hover:text-cyan-500">
               <i class="fa-solid fa-cogs mr-1"></i><span id="text-nav-services">Services</span>
             </a>
-            <a href="#solutions" class="text-white  hover:scale-100 hover:font-bold hover:text-cyan-500 ">
-              <i class="fa-solid fa-sitemap mr-1"></i><span id="text-nav-solutions">Solutions</span>
-            </a>
             <a href="#about" class="text-white hover:scale-100  hover:font-bold hover:text-cyan-500">
               <i class="fa-solid fa-user mr-1"></i><span id="text-nav-about">About</span>
+            </a>
+            <a href="#pricing" class="text-white hover:scale-100  hover:font-bold hover:text-cyan-500">
+              <i class="fa-solid fa-tag mr-1"></i><span id="text-nav-pricing">pricing</span>
             </a>
             <a href="#contact" class="text-white hover:scale-100 hover:font-bold hover:text-cyan-500">
               <i class="fa-solid fa-envelope mr-1"></i> <span id="text-nav-contact">Contact</span>
@@ -78,11 +78,14 @@
     
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-blue-600  text-center">
-      <a href="#hero" id="text-mobile-home" class="block px-4 py-2 text-white hover:bg-blue-500 transition">Home</a>
-      <a href="#services" id="text-mobile-services" class="block px-4 py-2 text-white hover:bg-blue-500 transition">Services</a>
-      <a href="#solutions" id="text-mobile-solutions" class="block px-4 py-2 text-white hover:bg-blue-500 transition">Solutions</a>
-      <a href="#about" id="text-mobile-about" class="block px-4 py-2 text-white hover:bg-blue-500 transition">About</a>
-      <a href="#contact" id="text-mobile-contact" class="block px-4 py-2 text-white hover:bg-blue-500 transition">Contact</a>
+      <a href="#hero" class="block px-4 py-2 text-white hover:bg-blue-500 transition">
+        <i class="fa-solid fa-house mr-1"></i><span id="text-nav-home-mobile">Home</span></a>
+      <a href="#services" class="block px-4 py-2 text-white hover:bg-blue-500 transition"> <i class="fa-solid fa-cogs mr-1"></i><span id="text-nav-services-mobile">Services</span>
+      </a>
+      <a href="#about" class="block px-4 py-2 text-white hover:bg-blue-500 transition"> <i class="fa-solid fa-user mr-1"></i><span id="text-nav-about-mobile">About</span>
+      </a>
+      <a href="#contact" class="block px-4 py-2 text-white hover:bg-blue-500 transition"> <i class="fa-solid fa-envelope mr-1"></i> <span id="text-nav-contact-mobile">Contact</span>
+      </a>
       <button onclick="changeLanguage('en')" class="items-center space-x-2 text-gray-700 hover:text-blue-500 focus:outline-none">
         <span class="flag-icon flag-icon-us"></span>
       </button>
@@ -119,10 +122,10 @@
                     <h1 id="text-slide-technology" class="text-4xl lg:text-5xl font-bold uppercase text-white">Technology to power your business</h1>
                   </li>
                   <li class="glide__slide">
-                    <h1 id="text-slide-software" class="text-4xl lg:text-5xl font-bold uppercase text-white">Software to power your business</h1>
+                    <h1 id="text-slide-software" class="text-4xl lg:text-5xl font-bold uppercase text-white">Porffessional Solutions to power your business</h1>
                   </li>
                   <li class="glide__slide">
-                    <h1 id="text-slide-hardware" class="text-4xl lg:text-5xl font-bold uppercase text-white">Hardware to power your business</h1>
+                    <h1 id="text-slide-hardware" class="text-4xl lg:text-5xl font-bold uppercase text-white">Round the hour Support to power your business</h1>
                   </li>
                 </ul>
               </div>
@@ -146,10 +149,9 @@
     </div>
   </section>
 
-
   <!-- SERVICES OVERVIEW SECTION -->
-  <section id="features" class="section bg-[#F5F5F5]">
-    <div class="container translate-y-[-150px]">
+  <section id="services" class="section bg-[#F5F5F5]">
+    <div class="container translate-y-[-75px]">
       <div class="grid-list mb-12" data-columns="4" data-columns-md="2" data-columns-sm="1">
         <div class="grid-box">
           <div class="grid-item">
@@ -165,8 +167,8 @@
             <div class="cnt-box cnt-box-top-icon boxed">
               <i class="fa-solid fa-shield-alt"></i>
               <div class="caption">
-                <h2 id="text-grid-trusted-security-title">Trusted Securit</h2>
-                <p id="text-grid-trusted-security-desc">Lorem consectetur adipi elitsed tempono.</p>
+                <h2 id="text-grid-trusted-security-title">Trusted Security</h2>
+                <p id="text-grid-trusted-security-desc">Proactive Protection, Peak Performance</p>
               </div>
             </div>
           </div>
@@ -174,8 +176,8 @@
             <div class="cnt-box cnt-box-top-icon boxed">
               <i class="fa-solid fa-trophy"></i>
               <div class="caption">
-                <h2 id="text-grid-awards-winners-title">Awards Winners</h2>
-                <p id="text-grid-awards-winners-desc">Ariento mesfato prodo arte e eli.</p>
+                <h2 id="text-grid-awards-winners-title">Efficiency</h2>
+                <p id="text-grid-awards-winners-desc">Maximized Productivity, Minimal Downtime</p>
               </div>
             </div>
           </div>
@@ -183,8 +185,8 @@
             <div class="cnt-box cnt-box-top-icon boxed">
               <i class="fa-solid fa-user-check"></i>
               <div class="caption">
-                <h2 id="text-grid-great-experience-title">Great Experience</h2>
-                <p id="text-grid-great-experience-desc">Lorem consectetur adipiscing elitsed pro.</p>
+                <h2 id="text-grid-great-experience-title">Customer Satisfaction</h2>
+                <p id="text-grid-great-experience-desc">Your Success, Our Commitment</p>
               </div>
             </div>
           </div>
@@ -198,24 +200,24 @@
             <div class="text-[#009DAE] mb-4 flex justify-center">
               <i class="fa-solid fa-wrench fa-2x icon-hover"></i>
             </div>
-            <h3 id="text-service-troubleshooting-title" class="text-xl font-bold mb-2 text-center">Troubleshooting</h3>
-            <p id="text-service-troubleshooting-desc" class="text-center">Rapid resolution of issues to minimize downtime.</p>
+            <h3 id="text-service-troubleshooting-title" class="text-xl font-bold mb-2 text-center">Microsoft 365 Administration</h3>
+            <p id="text-service-troubleshooting-desc" class="text-center">Proactive monitoring, quick issue resolution, and seamless day-to-day support.</p>
           </div>
           <!-- Service Card: Migration Services -->
           <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
             <div class="text-[#009DAE] mb-4 flex justify-center">
-              <i class="fa-solid fa-arrow-right-arrow-left fa-2x icon-hover"></i>
+              <i class="fa-solid fa-shield-halved fa-2x icon-hover"></i>
             </div>
-            <h3 id="text-service-migration-title" class="text-xl font-bold mb-2 text-center">Migration Services</h3>
-            <p id="text-service-migration-desc" class="text-center">Seamless migration of email, files, and apps with minimal disruption.</p>
+            <h3 id="text-service-migration-title" class="text-xl font-bold mb-2 text-center">Security &amp; Compliance</h3>
+            <p id="text-service-migration-desc" class="text-center">Robust protection with MFA, DLP, advanced threat management, and reliable backup solutions</p>
           </div>
           <!-- Service Card: Managed Support -->
           <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
             <div class="text-[#009DAE] mb-4 flex justify-center">
-              <i class="fa-solid fa-headset fa-2x icon-hover"></i>
+              <i class="fa-solid fa-piggy-bank fa-2x icon-hover"></i>
             </div>
-            <h3 id="text-service-managed-support-title" class="text-xl font-bold mb-2 text-center">Managed Support</h3>
-            <p id="text-service-managed-support-desc" class="text-center">Ongoing monitoring, maintenance, and support for all applications.</p>
+            <h3 id="text-service-managed-support-title" class="text-xl font-bold mb-2 text-center">Cost Optimization</h3>
+            <p id="text-service-managed-support-desc" class="text-center">Analysis and management of your Microsoft 365 licenses and subscriptions to eliminate waste and reduce costs </p>
           </div>
         </div>
         <div class="text-center mt-12">
@@ -226,45 +228,38 @@
   </section>
 
   <!-- DETAILED SERVICES SECTION -->
-  <section id="services-detail" class="section py-16">
+  <section id="services-detail" class="section py-7 md:py-14">
     <div class="container" data-aos="fade-up">
       <h2 id="text-detailed-services-title" class="text-3xl font-bold text-center mb-12 text-[#003EAA]">Detailed Services</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- Detailed Service Block -->
         <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl transition">
-          <h3 id="text-detail-troubleshooting-support-title" class="text-2xl font-bold mb-2 flex items-center">Troubleshooting &amp; Support</h3>
-          <p id="text-detail-troubleshooting-support-desc">Rapid issue resolution with expert technical assistance to
-            minimize downtime.</p>
+          <h3 id="text-detail-troubleshooting-support-title" class="text-2xl font-bold mb-2 flex items-center">Microsoft 365 Administration</h3>
+          <p id="text-detail-troubleshooting-support-desc">Proactive monitoring of your cloud services, regular patch management, user and license management, and on-call technical support to address any issues. We function as your outsourced IT admin for Microsoft 365</p>
         </div>
         <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl transition">
-          <h3 id="text-detail-migration-services-title" class="text-2xl font-bold mb-2 flex items-center">Migration Services</h3>
-          <p id="text-detail-migration-services-desc">Seamless migration of emails, files, and applications to Microsoft
-            365.</p>
+          <h3 id="text-detail-migration-services-title" class="text-2xl font-bold mb-2 flex items-center">Security &amp; Compliance</h3>
+          <p id="text-detail-migration-services-desc">Implementation of robust security measures (MFA, DLP, threat protection, encryption policies, backup and disaster recovery plans). We conduct security audits and ensure your Microsoft 365 environment adheres to compliance requirements, giving you peace of mind</p>
         </div>
         <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl transition">
-          <h3 id="text-detail-managed-support-title" class="text-2xl font-bold mb-2 flex items-center">Managed Support</h3>
-          <p id="text-detail-managed-support-desc">Continuous monitoring and proactive support for all your Microsoft
-            365 apps.</p>
+          <h3 id="text-detail-managed-support-title" class="text-2xl font-bold mb-2 flex items-center">Application Optimization</h3>
+          <p id="text-detail-managed-support-desc">Optimization and customization of Microsoft Teams for better communication, SharePoint for effective document management, Exchange/Outlook for streamlined email, and other Microsoft 365 apps to maximize productivity and user adoption.</p>
         </div>
         <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl transition">
-          <h3 id="text-detail-adoption-training-title" class="text-2xl font-bold mb-2 flex items-center">Adoption &amp; Training</h3>
-          <p id="text-detail-adoption-training-desc">Workshops, webinars, and guides to maximize your team’s
-            productivity.</p>
+          <h3 id="text-detail-adoption-training-title" class="text-2xl font-bold mb-2 flex items-center">Subscription Cost Optimization &amp; Billing Management</h3>
+          <p id="text-detail-adoption-training-desc">Analysis and management of your Microsoft 365 licenses and subscriptions to eliminate waste and reduce costs. We right-size your subscription plans, manage license renewals, and provide clear billing guidance so you get the most value out of your investment</p>
         </div>
         <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl transition">
-          <h3 id="text-detail-security-compliance-title" class="text-2xl font-bold mb-2 flex items-center">Security &amp; Compliance</h3>
-          <p id="text-detail-security-compliance-desc">Enhanced threat protection and compliance solutions to secure
-            your business.</p>
+          <h3 id="text-detail-security-compliance-title" class="text-2xl font-bold mb-2 flex items-center">Migration and Deployment Services</h3>
+          <p id="text-detail-security-compliance-desc">Planning and execution of migrations to Microsoft 365 or deployment of new Microsoft cloud services. Whether you’re moving from on-premises Exchange to Exchange Online or launching a new SharePoint site, we ensure a smooth, minimal-disruption transition with proper data migration and setup</p>
         </div>
         <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl transition">
-          <h3 id="text-detail-licensing-cost-opt-title" class="text-2xl font-bold mb-2 flex items-center">Licensing &amp; Cost Optimization</h3>
-          <p id="text-detail-licensing-cost-opt-desc">Expert advice on selecting licenses and maximizing
-            cost-efficiency.</p>
+          <h3 id="text-detail-licensing-cost-opt-title" class="text-2xl font-bold mb-2 flex items-center">Troubleshooting and Issue Resolution</h3>
+          <p id="text-detail-licensing-cost-opt-desc">Rapid diagnosis and resolution of Microsoft 365 issues. From email outages to Teams glitches, we troubleshoot problems efficiently. Our support reduces downtime and keeps your business running without IT headaches</p>
         </div>
         <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl transition md:col-span-2">
-          <h3 id="text-detail-custom-integration-title" class="text-2xl font-bold mb-2 flex items-center">Custom Integration/Workflow Automation</h3>
-          <p id="text-detail-custom-integration-desc">Tailored automation using Microsoft Power Platform to streamline
-            processes.</p>
+          <h3 id="text-detail-custom-integration-title" class="text-2xl font-bold mb-2 flex items-center">End-User Training &amp; Consulting</h3>
+          <p id="text-detail-custom-integration-desc">Personalized training sessions and consulting for your staff. We help your team learn best practices and hidden features in Microsoft 365, ensuring they use the tools effectively and confidently</p>
         </div>
       </div>
     </div>
@@ -272,37 +267,34 @@
 
 
   <!-- SOLUTIONS & APPROACH SECTION -->
-  <section id="solutions" class="section bg-[#F5F5F5] py-16">
+  <section id="solutions" class="section py-7 md:py-14 bg-[#F5F5F5]">
     <div class="container" data-aos="fade-up">
       <h2 id="text-our-approach-title" class="text-3xl font-bold text-center mb-12 text-[#003EAA]">Our Approach</h2>
       <div class="max-w-4xl mx-auto">
         <div class="flex flex-col md:flex-row items-center justify-between">
-          <div class="flex-1 text-center md:text-left">
+          <div class="flex-1 text-center md:text-left flex flex-col justify-center items-center">
             <h3 id="text-proactive-methodology-title" class="text-2xl font-bold mb-4">Proactive Methodology</h3>
             <!-- Replaced paragraph with a real flowchart using Mermaid -->
             <div id="flowchart-mermaid" class="mermaid mb-4">
               %%{init: {"theme": "base", "themeVariables": {"primaryTextColor": "#004767",
               "fontFamily": "Montserrat", "fontSize": "16px"}}}%%
               flowchart TD
-              A[Assessment] --&gt; B[Implementation]
-              A --&gt; C[Training &amp; Adoption]
-              B --&gt; D[Ongoing Monitoring]
-              D --&gt; E[Continuous Improvement]
+              A[Assessment &amp; Planning] --&gt; B[Secure Implementation]
+              B --&gt; D[Optimization &amp; Integration]
+              D --&gt; E[Ongoing Support &amp; Quality Assurance]
               style A fill:none,stroke:none,stroke-width:0,font-weight:bold,color:#004767
               style B fill:none,stroke:none,stroke-width:0,font-weight:bold,color:#004767
-              style C fill:none,stroke:none,stroke-width:0,font-weight:bold,color:#004767
               style D fill:none,stroke:none,stroke-width:0,font-weight:bold,color:#004767
               style E fill:none,stroke:none,stroke-width:0,font-weight:bold,color:#004767
             </div>
           </div>
           <div class="flex-1 mt-8 md:mt-0">
-            <img src="../assets/images/kelly-sikkema-Cg60_WXjvC4-unsplash.jpg" alt="Flowchart" class="mx-auto rounded-lg">
+            <img src="../assets/images/kelly-sikkema-Cg60_WXjvC4-unsplash.jpg" alt="Flowchart" class="mx-auto rounded-lg shadow-lg rotate-90">
           </div>
         </div>
         <div class="mt-12">
           <h3 id="text-tailored-approach-title" class="text-2xl font-bold mb-4">Tailored Approach</h3>
-          <p id="text-tailored-approach-desc">Every client’s needs are evaluated individually to craft flexible,
-            budget-friendly plans.</p>
+          <p id="text-tailored-approach-desc">Every client’s needs are evaluated individually to craft flexible,            budget-friendly plans.</p>
         </div>
         <div class="mt-12">
           <h3 id="text-outcomes-benefits-title" class="text-2xl font-bold mb-4">Outcomes &amp; Benefits</h3>
@@ -330,14 +322,14 @@
 
 
   <!-- ABOUT US & CULTURE SECTION -->
-  <section id="about" class="section py-16 relative overflow-hidden">
+  <section id="about" class="section py-7 md:py-14 overflow-hidden">
     <div class="container" data-aos="fade-up">
       <h2 id="text-about-title" class="text-3xl font-bold text-center mb-12 text-[#003EAA]">About Us</h2>
       <div class="md:flex md:space-x-12">
         <!-- Left column: Our Story -->
         <div class="md:flex-1 mb-8 md:mb-0" data-aos="fade-right">
           <h3 id="text-our-story-title" class="text-2xl font-bold mb-4">Our Story</h3>
-          <p id="text-our-story-desc">Founded with a passion for technology, our mission is to deliver top-tier Microsoft 365 support with            innovation and reliability. We empower businesses to achieve seamless digital transformation.</p>
+          <p id="text-our-story-desc">We are seasoned IT professionals with a passion for helping businesses harness the full potential of Microsoft 365. Our company may be small, but we offer big expertise, With our years of experience in Microsoft cloud administration and holds multiple Microsoft 365 certifications, underlining our commitment to technical excellence. We stay up-to-date with the latest Microsoft technologies and security practices, so you don’t have to.  At Erfolg 365, we pride ourselves on being a trusted partner to small and medium-sized enterprises and entrepreneurs. We understand the unique challenges that SMEs face when managing IT with limited resources. That’s why we deliver personalized support with an emphasis on responsiveness and clarity. When you work with us, you get direct access to an expert who genuinely cares about your business. Our mission is to make advanced Microsoft 365 solutions accessible and worry-free for businesses like yours.</p>
         </div>
         <!-- Right column: Team -->
         <div class="md:flex-1" data-aos="fade-left">
@@ -355,31 +347,122 @@
               <p id="text-team-member-jordan-name" class="font-bold">Tech LeadTech Lead</p>
               <p id="text-team-member-jordan-role" class="text-sm">Support Specialist</p>
             </div>
-            <!-- Team Member Card -->
-            <div class="text-center group" data-aos="zoom-in" data-aos-delay="300">
-              <img src="https://blog.pincel.app/wp-content/uploads/2024/02/smiling_full_body_professional_headshot_with_soft_lighting_blurred_office_background_formal_white_shirt.jpeg" alt="Team Member" class="rounded-full mx-auto mb-2 w-36 h-36 md:w-48 md:h-48 object-cover transform transition duration-300 ease-in-out group-hover:scale-105">
-              <p id="text-team-member-taylor-name" class="font-bold">Taylor</p>
-              <p id="text-team-member-taylor-role" class="text-sm">Migration Expert</p>
-            </div>
-            <!-- Team Member Card -->
-            <div class="text-center group" data-aos="zoom-in" data-aos-delay="400">
-              <img src="https://blog.pincel.app/wp-content/uploads/2024/02/smiling_full_body_professional_headshot_with_soft_lighting_blurred_office_background_formal_white_shirt.jpeg" alt="Team Member" class="rounded-full mx-auto mb-2 w-36 h-36 md:w-48 md:h-36 md:h-48 object-cover transform transition duration-300 ease-in-out group-hover:scale-105">
-              <p id="text-team-member-morgan-name" class="font-bold">Morgan</p>
-              <p id="text-team-member-morgan-role" class="text-sm">Customer Success</p>
-            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <section id="pricing" class="ezy__pricing2 section py-7 md:py-14 bg-white text-zinc-900 ">
+    <div class="container px-4">
+      <h2 id="text-pricing-title" class="text-3xl font-bold text-center mb-12 text-[#003EAA]">Pricing</h2>
+      <p id="text-pricing-intro" class="text-left text-lg font-bold mb-12">We offer three flexible pricing packages to fit your needs. Each plan is designed to provide excellent value and transparent service levels, so you know exactly what you’re getting. (Pricing is per user per month unless otherwise noted. Contact us for volume discounts or custom enterprise needs.)</p>
+      <div class="grid grid-cols-12 mb-12">
+        <div class="col-span-12 lg:col-span-6 lg:col-start-4 text-center">
+          <h2 id="text-pricing-subtitle" class="text-3xl leading-none md:text-[45px] font-bold mb-4">Choose Your Suitable Plan</h2>
+        </div>
+      </div>
+      <div class="grid grid-cols-12 dark:text-white">
+        <!-- Basic Plan Card -->
+        <div class="col-span-12 lg:col-span-4 p-0 mt-4 lg:mt-0 lg:border-r lg:dark:border-gray-800 mr-4">
+          <div class="bg-blue-50 dark:bg-[#101D2C] p-4 lg:p-12 h-full flex flex-col justify-between rounded-lg shadow hover:shadow-lg">
+            <h3 id="text-basic-plan-title" class="font-bold mb-2 text-3xl">Basic</h3>
+            <div class="mb-3">
+              <span id="text-basic-plan-price" class="text-3xl font-bold">€50</span>
+              <span id="text-basic-plan-month" class="ml-2 opacity-50">Per user/month</span>
+            </div>
+            <p id="text-basic-plan-desc" class="opacity-50 mb-6"> Ideal for freelancers or small teams that need essential support for Microsoft 365 without breaking the bank. This entry-level package focuses on core maintenance and reactive support.</p>
+            <ul class="flex flex-col">
+              <li class="mb-4">
+                <span class="fas fa-check text-blue-600 mr-2"></span>
+                <span id="text-basic-plan-feature1" class="opacity-50">Core Support</span>
+              </li>
+              <li class="mb-4">
+                <span class="fas fa-check text-blue-600 mr-2"></span>
+                <span id="text-basic-plan-feature2" class="opacity-50">Essential Security</span>
+              </li>
+              <li class="mb-4">
+                <span class="fas fa-check text-blue-600 mr-2"></span>
+                <span id="text-basic-plan-feature3" class="opacity-50">Support Access</span>
+              </li>
+            </ul>
+            <button id="text-basic-plan-button" class="border border-blue-600 text-blue-600 rounded-md px-7 py-3 w-full mt-6 hover:bg-blue-600 hover:text-white duration-300">Choose plan</button>
+          </div>
+        </div>
+        <!-- Standard Plan Card -->
+        <div class="col-span-12 lg:col-span-4 p-0 mt-4 lg:mt-0 lg:border-r lg:dark:border-gray-800 mr-4 ">
+          <div class="bg-blue-50 dark:bg-[#101D2C] p-4 lg:p-12 h-full flex flex-col justify-between rounded-lg shadow hover:shadow-lg">
+            <h3 id="text-standard-plan-title" class="font-bold mb-2 text-3xl text-blue-600">Advanced</h3>
+            <div class="mb-3">
+              <span id="text-standard-plan-price" class="text-3xl font-bold">€120</span>
+              <span id="text-standard-plan-month" class="ml-2 opacity-50">Per user/month</span>
+            </div>
+            <p id="text-standard-plan-desc" class="opacity-50 mb-6">Designed for growing businesses that require more proactive management and enhanced security. This mid-tier plan adds greater coverage and optimization features on top of the basics.</p>
+            <ul class="flex flex-col">
+              <li class="mb-4">
+                <span class="fas fa-check text-blue-600 mr-2"></span>
+                <span id="text-standard-plan-feature1" class="opacity-50">All Basic Services, Plus...</span>
+              </li>
+              <li class="mb-4">
+                <span class="fas fa-check text-blue-600 mr-2"></span>
+                <span id="text-standard-plan-feature2" class="opacity-50">Enhanced Security &amp; Compliance</span>
+              </li>
+              <li class="mb-4">
+                <span class="fas fa-check text-blue-600 mr-2"></span>
+                <span id="text-standard-plan-feature3" class="opacity-50">Application Optimization</span>
+              </li>
+              <li class="mb-4">
+                <span class="fas fa-check text-blue-600 mr-2"></span>
+                <span id="text-standard-plan-feature4" class="opacity-50">Priority Support</span>
+              </li>
+            </ul>
+            <button id="text-standard-plan-button" class="bg-blue-600 text-white border border-blue-600 hover:bg-opacity-90 py-3 px-7 rounded-md duration-300 w-full mt-6">Choose plan</button>
+          </div>
+        </div>
+        <!-- Premium Plan Card -->
+        <div class="col-span-12 lg:col-span-4 p-0 mt-4 lg:mt-0 mr-4">
+          <div class="bg-blue-50 dark:bg-[#101D2C] p-4 lg:p-12 h-full flex flex-col justify-between rounded-lg shadow hover:shadow-lg">
+            <h3 id="text-premium-plan-title" class="font-bold mb-2 text-3xl">Enterprise</h3>
+            <div class="mb-3">
+              <span id="text-premium-plan-price" class="text-3xl font-bold">€200</span>
+              <span id="text-premium-plan-month" class="ml-2 opacity-50">Per user/month</span>
+            </div>
+            <p id="text-premium-plan-desc" class="opacity-50 mb-6">A comprehensive, fully managed service for businesses that want hands-off, worry-free IT. Our Premium package offers the highest level of attention, including strategic guidance and unlimited support</p>
+            <ul class="flex flex-col">
+              <li class="mb-4">
+                <span class="fas fa-check text-blue-600 mr-2"></span>
+                <span id="text-premium-plan-feature1" class="opacity-50">Fully Managed Support</span>
+              </li>
+              <li class="mb-4">
+                <span class="fas fa-check text-blue-600 mr-2"></span>
+                <span id="text-premium-plan-feature2" class="opacity-50">Strategic Security Management</span>
+              </li>
+              <li class="mb-4">
+                <span class="fas fa-check text-blue-600 mr-2"></span>
+                <span id="text-premium-plan-feature3" class="opacity-50">Training &amp; Consultation</span>
+              </li>
+              <li class="mb-4">
+                <span class="fas fa-check text-blue-600 mr-2"></span>
+                <span id="text-premium-plan-feature4" class="opacity-50">License Optimization &amp; Reporting</span>
+              </li>
+              <li>
+                <span class="fas fa-check text-blue-600 mr-2"></span>
+                <span id="text-premium-plan-feature5" class="opacity-50">Enterprise Agile Planning</span>
+              </li>
+            </ul>
+            <button id="text-premium-plan-button" class="border border-blue-600 text-blue-600 rounded-md px-7 py-3 w-full mt-6 hover:bg-blue-600 hover:text-white duration-300">Choose plan</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- CONTACT SECTION -->
-  <section id="contact" class="py-16">
+  <section id="contact" class="section">
     <div class="container" data-aos="fade-up">
       <h2 id="text-contact-title" class="text-3xl font-bold text-center mb-12 text-[#003EAA]">Get in Touch</h2>
       <div class="max-w-3xl mx-auto">
-        <form id="contact-form" class="bg-gray-50 p-8 rounded-lg shadow-lg">
+        <form id="contact-form" class="bg-gray-50 p-8">
           <!-- First Row: Name and Email -->
           <div class="flex flex-wrap -mx-2 mb-4">
             <div class="w-full md:w-1/2 px-2 mb-4 md:mb-0">
@@ -404,12 +487,11 @@
           </div>
           <!-- Inquiry Selection -->
           <div class="mb-4" onchange="required()">
-            <label id="text-contact-inquiry-label" for="inquiry" class="text-gray-700 font-semibold">Type of              Inquiry</label>
+            <label id="text-contact-inquiry-label" for="inquiry" class="text-gray-700 font-semibold">Type of Inquiry</label>
             <select id="inquiry" class="w-full p-2 border rounded">
-              <option value="general">General Question</option>
-              <option value="support">Support Issue</option>
-              <option value="consultation">Consultation Request</option>
-              <option value="trial">Free Trial</option>
+              <option id="inquiry-option-1" value="general">General Question</option>
+              <option id="inquiry-option-2" value="consultation">Free Consultation</option>
+              <option id="inquiry-option-3" value="trial">Free Trial</option>
             </select>
           </div>
           <!-- Message Textarea -->
@@ -421,120 +503,6 @@
           <button type="submit" id="text-contact-send-message" class="w-full bg-[#009DAE] hover:bg-[#008494] text-white font-bold py-3 rounded transition">Send Message</button>
         </form>
         <div id="text-contact-form-response" class="mt-4 text-center"></div>
-      </div>
-    </div>
-  </section>
-
-
-  <section id="pricing" class="ezy__pricing2 py-14 md:py-24 bg-white text-zinc-900 ">
-    <div class="container px-4">
-      <h2 id="text-pricing-title" class="text-3xl font-bold text-center mb-12 text-[#003EAA]">Pricing</h2>
-      <div class="grid grid-cols-12 mb-12">
-        <div class="col-span-12 lg:col-span-6 lg:col-start-4 text-center">
-          <h2 id="text-pricing-subtitle" class="text-3xl leading-none md:text-[45px] font-bold mb-4">Choose Your Suitable Plan</h2>
-          <p id="text-pricing-description">Choice suitable plan for you.</p>
-        </div>
-      </div>
-      <div class="grid grid-cols-12 dark:text-white">
-        <!-- Basic Plan Card -->
-        <div class="col-span-12 lg:col-span-4 p-0 mt-4 lg:mt-0 lg:border-r lg:dark:border-gray-800">
-          <div class="bg-blue-50 dark:bg-[#101D2C] p-4 lg:p-12">
-            <h3 id="text-basic-plan-title" class="font-bold mb-2 text-3xl">Basic</h3>
-            <div class="mb-3">
-              <span id="text-basic-plan-price" class="text-3xl font-bold">$20</span>
-              <span id="text-basic-plan-month" class="ml-2 opacity-50">/month</span>
-            </div>
-            <p id="text-basic-plan-desc" class="opacity-50 mb-6">It’s easier to reach your savings goals when you have              the right savings.</p>
-            <ul class="flex flex-col">
-              <li class="mb-4">
-                <span class="fas fa-check text-blue-600 mr-2"></span>
-                <span id="text-basic-plan-feature1" class="opacity-50">Unlimited subscribers</span>
-              </li>
-              <li class="mb-4">
-                <span class="fas fa-check text-blue-600 mr-2"></span>
-                <span id="text-basic-plan-feature2" class="opacity-50">Up to 62K emails per month</span>
-              </li>
-              <li class="mb-4">
-                <span class="fas fa-check text-blue-600 mr-2"></span>
-                <span id="text-basic-plan-feature3" class="opacity-50">24/7 Contact support</span>
-              </li>
-              <li class="mb-4">
-                <span class="fas fa-check text-blue-600 mr-2"></span>
-                <span id="text-basic-plan-feature4" class="opacity-50">MailBluster's branding</span>
-              </li>
-              <li>
-                <span class="fas fa-check text-blue-600 mr-2"></span>
-                <span id="text-basic-plan-feature5" class="opacity-50">Enterprise Agile Planning</span>
-              </li>
-            </ul>
-            <button id="text-basic-plan-button" class="border border-blue-600 text-blue-600 rounded-md px-7 py-3 w-full mt-6 hover:bg-blue-600 hover:text-white duration-300">Choose plan</button>
-          </div>
-        </div>
-        <!-- Standard Plan Card -->
-        <div class="col-span-12 lg:col-span-4 p-0 mt-4 lg:mt-0 lg:border-r lg:dark:border-gray-800">
-          <div class="bg-blue-50 dark:bg-[#101D2C] p-4 lg:p-12">
-            <h3 id="text-standard-plan-title" class="font-bold mb-2 text-3xl text-blue-600">Standard</h3>
-            <div id="text-standard-plan-price-container" class="mb-3 text-blue-600">$199 /Monat</div>
-            <p id="text-standard-plan-desc" class="opacity-50 mb-6">Sed ut in perspiciatis unde omnis iste natus error sit tatem laudantium.</p>
-            <ul class="flex flex-col">
-              <li class="mb-4">
-                <span class="fas fa-check text-blue-600 mr-2"></span>
-                <span id="text-standard-plan-feature1" class="opacity-50">Unlimited subscribers</span>
-              </li>
-              <li class="mb-4">
-                <span class="fas fa-check text-blue-600 mr-2"></span>
-                <span id="text-standard-plan-feature2" class="opacity-50">Up to 62K emails per month</span>
-              </li>
-              <li class="mb-4">
-                <span class="fas fa-check text-blue-600 mr-2"></span>
-                <span id="text-standard-plan-feature3" class="opacity-50">24/7 Contact support</span>
-              </li>
-              <li class="mb-4">
-                <span class="fas fa-check text-blue-600 mr-2"></span>
-                <span id="text-standard-plan-feature4" class="opacity-50">MailBluster's branding</span>
-              </li>
-              <li>
-                <span class="fas fa-check text-blue-600 mr-2"></span>
-                <span id="text-standard-plan-feature5" class="opacity-50">Enterprise Agile Planning</span>
-              </li>
-            </ul>
-            <button id="text-standard-plan-button" class="bg-blue-600 text-white border border-blue-600 hover:bg-opacity-90 py-3 px-7 rounded-md duration-300 w-full mt-6">Choose plan</button>
-          </div>
-        </div>
-        <!-- Premium Plan Card -->
-        <div class="col-span-12 lg:col-span-4 p-0 mt-4 lg:mt-0">
-          <div class="bg-blue-50 dark:bg-[#101D2C] p-4 lg:p-12">
-            <h3 id="text-premium-plan-title" class="font-bold mb-2 text-3xl">Premium</h3>
-            <div class="mb-3">
-              <span id="text-premium-plan-price" class="text-3xl font-bold">$399</span>
-              <span id="text-premium-plan-month" class="ml-2 opacity-50">/month</span>
-            </div>
-            <p id="text-premium-plan-desc" class="opacity-50 mb-6">It’s no secret that the digital industry is booming. From to global brands.</p>
-            <ul class="flex flex-col">
-              <li class="mb-4">
-                <span class="fas fa-check text-blue-600 mr-2"></span>
-                <span id="text-premium-plan-feature1" class="opacity-50">Unlimited subscribers</span>
-              </li>
-              <li class="mb-4">
-                <span class="fas fa-check text-blue-600 mr-2"></span>
-                <span id="text-premium-plan-feature2" class="opacity-50">Up to 62K emails per month</span>
-              </li>
-              <li class="mb-4">
-                <span class="fas fa-check text-blue-600 mr-2"></span>
-                <span id="text-premium-plan-feature3" class="opacity-50">24/7 Contact support</span>
-              </li>
-              <li class="mb-4">
-                <span class="fas fa-check text-blue-600 mr-2"></span>
-                <span id="text-premium-plan-feature4" class="opacity-50">MailBluster's branding</span>
-              </li>
-              <li>
-                <span class="fas fa-check text-blue-600 mr-2"></span>
-                <span id="text-premium-plan-feature5" class="opacity-50">Enterprise Agile Planning</span>
-              </li>
-            </ul>
-            <button id="text-premium-plan-button" class="border border-blue-600 text-blue-600 rounded-md px-7 py-3 w-full mt-6 hover:bg-blue-600 hover:text-white duration-300">Choose plan</button>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -557,7 +525,6 @@
         <div class="mb-4">
           <a href="#hero" id="text-footer-home" class="mx-2 text-gray-700 hover:text-[#009DAE] transition">Home</a>
           <a href="#services" id="text-footer-services" class="mx-2 text-gray-700 hover:text-[#009DAE] transition">Services</a>
-          <a href="#solutions" id="text-footer-solutions" class="mx-2 text-gray-700 hover:text-[#009DAE] transition">Solutions</a>
           <a href="#about" id="text-footer-about" class="mx-2 text-gray-700 hover:text-[#009DAE] transition">About</a>
           <a href="#contact" id="text-footer-contact" class="mx-2 text-gray-700 hover:text-[#009DAE] transition">Contact</a>
         </div>
@@ -624,7 +591,7 @@
         <p id="text-privacyPolicy-modal-intro" class="mb-4">This Privacy Policy explains how we handle your personal data in accordance with the General Data Protection          Regulation (GDPR) and the German Federal Data Protection Act (BDSG).</p>
         <h3 id="text-privacyPolicy-data-controller-title" class="font-semibold mb-2">1. Data Controller</h3>
         <div id="privacyPolicy-data-controller-desc" class="mb-4">
-          <p id="text-privacyPolicy-data-controller-name">Anvilcloud</p>
+          <p id="text-privacyPolicy-data-controller-name">Erfolg 365</p>
           <p id="text-privacyPolicy-data-controller-address">[Your Address]</p>
           <p>Email: <a href="mailto:conatact@anvilcloud.de" id="text-privacyPolicy-email" class="text-blue-500">conatact@anvilcloud.de</a></p>
         </div>
@@ -643,8 +610,6 @@
     </div>
   </section>
 
-
-
   <!-- CONTACT APPROVAL MODAL -->
   <section id="contact-approval-modal">
     <div id="contactApprovalModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
@@ -657,7 +622,6 @@
       </div>
     </div>
   </section>
-
 
   <!-- JavaScript Libraries -->
   <!-- Glide JS -->

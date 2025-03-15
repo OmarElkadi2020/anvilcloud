@@ -5,7 +5,7 @@
       "text-slide-technology": "Technologie, um Ihr Geschäft zu versorgen",
       "text-slide-software": "Porffessionelle Lösungen, um Ihr Geschäft zu betreiben",
       "text-slide-hardware": "Hardware, um Ihr Unternehmen zu versorgen",
-      "text-hero-description": "Versuchen Sie es jetzt unsere kostenlose Probe -Mitgliedschaft. DUIS AUTE IRURE DOLOR IN VERREHENTENIT IN VOLUPTATE VELIT ESSE CILLUM              Dolore Eu Fugiat Nulla Pariatur.",
+      "text-hero-description": "Versuchen Sie es jetzt unsere kostenlose Probe -Mitgliedschaft.",
       "text-consultation-link": "Kostenlose Beratung",
       "text-trial-link": "Kostenlos Testen"
     },
@@ -85,7 +85,7 @@
       "text-pricing-subtitle": "Wählen Sie Ihren passenden Plan",
       "text-basic-plan-title": "Basic",
       "text-basic-plan-price": "€50",
-      "text-basic-plan-month": "Pro Nutzer/Monat",
+      "text-basic-plan-month": "Pro Nutzer/ Monat",
       "text-basic-plan-desc": "Ideal für Freiberufler oder kleine Teams, die einen grundlegenden Support für Microsoft 365 benötigen, ohne dass die Kosten ins Unermessliche steigen. Dieses Einstiegspaket konzentriert sich auf die Kernwartung und den reaktiven Support.",
       "text-basic-plan-feature1": "Basic Support",
       "text-basic-plan-feature2": "Essenzielle Sicherheit",
@@ -93,7 +93,7 @@
       "text-basic-plan-button": "Plan auswählen",
       "text-standard-plan-title": "Advanced",
       "text-standard-plan-price": "€120",
-      "text-standard-plan-month": "Pro Nutzer/Monat",
+      "text-standard-plan-month": "Pro Nutzer/ Monat",
       "text-standard-plan-desc": "Konzipiert für wachsende Unternehmen, die eine proaktive Verwaltung und verbesserte Sicherheit benötigen. Dieser Mid-Tier-Tarif bietet zusätzlich zu den Grundlagen eine größere Abdeckung und Optimierungsfunktionen.",
       "text-standard-plan-feature1": "Alle Deinste vom Basic , plus...",
       "text-standard-plan-feature2": "Verbesserte Sicherheit und Compliance",
@@ -103,7 +103,7 @@
       "text-standard-plan-button": "Plan auswählen",
       "text-premium-plan-title": "Enterprise",
       "text-premium-plan-price": "€200",
-      "text-premium-plan-month": "Pro Nutzer/Monat",
+      "text-premium-plan-month": "Pro Nutzer/ Monat",
       "text-premium-plan-desc": "Ein umfassender, voll bewirtschafteter Service für Unternehmen, die sich von Hands-Off wünschen, sorgen Sie sich. Unser Premium -Paket bietet die höchste Aufmerksamkeit, einschließlich strategischer Anleitung und unbegrenzter Unterstützung",
       "text-premium-plan-feature1": "Fully Managed Support",
       "text-premium-plan-feature2": "Strategisches Sicherheitsmanagement",
@@ -111,7 +111,7 @@
       "text-premium-plan-feature4": "Lizenz-Optimierung & Berichterstattung",
       "text-premium-plan-feature5": "Agile Unternehmensplanung",
       "text-premium-plan-button": "Plan auswählen",
-      "text-pricing-intro": "Wir bieten drei flexible Preispakete an, die Ihren Bedürfnissen entsprechen. Jeder Plan ist so konzipiert, dass er ein hervorragendes Preis-Leistungs-Verhältnis und transparente Service-Levels bietet, damit Sie genau wissen, was Sie bekommen. (Die Preise gelten pro Benutzer und Monat, sofern nicht anders angegeben. Kontaktieren Sie uns für Mengenrabatte oder individuelle Unternehmensanforderungen)."
+      "text-pricing-intro": "Wir bieten drei flexible Preispakete an, die Ihren Bedürfnissen entsprechen. Jeder Plan ist so konzipiert, dass er ein hervorragendes Preis-Leistungs-Verhältnis und ein transparentes Serviceniveau bietet, damit Sie genau wissen, was Sie bekommen."
     },
     "footer": {
       "text-footer-home": "Startseite",
@@ -119,7 +119,7 @@
       "text-footer-solutions": "Lösungen",
       "text-footer-about": "Über uns",
       "text-footer-contact": "Kontakt",
-      "text-footer-copy": " © 2025 Microsoft 365 Support. Alle Rechte vorbehalten. ",
+      "text-footer-copy": "© 2025 Erfolg 365. Alle Rechte vorbehalten.",
       "text-privacy-policy-link": "Datenschutzbestimmungen",
       "text-terms-service-link": "Bedingungen der Dienstleistung"
     },
@@ -148,7 +148,7 @@
       "text-nav-home": "Startseite",
       "text-nav-services": "Dienstleistungen",
       "text-nav-about": "Über Uns",
-      "text-nav-pricing": "Preise Pläne",
+      "text-nav-pricing": "Preise",
       "text-nav-contact": "Kontakt",
       "text-nav-home-mobile": "Startseite",
       "text-nav-services-mobile": "Dienstleistungen",

@@ -5,7 +5,7 @@
       "text-slide-technology": "Technology to power your business",
       "text-slide-software": "Porffessional Solutions to power your business",
       "text-slide-hardware": "Round the hour Support to power your business",
-      "text-hero-description": "Try now our free trial membership. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum\n              dolore eu fugiat nulla pariatur.",
+      "text-hero-description": "Try now our free trial membership.",
       "text-consultation-link": "Free Consultation",
       "text-trial-link": "Free Trial"
     },
@@ -85,7 +85,7 @@
       "text-pricing-subtitle": "Choose Your Suitable Plan",
       "text-basic-plan-title": "Basic",
       "text-basic-plan-price": "€50",
-      "text-basic-plan-month": "Per user/month",
+      "text-basic-plan-month": "Per User/ Month",
       "text-basic-plan-desc": " Ideal for freelancers or small teams that need essential support for Microsoft 365 without breaking the bank. This entry-level package focuses on core maintenance and reactive support.",
       "text-basic-plan-feature1": "Core Support",
       "text-basic-plan-feature2": "Essential Security",
@@ -93,7 +93,7 @@
       "text-basic-plan-button": "Choose plan",
       "text-standard-plan-title": "Advanced",
       "text-standard-plan-price": "€120",
-      "text-standard-plan-month": "Per user/month",
+      "text-standard-plan-month": "Per User/ Month",
       "text-standard-plan-desc": "Designed for growing businesses that require more proactive management and enhanced security. This mid-tier plan adds greater coverage and optimization features on top of the basics.",
       "text-standard-plan-feature1": "All Basic Services, Plus...",
       "text-standard-plan-feature2": "Enhanced Security & Compliance",
@@ -103,7 +103,7 @@
       "text-standard-plan-button": "Choose plan",
       "text-premium-plan-title": "Enterprise",
       "text-premium-plan-price": "€200",
-      "text-premium-plan-month": "Per user/month",
+      "text-premium-plan-month": "Per User/ Month",
       "text-premium-plan-desc": "A comprehensive, fully managed service for businesses that want hands-off, worry-free IT. Our Premium package offers the highest level of attention, including strategic guidance and unlimited support",
       "text-premium-plan-feature1": "Fully Managed Support",
       "text-premium-plan-feature2": "Strategic Security Management",
@@ -111,7 +111,7 @@
       "text-premium-plan-feature4": "License Optimization & Reporting",
       "text-premium-plan-feature5": "Enterprise Agile Planning",
       "text-premium-plan-button": "Choose plan",
-      "text-pricing-intro": "We offer three flexible pricing packages to fit your needs. Each plan is designed to provide excellent value and transparent service levels, so you know exactly what you’re getting. (Pricing is per user per month unless otherwise noted. Contact us for volume discounts or custom enterprise needs.)"
+      "text-pricing-intro": "We offer three flexible pricing packages to fit your needs. Each plan is designed to provide excellent value and         transparent service levels, so you know exactly what you’re getting."
     },
     "footer": {
       "text-footer-home": "Home",
@@ -119,7 +119,7 @@
       "text-footer-solutions": "Solutions",
       "text-footer-about": "About",
       "text-footer-contact": "Contact",
-      "text-footer-copy": "© 2025 Microsoft 365 Support. All rights reserved.",
+      "text-footer-copy": "© 2025 Erfolg 365. All rights reserved.",
       "text-privacy-policy-link": "Privacy Policy",
       "text-terms-service-link": "Terms of Service"
     },

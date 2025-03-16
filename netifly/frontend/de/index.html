@@ -24,13 +24,15 @@
     <div class="container mx-auto px-4">
       <div class="flex items-center justify-between py-4">
         <!-- Brand Section -->
-        <div class="flex items-center space-x-3">
+        <div class="flex items-center space-x-4 group">
           <a href="#">
-            <i class="fa-solid fa-cloud icon-hover text-3xl hover:text-gray-300 text-white transition"></i>
+            <i class="fa-solid fa-cloud icon-hover text-4xl text-[#4CBAC6] group-hover:text-white transition ease-in-out duration-300"></i>
           </a>
-          <div>
-            <a href="#" id="text-brand-name" class="text-2xl font-bold text-white hover:text-gray-300 transition">ERFOLG 365</a>
-            <p class="text-white text-[14px] font-bold hover:text-gray-300 animate-bounce">
+          <div class="flex flex-col ml-0">
+            <p href="#" class="text-xl font-bold text-[#4CBAC6] group-hover:text-white transition ease-in-out duration-300">
+              <a href="#" id="text-brand-name">ERFOLG 365</a>
+            </p>
+            <p class="text-white text-[14px] font-bold group-hover:text-[#4CBAC6] transition ease-in-out duration-300">
               <a href="#" id="text-brand-tagline">MS365 PROFESSIONALS</a>
             </p>
           </div>
@@ -71,14 +73,14 @@
         </div>
       </div>
       <!-- Mobile Menu Toggle -->
-      <div class="md:hidden">
+      <!-- <div class="md:hidden">
         <button id="menu-btn" class="text-white focus:outline-none">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
             </path>
           </svg>
         </button>
-      </div>
+      </div> -->
     </div>
     
     <!-- Mobile Menu -->
@@ -276,18 +278,18 @@
     <div class="container" data-aos="fade-up">
       <h2 id="text-our-approach-title" class="text-3xl font-bold text-center mb-12 text-[#003EAA]">Unser Ansatz</h2>
       <div class="mx-auto">
-        <div class="flex flex-col md:flex-row items-center justify-between">
-          <div class="flex-1 text-center md:text-left flex flex-col justify-center items-center">
-            <!-- <h3 id="text-proactive-methodology-title" class="text-2xl font-bold mb-4">Proactive Methodology</h3> -->
+        <div class="flex flex-col md:flex-row items-center justify-between items-stretch">
+          <div class="flex-1 text-center md:text-left flex flex-col items-center">
+            <h3 id="text-proactive-methodology-title" class="text-2xl font-bold mb-4">Proaktive Methodik</h3>
             <!-- Replaced paragraph with a real flowchart using Mermaid -->
-            <div id="flowchart-mermaid" class="mermaid mb-4">
+            <div id="flowchart-mermaid" class="mermaid mb-4 w-1/2 h-full">
               %%{init: {"theme": "base", "themeVariables": {"primaryTextColor": "#004767",
               "fontFamily": "Montserrat", "fontSize": "16px"}}}%%
               flowchart TD
-              X{Assessment &amp; Planning} f1@==&gt; Y[Professional Implementation]
+              X([Assessment &amp; Planning])   f1@==&gt; Y[Professional Implementation]
               Y f4@==&gt; Z[Secure Integration]
               Z f5@==&gt; V[Ongoing Support &amp; Quality Assurance]
-              W[Continuous Optimization] f3@==&gt; X
+              W[Continuous Optimization] f3@==&gt; Y
               V f6@==&gt; W
               f1@{ animate: true }
               f3@{ animate: true }
@@ -301,13 +303,14 @@
               style V fill:none,stroke:#009DAE,stroke-width:2px,font-weight:bold,color:#004767
             </div>
           </div>
-          <div class="flex-1 text-center md:text-left flex flex-col justify-center items-center relative object-cover">
-            <img src="../assets/images/kelly-sikkema-Cg60_WXjvC4-unsplash.jpg" alt="Flowchart" class="mx-auto rounded-lg shadow-lg rotate-90">
+          <div class="flex-1 text-center md:text-left flex flex-col items-center">
+            <h3 id="text-deep-dive-title" class="text-2xl font-bold mb-4">Deep Dive</h3>
+            <img src="../assets/images/kelly-sikkema-Cg60_WXjvC4-unsplash.jpg" alt="Flowchart" class="rounded-lg shadow-lg w-1/2 h-full">
           </div>
         </div>
         <div class="mt-12">
           <h3 id="text-tailored-approach-title" class="text-2xl font-bold mb-4">Maßgeschneiderter Ansatz</h3>
-          <p id="text-tailored-approach-desc">Die Bedürfnisse jedes Kunden werden individuell bewertet, um flexible, budgetfreundliche Pläne zu erstellen.</p>
+          <p id="text-tailored-approach-desc" class="text-center">Die Bedürfnisse jedes Kunden werden individuell bewertet, um flexible, budgetfreundliche Pläne zu erstellen.</p>
         </div>
         <div class="mt-12">
           <h3 id="text-outcomes-benefits-title" class="text-2xl font-bold mb-4">Ergebnisse und Vorteile</h3>

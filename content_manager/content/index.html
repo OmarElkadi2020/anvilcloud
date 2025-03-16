@@ -27,14 +27,16 @@
     <div class="container mx-auto px-4">
       <div class="flex items-center justify-between py-4">
         <!-- Brand Section -->
-        <div class="flex items-center space-x-3">
+        <div class="flex items-center space-x-4 group">
           <a href="#">
-            <i class="fa-solid fa-cloud icon-hover text-3xl hover:text-gray-300 text-white transition"></i>
+            <i class="fa-solid fa-cloud icon-hover text-4xl text-[#4CBAC6] group-hover:text-white transition ease-in-out duration-300"></i>
           </a>
-          <div>
-            <a href="#" id="text-brand-name"
-              class="text-2xl font-bold text-white hover:text-gray-300 transition">Erfolg365</a>
-            <p class="text-white text-[14px] font-bold hover:text-gray-300 animate-bounce">
+          <div class="flex flex-col ml-0">
+            <p href="#" 
+              class="text-xl font-bold text-[#4CBAC6] group-hover:text-white transition ease-in-out duration-300">
+              <a href="#" id="text-brand-name">Erfolg365</a>
+            </p>
+            <p class="text-white text-[14px] font-bold group-hover:text-[#4CBAC6] transition ease-in-out duration-300">
               <a href="#" id="text-brand-tagline">MS365 Professionals</a>
             </p>
           </div>
@@ -46,37 +48,43 @@
               class="text-white hover:bg-gray-700 rounded px-3 py-3 flex flex-col items-center justify-center group">
               <i
                 class="fa-solid fa-house  text-xl group-hover:text-cyan-500 group-hover:scale-150 transition ease-in-out duration-300"></i><span
-                id="text-nav-home" class="group-hover:scale-110 group-hover:translate-y-1 transition ease-in-out duration-300">Home</span>
+                id="text-nav-home"
+                class="group-hover:scale-110 group-hover:translate-y-1 transition ease-in-out duration-300">Home</span>
             </a>
             <a href="#services"
               class="text-white hover:bg-gray-700 rounded px-3 py-3 flex flex-col items-center justify-center group">
               <i
                 class="fa-solid fa-cogs  text-xl group-hover:text-cyan-500 group-hover:scale-150 transition ease-in-out duration-300"></i><span
-                id="text-nav-services" class="group-hover:scale-110 group-hover:translate-y-1 transition ease-in-out duration-300">Services</span>
+                id="text-nav-services"
+                class="group-hover:scale-110 group-hover:translate-y-1 transition ease-in-out duration-300">Services</span>
             </a>
             <a href="#approach"
               class="text-white hover:bg-gray-700 rounded px-3 py-3 flex flex-col items-center justify-center group">
               <i
                 class="fa-solid fa-check-double  text-xl group-hover:text-cyan-500 group-hover:scale-150 transition ease-in-out duration-300"></i><span
-                id="text-nav-approach" class="group-hover:scale-110 group-hover:translate-y-1  transition ease-in-out duration-300">Approach</span>
+                id="text-nav-approach"
+                class="group-hover:scale-110 group-hover:translate-y-1  transition ease-in-out duration-300">Approach</span>
             </a>
             <a href="#about"
               class="text-white hover:bg-gray-700 rounded px-3 py-3 flex flex-col items-center justify-center group">
               <i
                 class="fa-solid fa-user  text-xl group-hover:text-cyan-500 group-hover:scale-150 transition ease-in-out duration-300"></i><span
-                id="text-nav-about" class="group-hover:scale-110 group-hover:translate-y-1  transition ease-in-out duration-300">About</span>
+                id="text-nav-about"
+                class="group-hover:scale-110 group-hover:translate-y-1  transition ease-in-out duration-300">About</span>
             </a>
             <a href="#pricing"
               class="text-white hover:bg-gray-700 rounded px-3 py-3 flex flex-col items-center justify-center group">
               <i
                 class="fa-solid fa-tag  text-xl group-hover:text-cyan-500 group-hover:scale-150 transition ease-in-out duration-300"></i><span
-                id="text-nav-pricing" class="group-hover:scale-110 group-hover:translate-y-1  transition ease-in-out duration-300">pricing</span>
+                id="text-nav-pricing"
+                class="group-hover:scale-110 group-hover:translate-y-1  transition ease-in-out duration-300">pricing</span>
             </a>
             <a href="#contact"
               class="text-white hover:bg-gray-700 rounded px-3 py-3 flex flex-col items-center justify-center group">
               <i
                 class="fa-solid fa-envelope  text-xl group-hover:text-cyan-500 group-hover:scale-150 transition ease-in-out duration-300"></i>
-              <span id="text-nav-contact" class="group-hover:scale-110 group-hover:translate-y-1  transition ease-in-out duration-300">Contact</span>
+              <span id="text-nav-contact"
+                class="group-hover:scale-110 group-hover:translate-y-1  transition ease-in-out duration-300">Contact</span>
             </a>
           </div>
           <div class="flex flex-col items-center justify-center">
@@ -94,14 +102,14 @@
         </div>
       </div>
       <!-- Mobile Menu Toggle -->
-      <div class="md:hidden">
+      <!-- <div class="md:hidden">
         <button id="menu-btn" class="text-white focus:outline-none">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
             </path>
           </svg>
         </button>
-      </div>
+      </div> -->
     </div>
     </div>
     <!-- Mobile Menu -->
@@ -180,7 +188,7 @@
                 onclick="consultation()">Free Consultation</a>
               <a id="text-trial-link" href="#contact"
                 class="px-6 py-2 border border-white text-white hover:bg-white hover:text-gray-800 font-bold rounded text-center"
-                onclick="trial()">Free Trialx</a>
+                onclick="trial()">Free Trial</a>
             </div>
             <hr class="my-8">
           </div>
@@ -284,43 +292,50 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- Detailed Service Block -->
         <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl transition">
-          <h3 id="text-detail-troubleshooting-support-title" class="text-2xl text-[#009DAE] font-bold mb-2 flex items-center">
+          <h3 id="text-detail-troubleshooting-support-title"
+            class="text-2xl text-[#009DAE] font-bold mb-2 flex items-center">
             Troubleshooting &amp; Support</h3>
           <p id="text-detail-troubleshooting-support-desc">Rapid issue resolution with expert technical assistance to
             minimize downtime.</p>
         </div>
         <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl transition">
-          <h3 id="text-detail-migration-services-title" class="text-2xl text-[#009DAE] font-bold mb-2 flex items-center">Migration
+          <h3 id="text-detail-migration-services-title"
+            class="text-2xl text-[#009DAE] font-bold mb-2 flex items-center">Migration
             Services</h3>
           <p id="text-detail-migration-services-desc">Seamless migration of emails, files, and applications to Microsoft
             365.</p>
         </div>
         <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl transition">
-          <h3 id="text-detail-managed-support-title" class="text-2xl text-[#009DAE] font-bold mb-2 flex items-center">Managed Support
+          <h3 id="text-detail-managed-support-title" class="text-2xl text-[#009DAE] font-bold mb-2 flex items-center">
+            Managed Support
           </h3>
           <p id="text-detail-managed-support-desc">Continuous monitoring and proactive support for all your Microsoft
             365 apps.</p>
         </div>
         <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl transition">
-          <h3 id="text-detail-adoption-training-title" class="text-2xl text-[#009DAE] font-bold mb-2 flex items-center">Adoption &amp;
+          <h3 id="text-detail-adoption-training-title" class="text-2xl text-[#009DAE] font-bold mb-2 flex items-center">
+            Adoption &amp;
             Training</h3>
           <p id="text-detail-adoption-training-desc">Workshops, webinars, and guides to maximize your team’s
             productivity.</p>
         </div>
         <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl transition">
-          <h3 id="text-detail-security-compliance-title" class="text-2xl text-[#009DAE] font-bold mb-2 flex items-center">Security
+          <h3 id="text-detail-security-compliance-title"
+            class="text-2xl text-[#009DAE] font-bold mb-2 flex items-center">Security
             &amp; Compliance</h3>
           <p id="text-detail-security-compliance-desc">Enhanced threat protection and compliance solutions to secure
             your business.</p>
         </div>
         <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl transition">
-          <h3 id="text-detail-licensing-cost-opt-title" class="text-2xl text-[#009DAE] font-bold mb-2 flex items-center">Licensing
+          <h3 id="text-detail-licensing-cost-opt-title"
+            class="text-2xl text-[#009DAE] font-bold mb-2 flex items-center">Licensing
             &amp; Cost Optimization</h3>
           <p id="text-detail-licensing-cost-opt-desc">Expert advice on selecting licenses and maximizing
             cost-efficiency.</p>
         </div>
         <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl transition md:col-span-2">
-          <h3 id="text-detail-custom-integration-title" class="text-2xl text-[#009DAE] font-bold mb-2 flex items-center">Custom
+          <h3 id="text-detail-custom-integration-title"
+            class="text-2xl text-[#009DAE] font-bold mb-2 flex items-center">Custom
             Integration/Workflow Automation</h3>
           <p id="text-detail-custom-integration-desc">Tailored automation using Microsoft Power Platform to streamline
             processes.</p>
@@ -334,18 +349,18 @@
     <div class="container" data-aos="fade-up">
       <h2 id="text-our-approach-title" class="text-3xl font-bold text-center mb-12 text-[#003EAA]">Our Approach</h2>
       <div class="mx-auto">
-        <div class="flex flex-col md:flex-row items-center justify-between">
-          <div class="flex-1 text-center md:text-left flex flex-col justify-center items-center">
-            <!-- <h3 id="text-proactive-methodology-title" class="text-2xl font-bold mb-4">Proactive Methodology</h3> -->
+        <div class="flex flex-col md:flex-row items-center justify-between items-stretch">
+          <div class="flex-1 text-center md:text-left flex flex-col items-center">
+            <h3 id="text-proactive-methodology-title" class="text-2xl font-bold mb-4">Proactive Methodology</h3>
             <!-- Replaced paragraph with a real flowchart using Mermaid -->
-            <div id="flowchart-mermaid" class="mermaid mb-4">
+            <div id="flowchart-mermaid" class="mermaid mb-4 w-1/2 h-full">
               %%{init: {"theme": "base", "themeVariables": {"primaryTextColor": "#004767",
               "fontFamily": "Montserrat", "fontSize": "16px"}}}%%
               flowchart TD
-              X{Assessment & Planning} f1@==> Y[Professional Implementation]
+              X([Assessment & Planning])   f1@==> Y[Professional Implementation]
               Y f4@==> Z[Secure Integration]
               Z f5@==> V[Ongoing Support & Quality Assurance]
-              W[Continuous Optimization] f3@==> X
+              W[Continuous Optimization] f3@==> Y
               V f6@==> W
               f1@{ animate: true }
               f3@{ animate: true }
@@ -359,14 +374,15 @@
               style V fill:none,stroke:#009DAE,stroke-width:2px,font-weight:bold,color:#004767
             </div>
           </div>
-          <div class="flex-1 text-center md:text-left flex flex-col justify-center items-center relative object-cover">
+          <div class="flex-1 text-center md:text-left flex flex-col items-center">
+            <h3 id="text-deep-dive-title" class="text-2xl font-bold mb-4">Deep Dive</h3>
             <img src="../assets/images/kelly-sikkema-Cg60_WXjvC4-unsplash.jpg" alt="Flowchart"
-              class="mx-auto rounded-lg shadow-lg rotate-90">
+              class="rounded-lg shadow-lg w-1/2 h-full">
           </div>
         </div>
         <div class="mt-12">
           <h3 id="text-tailored-approach-title" class="text-2xl font-bold mb-4">Tailored Approach</h3>
-          <p id="text-tailored-approach-desc">Every client’s needs are evaluated individually to craft flexible,
+          <p id="text-tailored-approach-desc" class="text-center">Every client’s needs are evaluated individually to craft flexible,
             budget-friendly plans.</p>
         </div>
         <div class="mt-12">

@@ -42,19 +42,20 @@
         <!-- Desktop Menu -->
         <div class="hidden md:flex space-x-6">
           <div class="hidden md:flex space-x-6">
-            <a href="#hero" class="text-white hover:scale-100 hover:text-cyan-500 hover:font-bold">
+            <a href="#hero" class="text-white">
               <i class="fa-solid fa-house mr-1"></i><span id="text-nav-home">Home</span>
             </a>
-            <a href="#services" class="text-white hover:scale-100  hover:font-bold hover:text-cyan-500">
+            <a href="#services" class="text-white hover:font-bold hover:text-cyan-500 flex items-center justify-center">
               <i class="fa-solid fa-cogs mr-1"></i><span id="text-nav-services">Services</span>
             </a>
-            <a href="#about" class="text-white hover:scale-100  hover:font-bold hover:text-cyan-500">
+            <a href="#about" class="text-white   hover:font-bold hover:text-cyan-500 flex items-center justify-center">
               <i class="fa-solid fa-user mr-1"></i><span id="text-nav-about">About</span>
             </a>
-            <a href="#pricing" class="text-white hover:scale-100  hover:font-bold hover:text-cyan-500">
+            <a href="#pricing"
+              class="text-white   hover:font-bold hover:text-cyan-500 flex items-center justify-center">
               <i class="fa-solid fa-tag mr-1"></i><span id="text-nav-pricing">pricing</span>
             </a>
-            <a href="#contact" class="text-white hover:scale-100 hover:font-bold hover:text-cyan-500">
+            <a href="#contact" class="text-white  hover:font-bold hover:text-cyan-500 flex items-center justify-center">
               <i class="fa-solid fa-envelope mr-1"></i> <span id="text-nav-contact">Contact</span>
             </a>
           </div>
@@ -85,13 +86,13 @@
     <div id="mobile-menu" class="hidden md:hidden bg-blue-600  text-center">
       <a href="#hero" class="block px-4 py-2 text-white hover:bg-blue-500 transition">
         <i class="fa-solid fa-house mr-1"></i><span id="text-nav-home-mobile">Home</span></a>
-      <a href="#services"class="block px-4 py-2 text-white hover:bg-blue-500 transition"> <i
+      <a href="#services" class="block px-4 py-2 text-white hover:bg-blue-500 transition"> <i
           class="fa-solid fa-cogs mr-1"></i><span id="text-nav-services-mobile">Services</span>
       </a>
-      <a href="#about"  class="block px-4 py-2 text-white hover:bg-blue-500 transition"> <i
+      <a href="#about" class="block px-4 py-2 text-white hover:bg-blue-500 transition"> <i
           class="fa-solid fa-user mr-1"></i><span id="text-nav-about-mobile">About</span>
       </a>
-      <a href="#contact"class="block px-4 py-2 text-white hover:bg-blue-500 transition"> <i
+      <a href="#contact" class="block px-4 py-2 text-white hover:bg-blue-500 transition"> <i
           class="fa-solid fa-envelope mr-1"></i> <span id="text-nav-contact-mobile">Contact</span>
       </a>
       <button onclick="changeLanguage('en')"
@@ -415,7 +416,8 @@
       <div class="grid grid-cols-12 dark:text-white">
         <!-- Basic Plan Card -->
         <div class="col-span-12 lg:col-span-4 p-0 mt-4 lg:mt-0 lg:border-r lg:dark:border-gray-800 mr-4">
-          <div class="bg-blue-50 dark:bg-[#101D2C] p-4 lg:p-12 h-full flex flex-col justify-between rounded-lg shadow hover:shadow-lg">
+          <div
+            class="bg-blue-50 dark:bg-[#101D2C] p-4 lg:p-12 h-full flex flex-col justify-between rounded-lg shadow hover:shadow-lg">
             <h3 id="text-basic-plan-title" class="font-bold mb-2 text-3xl">Basic</h3>
             <div class="mb-3">
               <span id="text-basic-plan-price" class="text-3xl font-bold">$20</span>
@@ -444,7 +446,8 @@
         </div>
         <!-- Standard Plan Card -->
         <div class="col-span-12 lg:col-span-4 p-0 mt-4 lg:mt-0 lg:border-r lg:dark:border-gray-800 mr-4 ">
-          <div class="bg-blue-50 dark:bg-[#101D2C] p-4 lg:p-12 h-full flex flex-col justify-between rounded-lg shadow hover:shadow-lg">
+          <div
+            class="bg-blue-50 dark:bg-[#101D2C] p-4 lg:p-12 h-full flex flex-col justify-between rounded-lg shadow hover:shadow-lg">
             <h3 id="text-standard-plan-title" class="font-bold mb-2 text-3xl text-blue-600">Standard</h3>
             <div class="mb-3">
               <span id="text-standard-plan-price" class="text-3xl font-bold">$20</span>
@@ -478,7 +481,8 @@
         </div>
         <!-- Premium Plan Card -->
         <div class="col-span-12 lg:col-span-4 p-0 mt-4 lg:mt-0 mr-4">
-          <div class="bg-blue-50 dark:bg-[#101D2C] p-4 lg:p-12 h-full flex flex-col justify-between rounded-lg shadow hover:shadow-lg">
+          <div
+            class="bg-blue-50 dark:bg-[#101D2C] p-4 lg:p-12 h-full flex flex-col justify-between rounded-lg shadow hover:shadow-lg">
             <h3 id="text-premium-plan-title" class="font-bold mb-2 text-3xl">Premium</h3>
             <div class="mb-3">
               <span id="text-premium-plan-price" class="text-3xl font-bold">$399</span>
@@ -554,11 +558,12 @@
           </div>
           <!-- Inquiry Selection -->
           <div class="mb-4" onchange="required()">
-            <label id="text-contact-inquiry-label" for="inquiry" class="text-gray-700 font-semibold">Type of Inquiry</label>
+            <label id="text-contact-inquiry-label" for="inquiry" class="text-gray-700 font-semibold">Type of
+              Inquiry</label>
             <select id="inquiry" class="w-full p-2 border rounded">
-              <option id = "inquiry-option-1" value="general">General Question</option>
-              <option id = "inquiry-option-2" value="consultation">Free Consultation</option>
-              <option id = "inquiry-option-3" value="trial">Free Trial</option>
+              <option id="inquiry-option-1" value="general">General Question</option>
+              <option id="inquiry-option-2" value="consultation">Free Consultation</option>
+              <option id="inquiry-option-3" value="trial">Free Trial</option>
             </select>
           </div>
           <!-- Message Textarea -->

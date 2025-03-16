@@ -57,16 +57,6 @@
       "text-outcome-cost-savings-title": "Kosteneinsparungen",
       "text-outcome-cost-savings-desc": "Optimierte Lizenzierung senkt die Kosten."
     },
-    "about": {
-      "text-about-title": " Über uns",
-      "text-our-story-title": " Unsere Geschichte",
-      "text-our-story-desc": "Wir sind erfahrene IT-Profis mit einer Leidenschaft dafür, Unternehmen dabei zu helfen, das volle Potenzial von Microsoft 365 auszuschöpfen. Unser Unternehmen mag klein sein, aber wir bieten großes Fachwissen. Mit unserer langjährigen Erfahrung in der Microsoft-Cloud-Administration und mehreren Microsoft 365-Zertifizierungen unterstreichen wir unser Engagement für technische Spitzenleistungen. Wir halten uns über die neuesten Microsoft-Technologien und Sicherheitspraktiken auf dem Laufenden, damit Sie das nicht tun müssen.  Wir von Erfolg 365 sind stolz darauf, ein zuverlässiger Partner für kleine und mittlere Unternehmen und Unternehmer zu sein. Wir kennen die besonderen Herausforderungen, denen sich KMU bei der IT-Verwaltung mit begrenzten Ressourcen gegenübersehen. Deshalb bieten wir einen persönlichen Support, der sich durch Reaktionsfähigkeit und Klarheit auszeichnet. Wenn Sie mit uns zusammenarbeiten, erhalten Sie direkten Zugang zu einem Experten, der sich wirklich um Ihr Unternehmen kümmert. Unser Ziel ist es, fortschrittliche Microsoft 365-Lösungen für Unternehmen wie das Ihre zugänglich und sorgenfrei zu machen.",
-      "text-team-title": "Team",
-      "text-team-member-alex-name": "Alex",
-      "text-team-member-alex-role": "Tech Lead",
-      "text-team-member-jordan-name": "Tech LeadTech Lead",
-      "text-team-member-jordan-role": "Support Specialist"
-    },
     "contact": {
       "text-contact-title": " Kontakt aufnehmen",
       "text-contact-name-label": "Name",
@@ -154,6 +144,23 @@
       "text-nav-services-mobile": "Dienstleistungen",
       "text-nav-about-mobile": "Über Uns",
       "text-nav-contact-mobile": "Preise Pläne"
+    },
+    "about": {
+      "text-company-info-title": "Über uns",
+      "text-company-journey-title": "Unsere Geschichte",
+      "text-company-journey-desc-1": "Bei ERFOLG 365 sind die IT -Profis erfahren, die Unternehmen dabei helfen, das volle Potenzial von auszuschöpfen            Microsoft 365. Obwohl wir ein Boutique -Unternehmen sind            Spezialzertifizierungen. Wir bleiben mit sich entwickelnden Microsoft -Technologien auf dem Laufenden, sodass Sie zuversichtlich sind            Verlassen Sie sich auf uns, um Ihre IT -Umgebung zu verwalten.",
+      "text-company-journey-desc-2": "Unsere Mission ist einfach-ein vertrauenswürdiger Partner für kleine und mittelgroße Unternehmen zu werden und zu befähigen\n            Unternehmer, um die IT -Herausforderungen zu überwinden und trotz begrenzter Ressourcen Effizienz zu erreichen. Wir bieten\n            Reaktionsschnelle, personalisierte und transparente Unterstützung, die speziell für KMU zugeschnitten sind.",
+      "text-company-journey-desc-3": "Wir kümmern uns wirklich um Ihren Geschäftserfolg. Unser personalisierter Ansatz sorgt für eindeutige Kommunikation und\n            Schnelle Problemlösung, die Microsoft 365 für jeden Kunden, den wir bedienen, zugänglich, besorgnisfrei und effektiv machen.",
+      "text-company-journey-desc-4": "Wir glauben daran, dauerhafte Beziehungen durch Integrität, Transparenz und kontinuierliche Verbesserung aufzubauen.\n            Unsere Kunden vertrauen uns darauf, effiziente Lösungen zu liefern, die den Vorgängen rationalisieren, wertvoll schützen\n            Informationen und maximieren Sie die Produktivität. Erfolg 365 ist nicht nur Ihr IT -Anbieter - wir sind Ihr strategischer Partner\n            Verpflichtet zu Ihrem langfristigen Wachstum und Ihrer Stabilität.",
+      "text-company-values-title": "Was zeichnet uns aus?",
+      "text-company-value-1-title": "Zertifiziertes Expertise",
+      "text-company-value-1-desc": "Unsere zertifizierten Spezialisten bleiben mit dem voran\n                  Neueste Microsoft 365-Technologien, die branchenbeste Expertise gewährleisten.",
+      "text-company-value-2-title": "Proaktive Sicherheit",
+      "text-company-value-2-desc": "Wir schützen Ihre Daten proaktiv mit\n                  Strenge Sicherheitsstandards und umfassende Compliance -Maßnahmen.",
+      "text-company-value-3-title": "Zuverlässige Effizienz",
+      "text-company-value-3-desc": "Durch proaktive Überwachung und optimiert\n                  Workflows, wir stellen sicher, dass Ihr Unternehmen mit minimalen Ausfallzeiten reibungslos läuft.",
+      "text-company-value-4-title": "Personalisierter Service",
+      "text-company-value-4-desc": "Ihre Zufriedenheit ist unsere Priorität. Wir bieten\n                  Personalisierte Unterstützung und transparente Kommunikation bei jedem Schritt."
     }
   }
 }

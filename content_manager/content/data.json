@@ -57,16 +57,6 @@
       "text-outcome-cost-savings-title": "Cost Savings",
       "text-outcome-cost-savings-desc": "Optimized licensing cuts expenses."
     },
-    "about": {
-      "text-about-title": "About Us",
-      "text-our-story-title": "Our Story",
-      "text-our-story-desc": "We are seasoned IT professionals with a passion for helping businesses harness the full potential of Microsoft 365. Our company may be small, but we offer big expertise, With our years of experience in Microsoft cloud administration and holds multiple Microsoft 365 certifications, underlining our commitment to technical excellence. We stay up-to-date with the latest Microsoft technologies and security practices, so you don’t have to.  At Erfolg 365, we pride ourselves on being a trusted partner to small and medium-sized enterprises and entrepreneurs. We understand the unique challenges that SMEs face when managing IT with limited resources. That’s why we deliver personalized support with an emphasis on responsiveness and clarity. When you work with us, you get direct access to an expert who genuinely cares about your business. Our mission is to make advanced Microsoft 365 solutions accessible and worry-free for businesses like yours.",
-      "text-team-title": "Team",
-      "text-team-member-alex-name": "Alex",
-      "text-team-member-alex-role": "Tech Lead",
-      "text-team-member-jordan-name": "Tech LeadTech Lead",
-      "text-team-member-jordan-role": "Support Specialist"
-    },
     "contact": {
       "text-contact-title": "Get in Touch",
       "text-contact-name-label": "Name",
@@ -155,6 +145,23 @@
       "text-nav-services-mobile": "Services",
       "text-nav-about-mobile": "About",
       "text-nav-contact-mobile": "Contact"
+    },
+    "about": {
+      "text-company-info-title": "About Us",
+      "text-company-journey-title": "Our Story",
+      "text-company-journey-desc-1": "At ERFOLG 365, we're seasoned IT professionals dedicated to helping businesses unlock the full potential of            Microsoft 365. Although we’re a boutique firm, our expertise is extensive, rooted in years of experience and            specialized certifications. We stay current with evolving Microsoft technologies, so you can confidently            rely on us to manage your IT environment.",
+      "text-company-journey-desc-2": "Our mission is simple—to become a trusted partner to small and medium-sized businesses, empowering\n            entrepreneurs to overcome IT challenges and achieve efficiency despite limited resources. We provide\n            responsive, personalized, and transparent support tailored specifically for SMEs.",
+      "text-company-journey-desc-3": "We genuinely care about your business success. Our personalized approach ensures clear communication and\n            rapid problem-solving, making Microsoft 365 accessible, worry-free, and effective for every client we serve.",
+      "text-company-journey-desc-4": "We believe in building lasting relationships through integrity, transparency, and continuous improvement.\n            Our clients trust us to deliver efficient solutions that streamline operations, protect valuable\n            information, and maximize productivity. Erfolg 365 is not just your IT provider—we're your strategic partner\n            committed to your long-term growth and stability.",
+      "text-company-values-title": "What            Sets Us Apart?",
+      "text-company-value-1-title": "Certified Expertise",
+      "text-company-value-1-desc": "Our certified specialists stay ahead with the\n                  latest Microsoft 365 technologies, ensuring industry-best expertise.",
+      "text-company-value-2-title": "Proactive Security",
+      "text-company-value-2-desc": "We safeguard your data proactively with\n                  rigorous security standards and comprehensive compliance measures.",
+      "text-company-value-3-title": "Reliable Efficiency",
+      "text-company-value-3-desc": "Through proactive monitoring and optimized\n                  workflows, we ensure your business runs smoothly with minimal downtime.",
+      "text-company-value-4-title": "Personalized Service",
+      "text-company-value-4-desc": "Your satisfaction is our priority. We provide\n                  personalized support and transparent communication at every step."
     }
   }
 }

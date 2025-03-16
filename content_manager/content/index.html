@@ -21,7 +21,7 @@
 
 </head>
 
-<body class="text-gray-800">
+<body id="body" class="text-gray-800">
   <!-- Improved NAVIGATION with Animated Slogan -->
   <nav class="bg-gradient-to-r from-blue-500 to-blue-700 shadow-lg sticky top-0 z-50">
     <div class="container mx-auto px-4">
@@ -42,33 +42,39 @@
         <!-- Desktop Menu -->
         <div class="hidden md:flex space-x-6">
           <div class="hidden md:flex space-x-6">
-            <a href="#hero" class="text-white hover:font-bold hover:text-cyan-500 flex items-center justify-center">
-              <i class="fa-solid fa-house mr-1"></i><span id="text-nav-home">Home</span>
+            <a href="#hero"
+              class="text-white hover:text-cyan-500 hover:bg-gray-700 rounded px-4 py-3 flex flex-col items-center justify-center">
+              <i class="fa-solid fa-house mr-1 text-xl"></i><span id="text-nav-home">Home</span>
             </a>
-            <a href="#services" class="text-white hover:font-bold hover:text-cyan-500 flex items-center justify-center">
-              <i class="fa-solid fa-cogs mr-1"></i><span id="text-nav-services">Services</span>
+            <a href="#services"
+              class="text-white hover:text-cyan-500 hover:bg-gray-700 rounded px-4 py-3 flex flex-col items-center justify-center">
+              <i class="fa-solid fa-cogs mr-1 text-xl"></i><span id="text-nav-services">Services</span>
             </a>
-            <a href="#about" class="text-white hover:font-bold hover:text-cyan-500 flex items-center justify-center">
-              <i class="fa-solid fa-user mr-1"></i><span id="text-nav-about">About</span>
+            <a href="#about"
+              class="text-white hover:text-cyan-500 hover:bg-gray-700 rounded px-4 py-3 flex flex-col items-center justify-center">
+              <i class="fa-solid fa-user mr-1 text-xl"></i><span id="text-nav-about">About</span>
             </a>
             <a href="#pricing"
-              class="text-white hover:font-bold hover:text-cyan-500 flex items-center justify-center">
-              <i class="fa-solid fa-tag mr-1"></i><span id="text-nav-pricing">pricing</span>
+              class="text-white hover:text-cyan-500 hover:bg-gray-700 rounded px-4 py-3 flex flex-col items-center justify-center">
+              <i class="fa-solid fa-tag mr-1 text-xl"></i><span id="text-nav-pricing">pricing</span>
             </a>
-            <a href="#contact" class="text-white hover:font-bold hover:text-cyan-500 flex items-center justify-center">
-              <i class="fa-solid fa-envelope mr-1"></i> <span id="text-nav-contact">Contact</span>
+            <a href="#contact"
+              class="text-white hover:text-cyan-500 hover:bg-gray-700 rounded px-4 py-3 flex flex-col items-center justify-center">
+              <i class="fa-solid fa-envelope mr-1 text-xl"></i> <span id="text-nav-contact">Contact</span>
             </a>
           </div>
-          <div class="hidden md:flex space-x-2"></div>
-          <button onclick="changeLanguage('en')"
-            class="flex items-center text-gray-700 hover:scale-125 hover:text-cyan-500 hover:font-bold">
-            <span class="flag-icon flag-icon-us"></span>
-          </button>
-          <!-- German Button -->
-          <button onclick="changeLanguage('de')"
-            class="flex items-center text-gray-700 hover:scale-125 hover:text-cyan-500 hover:font-bold">
-            <span class="flag-icon flag-icon-de"></span>
-          </button>
+          <div class="flex flex-col items-center justify-center">
+            <button onclick="changeLanguage('en')"
+              class="text-gray-700 hover:scale-125 hover:text-cyan-500 hover:font-bold">
+              <span class="flag-icon flag-icon-us text-l"></span>
+            </button>
+            <!-- German Button -->
+            <button onclick="changeLanguage('de')"
+              class="text-gray-700 hover:scale-125 hover:text-cyan-500 hover:font-bold">
+              <span class="flag-icon flag-icon-de text-l"></span>
+            </button>
+          </div>
+
         </div>
       </div>
       <!-- Mobile Menu Toggle -->
@@ -364,38 +370,81 @@
 
 
   <!-- ABOUT US & CULTURE SECTION -->
-  <section id="about" class="section py-7 md:py-14 overflow-hidden">
-    <div class="container" data-aos="fade-up">
-      <h2 id="text-about-title" class="text-3xl font-bold text-center mb-12 text-[#003EAA]">About Us</h2>
+  <section id="about" class="section py-10 md:py-16 bg-gradient-to-r from-gray-50 to-white overflow-hidden">
+    <div class="container mx-auto px-4" data-aos="fade-up">
+      <h2 id="text-company-info-title" class="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-800">About Us</h2>
       <div class="md:flex md:space-x-12">
-        <!-- Left column: Our Story -->
-        <div class="md:flex-1 mb-8 md:mb-0" data-aos="fade-right">
-          <h3 id="text-our-story-title" class="text-2xl font-bold mb-4">Our Story</h3>
-          <p id="text-our-story-desc">Founded with a passion for technology, our mission is to deliver top-tier
-            Microsoft 365 support with innovation and reliability. We empower businesses to achieve seamless digital
-            transformation.</p>
+        <!-- Left column: Our Journey -->
+        <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+          <h3 id="text-company-journey-title" class="text-xl font-semibold text-gray-800 mb-4">Our Story</h3>
+          <p id="text-company-journey-desc-1" class="mb-4 text-gray-700 leading-relaxed">
+            At Erfolg 365, we're seasoned IT professionals dedicated to helping businesses unlock the full potential of
+            Microsoft 365. Although we’re a boutique firm, our expertise is extensive, rooted in years of experience and
+            specialized certifications. We stay current with evolving Microsoft technologies, so you can confidently
+            rely on us to manage your IT environment.
+          </p>
+          <p id="text-company-journey-desc-2" class="mb-4 text-gray-700 leading-relaxed">
+            Our mission is simple—to become a trusted partner to small and medium-sized businesses, empowering
+            entrepreneurs to overcome IT challenges and achieve efficiency despite limited resources. We provide
+            responsive, personalized, and transparent support tailored specifically for SMEs.
+          </p>
+          <p id="text-company-journey-desc-3" class="mb-4 text-gray-700 leading-relaxed">
+            We genuinely care about your business success. Our personalized approach ensures clear communication and
+            rapid problem-solving, making Microsoft 365 accessible, worry-free, and effective for every client we serve.
+          </p>
+          <p id="text-company-journey-desc-4" class="mb-4 text-gray-700 leading-relaxed">
+            We believe in building lasting relationships through integrity, transparency, and continuous improvement.
+            Our clients trust us to deliver efficient solutions that streamline operations, protect valuable
+            information, and maximize productivity. Erfolg 365 is not just your IT provider—we're your strategic partner
+            committed to your long-term growth and stability.
+          </p>
         </div>
-        <!-- Right column: Team -->
-        <div class="md:flex-1" data-aos="fade-left">
-          <h3 id="text-team-title" class="text-2xl font-bold mb-4 text-center">Team</h3>
-          <div class="grid grid-cols-2 gap-6 md:gap-8">
-            <!-- Team Member Card -->
-            <div class="text-center group" data-aos="zoom-in" data-aos-delay="100">
-              <img
-                src="https://blog.pincel.app/wp-content/uploads/2024/02/smiling_full_body_professional_headshot_with_soft_lighting_blurred_office_background_formal_white_shirt.jpeg"
-                alt="Team Member"
-                class="rounded-full mx-auto mb-2 w-36 h-36 md:w-48 md:h-48 object-cover transform transition duration-300 ease-in-out group-hover:scale-105">
-              <p id="text-team-member-alex-name" class="font-bold">Alex</p>
-              <p id="text-team-member-alex-role" class="text-sm">Tech Lead</p>
+        <!-- Right column: What Sets Us Apart -->
+        <div class="md:w-1/2" data-aos="fade-left">
+          <h3 id="text-company-values-title" class="text-2xl md:text-3xl font-semibold mb-4 text-center text-gray-800">What
+            Sets Us Apart?</h3>
+          <div class="space-y-6">
+            <!-- Value Card 1 -->
+            <div class="flex items-center group" data-aos="zoom-in" data-aos-delay="100">
+              <img src="../assets/images/microsoft-certified-expert-badge.svg" alt="Certified Expertise"
+                class="rounded-full w-16 h-16 md:w-24 md:h-24 object-cover transform transition duration-300 ease-in-out group-hover:scale-105">
+              <div class="ml-4">
+                <p id="text-company-value-1-title" class="font-bold text-lg text-gray-800">Certified Expertise</p>
+                <p id="text-company-value-1-desc" class="text-sm text-gray-600">Our certified specialists stay ahead with the
+                  latest Microsoft 365 technologies, ensuring industry-best expertise.</p>
+              </div>
             </div>
-            <!-- Team Member Card -->
-            <div class="text-center group" data-aos="zoom-in" data-aos-delay="200">
+            <!-- Value Card 2 -->
+            <div class="flex items-center group" data-aos="zoom-in" data-aos-delay="150">
+              <img src="../assets/images/hacker-cracking-binary-code-data-security.jpg" alt="Proactive Security"
+                class="rounded-full w-16 h-16 md:w-24 md:h-24 object-cover transform transition duration-300 ease-in-out group-hover:scale-105">
+              <div class="ml-4">
+                <p id="text-company-value-2-title" class="font-bold text-lg text-gray-800">Proactive Security</p>
+                <p id="text-company-value-2-desc" class="text-sm text-gray-600">We safeguard your data proactively with
+                  rigorous security standards and comprehensive compliance measures.</p>
+              </div>
+            </div>
+            <!-- Value Card 3 -->
+            <div class="flex items-center group" data-aos="zoom-in" data-aos-delay="200">
               <img
-                src="https://blog.pincel.app/wp-content/uploads/2024/02/smiling_full_body_professional_headshot_with_soft_lighting_blurred_office_background_formal_white_shirt.jpeg"
-                alt="Team Member"
-                class="rounded-full mx-auto mb-2 w-36 h-36 md:w-48 md:h-48 object-cover transform transition duration-300 ease-in-out group-hover:scale-105">
-              <p id="text-team-member-jordan-name" class="font-bold">Tech LeadTech Lead</p>
-              <p id="text-team-member-jordan-role" class="text-sm">Support Specialist</p>
+                src="../assets/images/conceptual-business-office-with-wooden-blocks-with-icons-paperclips-binder-clips-top-view.jpg"
+                alt="Reliable Efficiency"
+                class="rounded-full w-16 h-16 md:w-24 md:h-24 object-cover transform transition duration-300 ease-in-out group-hover:scale-105">
+              <div class="ml-4">
+                <p id="text-company-value-3-title" class="font-bold text-lg text-gray-800">Reliable Efficiency</p>
+                <p id="text-company-value-3-desc" class="text-sm text-gray-600">Through proactive monitoring and optimized
+                  workflows, we ensure your business runs smoothly with minimal downtime.</p>
+              </div>
+            </div>
+            <!-- Value Card 4 -->
+            <div class="flex items-center group" data-aos="zoom-in" data-aos-delay="250">
+              <img src="../assets/images/collage-customer-experience-concept.jpg" alt="Personalized Service"
+                class="rounded-full w-16 h-16 md:w-24 md:h-24 object-cover transform transition duration-300 ease-in-out group-hover:scale-105">
+              <div class="ml-4">
+                <p id="text-company-value-4-title" class="font-bold text-lg text-gray-800">Personalized Service</p>
+                <p id="text-company-value-4-desc" class="text-sm text-gray-600">Your satisfaction is our priority. We provide
+                  personalized support and transparent communication at every step.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -404,9 +453,9 @@
   </section>
 
   <section id="pricing" class="ezy__pricing2 section py-7 md:py-14 bg-white text-zinc-900 ">
-    <div class="container px-4">
+    <div class="container px-4" data-aos="fade-up">
       <h2 id="text-pricing-title" class="text-3xl font-bold text-center mb-12 text-[#003EAA]">Pricing</h2>
-      <p id="text-pricing-intro" class="text-left text-lg font-bold mb-3">
+      <p id="text-pricing-intro" class="text-center text-md mb-3">
         We offer three flexible pricing packages to fit your needs. Each plan is designed to provide excellent value and
         transparent service levels, so you know exactly what you’re getting.</p>
       <div class="grid grid-cols-12 mb-12">
@@ -594,7 +643,7 @@
           <a href="#" class="text-gray-700 hover:text-[#009DAE] transition">
             <i class="fa-brands fa-twitter icon-hover"></i>
           </a>
-          <a href="#" class="text-gray-700 hover:text-[#009DAE] transition">
+          <a href="https://www.linkedin.com/company/erfolg-365" class="text-gray-700 hover:text-[#009DAE] transition">
             <i class="fa-brands fa-linkedin-in icon-hover"></i>
           </a>
         </div>
@@ -607,8 +656,8 @@
             class="mx-2 text-gray-700 hover:text-[#009DAE] transition">Contact</a>
         </div>
         <p id="text-footer-copy" class="text-sm text-gray-600">© 2025 Microsoft 365 Support. All rights reserved.</p>
-        <a href="#" id="text-privacy-policy-link" class="underline">Privacy Policy</a> |
-        <a href="#" id="text-terms-service-link" class="underline">Terms of Service</a>
+        <a href="#footer" id="text-privacy-policy-link" class="underline">Privacy Policy</a> |
+        <a href="#footer" id="text-terms-service-link" class="underline">Terms of Service</a>
       </div>
     </footer>
   </section>
@@ -634,9 +683,8 @@
         </p>
         <h3 class="font-semibold mb-2">1. Data Controller</h3>
         <p class="mb-4">
-          [Your Company Name]<br>
-          [Your Address]<br>
-          Email: <a href="mailto:conatact@anvilcloud.de" class="text-blue-500">conatact@anvilcloud.de</a>
+          Erfolg 365<br>
+          <a href="mailto:conatact@erfolg365.de" class="text-blue-500">conatact@erfolg365.de</a>
         </p>
         <h3 class="font-semibold mb-2">2. Data Collection and Processing</h3>
         <p class="mb-4">
@@ -665,8 +713,7 @@
 
   <!-- TERMS OF SERVICE MODAL -->
   <section id="terms-service-modal">
-    <div id="privacyPolicyModal"
-      class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
+    <div id="termsModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
       <div class="bg-white rounded-lg p-8 max-w-3xl mx-4 overflow-y-auto max-h-screen">
         <h2 id="text-privacyPolicy-modal-title" class="text-2xl font-bold mb-4">Privacy Policy</h2>
         <p id="text-privacyPolicy-modal-intro" class="mb-4">This Privacy Policy explains how we handle your personal
@@ -674,10 +721,9 @@
           Act (BDSG).</p>
         <h3 id="text-privacyPolicy-data-controller-title" class="font-semibold mb-2">1. Data Controller</h3>
         <div id="privacyPolicy-data-controller-desc" class="mb-4">
-          <p id="text-privacyPolicy-data-controller-name">Anvilcloud</p>
-          <p id="text-privacyPolicy-data-controller-address">[Your Address]</p>
-          <p>Email: <a href="mailto:conatact@anvilcloud.de" id="text-privacyPolicy-email"
-              class="text-blue-500">conatact@anvilcloud.de</a></p>
+          <p id="text-privacyPolicy-data-controller-name">Erfolg 365</p>
+          <p><a href="mailto:conatact@erfolg365.de" id="text-privacyPolicy-email"
+              class="text-blue-500">conatact@erfolg365.de</a></p>
         </div>
         <h3 id="text-privacyPolicy-data-collection-title" class="font-semibold mb-2">2. Data Collection and Processing
         </h3>
@@ -692,7 +738,7 @@
         <h3 id="text-privacyPolicy-changes-title" class="font-semibold mb-2">5. Changes to this Policy</h3>
         <p id="text-privacyPolicy-changes-desc" class="mb-4">We may update this policy from time to time. Any changes
           will be posted on this page.</p>
-        <button id="closePrivacyPolicy"
+        <button id="closeTermsModal"
           class="mt-4 bg-[#009DAE] hover:bg-[#008494] text-white font-bold py-2 px-4 rounded">
           Close
         </button>

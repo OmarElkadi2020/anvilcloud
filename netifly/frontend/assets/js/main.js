@@ -68,9 +68,11 @@ function required() {
 
 document.addEventListener('DOMContentLoaded', function () {
   // Modal event listeners for Privacy Policy
-  const privacyPolicyLink = document.getElementById('privacyPolicyLink');
+  const privacyPolicyLink = document.getElementById('text-privacy-policy-link');
   const privacyPolicyModal = document.getElementById('privacyPolicyModal');
   const closePrivacyPolicy = document.getElementById('closePrivacyPolicy');
+  const body = document.querySelector('body');
+
 
   if (privacyPolicyLink && privacyPolicyModal && closePrivacyPolicy) {
     privacyPolicyLink.addEventListener('click', function (e) {
@@ -81,12 +83,27 @@ document.addEventListener('DOMContentLoaded', function () {
     closePrivacyPolicy.addEventListener('click', function () {
       privacyPolicyModal.classList.add('hidden');
     });
+
+    body.addEventListener('click', function (e) {
+      if (e.target === privacyPolicyModal) {
+        privacyPolicyModal.classList.add('hidden');
+      }
+    });
+
+    // close when escape key is pressed
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        privacyPolicyModal.classList.add('hidden');
+      }
+    }
+    );
   }
 
   // Modal event listeners for Terms of Service
-  const termsModalLink = document.getElementById('termsModalLink');
+  const termsModalLink = document.getElementById('text-terms-service-link');
   const termsModal = document.getElementById('termsModal');
   const closeTermsModal = document.getElementById('closeTermsModal');
+
 
   if (termsModalLink && termsModal && closeTermsModal) {
     termsModalLink.addEventListener('click', function (e) {
@@ -94,9 +111,23 @@ document.addEventListener('DOMContentLoaded', function () {
       termsModal.classList.remove('hidden');
     });
 
+    body.addEventListener('click', function (e) {
+      if (e.target === termsModal) {
+        termsModal.classList.add('hidden');
+      }
+    });
+
     closeTermsModal.addEventListener('click', function () {
       termsModal.classList.add('hidden');
     });
+
+    // close when escape key is pressed
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        termsModal.classList.add('hidden');
+      }
+    }
+    );
   }
 
   // Contact form submission with improved feedback and timeout
@@ -175,7 +206,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 });
-
 function changeLanguage(lang) {
   // Remove the current language segment (assumes the path starts with /en or /de)
   let path = window.location.pathname.replace(/^\/(en|de)/, "");

@@ -29,29 +29,33 @@
             <i class="fa-solid fa-cloud icon-hover text-3xl hover:text-gray-300 text-white transition"></i>
           </a>
           <div>
-            <a href="#" id="text-brand-name" class="text-2xl font-bold text-white hover:text-gray-300 transition">Erfolg 365</a>
+            <a href="#" id="text-brand-name" class="text-2xl font-bold text-white hover:text-gray-300 transition">ERFOLG 365</a>
             <p class="text-white text-[14px] font-bold hover:text-gray-300 animate-bounce">
-              <a href="#" id="text-brand-tagline">MS365 Professionals</a>
+              <a href="#" id="text-brand-tagline">MS365 PROFESSIONALS</a>
             </p>
           </div>
         </div>
         <!-- Desktop Menu -->
         <div class="hidden md:flex space-x-6">
           <div class="hidden md:flex space-x-6">
-            <a href="#hero" class="text-white hover:text-cyan-500 hover:bg-gray-700 rounded px-3 py-3 flex flex-col items-center justify-center">
-              <i class="fa-solid fa-house mr-1 text-xl"></i><span id="text-nav-home">Home</span>
+            <a href="#hero" class="text-white hover:bg-gray-700 rounded px-3 py-3 flex flex-col items-center justify-center group">
+              <i class="fa-solid fa-house  text-xl group-hover:text-cyan-500 group-hover:scale-150 transition ease-in-out duration-300"></i><span id="text-nav-home" class="group-hover:scale-110 group-hover:translate-y-1 transition ease-in-out duration-300">Home</span>
             </a>
-            <a href="#services" class="text-white hover:text-cyan-500 hover:bg-gray-700 rounded px-3 py-3 flex flex-col items-center justify-center">
-              <i class="fa-solid fa-cogs mr-1 text-xl"></i><span id="text-nav-services">Services</span>
+            <a href="#services" class="text-white hover:bg-gray-700 rounded px-3 py-3 flex flex-col items-center justify-center group">
+              <i class="fa-solid fa-cogs  text-xl group-hover:text-cyan-500 group-hover:scale-150 transition ease-in-out duration-300"></i><span id="text-nav-services" class="group-hover:scale-110 group-hover:translate-y-1 transition ease-in-out duration-300">Services</span>
             </a>
-            <a href="#about" class="text-white hover:text-cyan-500 hover:bg-gray-700 rounded px-3 py-3 flex flex-col items-center justify-center">
-              <i class="fa-solid fa-user mr-1 text-xl"></i><span id="text-nav-about">About</span>
+            <a href="#approach" class="text-white hover:bg-gray-700 rounded px-3 py-3 flex flex-col items-center justify-center group">
+              <i class="fa-solid fa-check-double  text-xl group-hover:text-cyan-500 group-hover:scale-150 transition ease-in-out duration-300"></i><span id="text-nav-approach" class="group-hover:scale-110 group-hover:translate-y-1  transition ease-in-out duration-300">Approach</span>
             </a>
-            <a href="#pricing" class="text-white hover:text-cyan-500 hover:bg-gray-700 rounded px-3 py-3 flex flex-col items-center justify-center">
-              <i class="fa-solid fa-tag mr-1 text-xl"></i><span id="text-nav-pricing">Plans</span>
+            <a href="#about" class="text-white hover:bg-gray-700 rounded px-3 py-3 flex flex-col items-center justify-center group">
+              <i class="fa-solid fa-user  text-xl group-hover:text-cyan-500 group-hover:scale-150 transition ease-in-out duration-300"></i><span id="text-nav-about" class="group-hover:scale-110 group-hover:translate-y-1  transition ease-in-out duration-300">About</span>
             </a>
-            <a href="#contact" class="text-white hover:text-cyan-500 hover:bg-gray-700 rounded px-3 py-3 flex flex-col items-center justify-center">
-              <i class="fa-solid fa-envelope mr-1 text-xl"></i> <span id="text-nav-contact">Contact</span>
+            <a href="#pricing" class="text-white hover:bg-gray-700 rounded px-3 py-3 flex flex-col items-center justify-center group">
+              <i class="fa-solid fa-tag  text-xl group-hover:text-cyan-500 group-hover:scale-150 transition ease-in-out duration-300"></i><span id="text-nav-pricing" class="group-hover:scale-110 group-hover:translate-y-1  transition ease-in-out duration-300">Plans</span>
+            </a>
+            <a href="#contact" class="text-white hover:bg-gray-700 rounded px-3 py-3 flex flex-col items-center justify-center group">
+              <i class="fa-solid fa-envelope  text-xl group-hover:text-cyan-500 group-hover:scale-150 transition ease-in-out duration-300"></i>
+              <span id="text-nav-contact" class="group-hover:scale-110 group-hover:translate-y-1  transition ease-in-out duration-300">Contact</span>
             </a>
           </div>
           <div class="flex flex-col items-center justify-center">
@@ -82,6 +86,8 @@
       <a href="#hero" class="block px-3 py-2 text-white hover:bg-blue-500 transition">
         <i class="fa-solid fa-house mr-1"></i><span id="text-nav-home-mobile">Home</span></a>
       <a href="#services" class="block px-3 py-2 text-white hover:bg-blue-500 transition"> <i class="fa-solid fa-cogs mr-1"></i><span id="text-nav-services-mobile">Services</span>
+      </a>
+      <a href="#approach" class="block px-3 py-2 text-white hover:bg-blue-500 transition"> <i class="fa-solid fa-cogs mr-1"></i><span id="text-nav-approach-mobile">Approach</span>
       </a>
       <a href="#about" class="block px-3 py-2 text-white hover:bg-blue-500 transition"> <i class="fa-solid fa-user mr-1"></i><span id="text-nav-about-mobile">About</span>
       </a>
@@ -234,61 +240,68 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- Detailed Service Block -->
         <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl transition">
-          <h3 id="text-detail-troubleshooting-support-title" class="text-2xl font-bold mb-2 flex items-center">Microsoft 365 Administration</h3>
+          <h3 id="text-detail-troubleshooting-support-title" class="text-2xl text-[#009DAE] font-bold mb-2 flex items-center">Microsoft 365 Administration</h3>
           <p id="text-detail-troubleshooting-support-desc">Proactive monitoring of your cloud services, regular patch management, user and license management, and on-call technical support to address any issues. We function as your outsourced IT admin for Microsoft 365</p>
         </div>
         <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl transition">
-          <h3 id="text-detail-migration-services-title" class="text-2xl font-bold mb-2 flex items-center">Security &amp; Compliance</h3>
+          <h3 id="text-detail-migration-services-title" class="text-2xl text-[#009DAE] font-bold mb-2 flex items-center">Security &amp; Compliance</h3>
           <p id="text-detail-migration-services-desc">Implementation of robust security measures (MFA, DLP, threat protection, encryption policies, backup and disaster recovery plans). We conduct security audits and ensure your Microsoft 365 environment adheres to compliance requirements, giving you peace of mind</p>
         </div>
         <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl transition">
-          <h3 id="text-detail-managed-support-title" class="text-2xl font-bold mb-2 flex items-center">Application Optimization</h3>
+          <h3 id="text-detail-managed-support-title" class="text-2xl text-[#009DAE] font-bold mb-2 flex items-center">Application Optimization</h3>
           <p id="text-detail-managed-support-desc">Optimization and customization of Microsoft Teams for better communication, SharePoint for effective document management, Exchange/Outlook for streamlined email, and other Microsoft 365 apps to maximize productivity and user adoption.</p>
         </div>
         <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl transition">
-          <h3 id="text-detail-adoption-training-title" class="text-2xl font-bold mb-2 flex items-center">Subscription Cost Optimization &amp; Billing Management</h3>
+          <h3 id="text-detail-adoption-training-title" class="text-2xl text-[#009DAE] font-bold mb-2 flex items-center">Subscription Cost Optimization &amp; Billing Management</h3>
           <p id="text-detail-adoption-training-desc">Analysis and management of your Microsoft 365 licenses and subscriptions to eliminate waste and reduce costs. We right-size your subscription plans, manage license renewals, and provide clear billing guidance so you get the most value out of your investment</p>
         </div>
         <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl transition">
-          <h3 id="text-detail-security-compliance-title" class="text-2xl font-bold mb-2 flex items-center">Migration and Deployment Services</h3>
+          <h3 id="text-detail-security-compliance-title" class="text-2xl text-[#009DAE] font-bold mb-2 flex items-center">Migration and Deployment Services</h3>
           <p id="text-detail-security-compliance-desc">Planning and execution of migrations to Microsoft 365 or deployment of new Microsoft cloud services. Whether you’re moving from on-premises Exchange to Exchange Online or launching a new SharePoint site, we ensure a smooth, minimal-disruption transition with proper data migration and setup</p>
         </div>
         <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl transition">
-          <h3 id="text-detail-licensing-cost-opt-title" class="text-2xl font-bold mb-2 flex items-center">Troubleshooting and Issue Resolution</h3>
+          <h3 id="text-detail-licensing-cost-opt-title" class="text-2xl text-[#009DAE] font-bold mb-2 flex items-center">Troubleshooting and Issue Resolution</h3>
           <p id="text-detail-licensing-cost-opt-desc">Rapid diagnosis and resolution of Microsoft 365 issues. From email outages to Teams glitches, we troubleshoot problems efficiently. Our support reduces downtime and keeps your business running without IT headaches</p>
         </div>
         <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl transition md:col-span-2">
-          <h3 id="text-detail-custom-integration-title" class="text-2xl font-bold mb-2 flex items-center">End-User Training &amp; Consulting</h3>
+          <h3 id="text-detail-custom-integration-title" class="text-2xl text-[#009DAE] font-bold mb-2 flex items-center">End-User Training &amp; Consulting</h3>
           <p id="text-detail-custom-integration-desc">Personalized training sessions and consulting for your staff. We help your team learn best practices and hidden features in Microsoft 365, ensuring they use the tools effectively and confidently</p>
         </div>
       </div>
     </div>
   </section>
 
-
   <!-- SOLUTIONS & APPROACH SECTION -->
-  <section id="solutions" class="section py-7 md:py-14 bg-[#F5F5F5]">
+  <section id="approach" class="section py-7 md:py-14 bg-[#F5F5F5]">
     <div class="container" data-aos="fade-up">
       <h2 id="text-our-approach-title" class="text-3xl font-bold text-center mb-12 text-[#003EAA]">Our Approach</h2>
-      <div class="max-w-4xl mx-auto">
+      <div class="mx-auto">
         <div class="flex flex-col md:flex-row items-center justify-between">
           <div class="flex-1 text-center md:text-left flex flex-col justify-center items-center">
-            <h3 id="text-proactive-methodology-title" class="text-2xl font-bold mb-4">Proactive Methodology</h3>
+            <!-- <h3 id="text-proactive-methodology-title" class="text-2xl font-bold mb-4">Proactive Methodology</h3> -->
             <!-- Replaced paragraph with a real flowchart using Mermaid -->
             <div id="flowchart-mermaid" class="mermaid mb-4">
               %%{init: {"theme": "base", "themeVariables": {"primaryTextColor": "#004767",
               "fontFamily": "Montserrat", "fontSize": "16px"}}}%%
               flowchart TD
-              A[Assessment &amp; Planning] --&gt; B[Secure Implementation]
-              B --&gt; D[Optimization &amp; Integration]
-              D --&gt; E[Ongoing Support &amp; Quality Assurance]
-              style A fill:none,stroke:none,stroke-width:0,font-weight:bold,color:#004767
-              style B fill:none,stroke:none,stroke-width:0,font-weight:bold,color:#004767
-              style D fill:none,stroke:none,stroke-width:0,font-weight:bold,color:#004767
-              style E fill:none,stroke:none,stroke-width:0,font-weight:bold,color:#004767
+              X{Assessment &amp; Planning} f1@==&gt; Y[Professional Implementation]
+              Y f4@==&gt; Z[Secure Integration]
+              Z f5@==&gt; V[Ongoing Support &amp; Quality Assurance]
+              W[Continuous Optimization] f3@==&gt; X
+              V f6@==&gt; W
+              f1@{ animate: true }
+              f3@{ animate: true }
+              f4@{ animate: true }
+              f5@{ animate: true }
+              f6@{ animate: true }
+              style X fill:none,stroke:#009DAE,stroke-width:2px,font-weight:bold,color:#004767, padding: 0px
+              style Y fill:none,stroke:#009DAE,stroke-width:2px,font-weight:bold,color:#004767
+              style Z fill:none,stroke:#009DAE,stroke-width:2px,font-weight:bold,color:#004767
+              style W fill:none,stroke:#009DAE,stroke-width:2px,font-weight:bold,color:#004767
+              style V fill:none,stroke:#009DAE,stroke-width:2px,font-weight:bold,color:#004767
             </div>
           </div>
-          <div class="flex-1 mt-8 md:mt-0">
+          <div class="flex-1 text-center md:text-left flex flex-col justify-center items-center relative object-cover">
             <img src="../assets/images/kelly-sikkema-Cg60_WXjvC4-unsplash.jpg" alt="Flowchart" class="mx-auto rounded-lg shadow-lg rotate-90">
           </div>
         </div>
@@ -335,10 +348,7 @@
             responsive, personalized, and transparent support tailored specifically for SMEs.</p>
           <p id="text-company-journey-desc-3" class="mb-6 text-gray-700 leading-relaxed">We genuinely care about your business success. Our personalized approach ensures clear communication and
             rapid problem-solving, making Microsoft 365 accessible, worry-free, and effective for every client we serve.</p>
-          <p id="text-company-journey-desc-4" class="mb-6 text-gray-700 leading-relaxed">We believe in building lasting relationships through integrity, transparency, and continuous improvement.
-            Our clients trust us to deliver efficient solutions that streamline operations, protect valuable
-            information, and maximize productivity. Erfolg 365 is not just your IT provider—we're your strategic partner
-            committed to your long-term growth and stability.</p>
+          <p id="text-company-journey-desc-4" class="mb-6 text-gray-700 leading-relaxed">We believe in building lasting relationships through integrity, transparency, and continuous improvement.            Our clients trust us to deliver efficient solutions that streamline operations, protect valuable            information, and maximize productivity. ERFOLG 365 is not just your IT provider—we're your strategic partner            committed to your long-term growth and stability.</p>
         </div>
         <!-- Right column: What Sets Us Apart -->
         <div class="md:w-1/2" data-aos="fade-left">
@@ -560,7 +570,7 @@
           <a href="#about" id="text-footer-about" class="mx-2 text-gray-700 hover:text-[#009DAE] transition">About</a>
           <a href="#contact" id="text-footer-contact" class="mx-2 text-gray-700 hover:text-[#009DAE] transition">Contact</a>
         </div>
-        <p id="text-footer-copy" class="text-sm text-gray-600">© 2025 Erfolg 365. All rights reserved.</p>
+        <p id="text-footer-copy" class="text-sm text-gray-600">© 2025 ERFOLG 365. All rights reserved.</p>
         <a href="#footer" id="text-privacy-policy-link" class="underline">Privacy Policy</a> |
         <a href="#footer" id="text-terms-service-link" class="underline">Terms of Service</a>
       </div>

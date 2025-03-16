@@ -43,24 +43,40 @@
         <div class="hidden md:flex space-x-6">
           <div class="hidden md:flex space-x-6">
             <a href="#hero"
-              class="text-white hover:text-cyan-500 hover:bg-gray-700 rounded px-3 py-3 flex flex-col items-center justify-center">
-              <i class="fa-solid fa-house mr-1 text-xl"></i><span id="text-nav-home">Home</span>
+              class="text-white hover:bg-gray-700 rounded px-3 py-3 flex flex-col items-center justify-center group">
+              <i
+                class="fa-solid fa-house  text-xl group-hover:text-cyan-500 group-hover:scale-150 transition ease-in-out duration-300"></i><span
+                id="text-nav-home" class="group-hover:scale-110 group-hover:translate-y-1 transition ease-in-out duration-300">Home</span>
             </a>
             <a href="#services"
-              class="text-white hover:text-cyan-500 hover:bg-gray-700 rounded px-3 py-3 flex flex-col items-center justify-center">
-              <i class="fa-solid fa-cogs mr-1 text-xl"></i><span id="text-nav-services">Services</span>
+              class="text-white hover:bg-gray-700 rounded px-3 py-3 flex flex-col items-center justify-center group">
+              <i
+                class="fa-solid fa-cogs  text-xl group-hover:text-cyan-500 group-hover:scale-150 transition ease-in-out duration-300"></i><span
+                id="text-nav-services" class="group-hover:scale-110 group-hover:translate-y-1 transition ease-in-out duration-300">Services</span>
+            </a>
+            <a href="#approach"
+              class="text-white hover:bg-gray-700 rounded px-3 py-3 flex flex-col items-center justify-center group">
+              <i
+                class="fa-solid fa-check-double  text-xl group-hover:text-cyan-500 group-hover:scale-150 transition ease-in-out duration-300"></i><span
+                id="text-nav-approach" class="group-hover:scale-110 group-hover:translate-y-1  transition ease-in-out duration-300">Approach</span>
             </a>
             <a href="#about"
-              class="text-white hover:text-cyan-500 hover:bg-gray-700 rounded px-3 py-3 flex flex-col items-center justify-center">
-              <i class="fa-solid fa-user mr-1 text-xl"></i><span id="text-nav-about">About</span>
+              class="text-white hover:bg-gray-700 rounded px-3 py-3 flex flex-col items-center justify-center group">
+              <i
+                class="fa-solid fa-user  text-xl group-hover:text-cyan-500 group-hover:scale-150 transition ease-in-out duration-300"></i><span
+                id="text-nav-about" class="group-hover:scale-110 group-hover:translate-y-1  transition ease-in-out duration-300">About</span>
             </a>
             <a href="#pricing"
-              class="text-white hover:text-cyan-500 hover:bg-gray-700 rounded px-3 py-3 flex flex-col items-center justify-center">
-              <i class="fa-solid fa-tag mr-1 text-xl"></i><span id="text-nav-pricing">pricing</span>
+              class="text-white hover:bg-gray-700 rounded px-3 py-3 flex flex-col items-center justify-center group">
+              <i
+                class="fa-solid fa-tag  text-xl group-hover:text-cyan-500 group-hover:scale-150 transition ease-in-out duration-300"></i><span
+                id="text-nav-pricing" class="group-hover:scale-110 group-hover:translate-y-1  transition ease-in-out duration-300">pricing</span>
             </a>
             <a href="#contact"
-              class="text-white hover:text-cyan-500 hover:bg-gray-700 rounded px-3 py-3 flex flex-col items-center justify-center">
-              <i class="fa-solid fa-envelope mr-1 text-xl"></i> <span id="text-nav-contact">Contact</span>
+              class="text-white hover:bg-gray-700 rounded px-3 py-3 flex flex-col items-center justify-center group">
+              <i
+                class="fa-solid fa-envelope  text-xl group-hover:text-cyan-500 group-hover:scale-150 transition ease-in-out duration-300"></i>
+              <span id="text-nav-contact" class="group-hover:scale-110 group-hover:translate-y-1  transition ease-in-out duration-300">Contact</span>
             </a>
           </div>
           <div class="flex flex-col items-center justify-center">
@@ -94,6 +110,9 @@
         <i class="fa-solid fa-house mr-1"></i><span id="text-nav-home-mobile">Home</span></a>
       <a href="#services" class="block px-3 py-2 text-white hover:bg-blue-500 transition"> <i
           class="fa-solid fa-cogs mr-1"></i><span id="text-nav-services-mobile">Services</span>
+      </a>
+      <a href="#approach" class="block px-3 py-2 text-white hover:bg-blue-500 transition"> <i
+          class="fa-solid fa-cogs mr-1"></i><span id="text-nav-approach-mobile">Approach</span>
       </a>
       <a href="#about" class="block px-3 py-2 text-white hover:bg-blue-500 transition"> <i
           class="fa-solid fa-user mr-1"></i><span id="text-nav-about-mobile">About</span>
@@ -265,43 +284,43 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- Detailed Service Block -->
         <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl transition">
-          <h3 id="text-detail-troubleshooting-support-title" class="text-2xl font-bold mb-2 flex items-center">
+          <h3 id="text-detail-troubleshooting-support-title" class="text-2xl text-[#009DAE] font-bold mb-2 flex items-center">
             Troubleshooting &amp; Support</h3>
           <p id="text-detail-troubleshooting-support-desc">Rapid issue resolution with expert technical assistance to
             minimize downtime.</p>
         </div>
         <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl transition">
-          <h3 id="text-detail-migration-services-title" class="text-2xl font-bold mb-2 flex items-center">Migration
+          <h3 id="text-detail-migration-services-title" class="text-2xl text-[#009DAE] font-bold mb-2 flex items-center">Migration
             Services</h3>
           <p id="text-detail-migration-services-desc">Seamless migration of emails, files, and applications to Microsoft
             365.</p>
         </div>
         <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl transition">
-          <h3 id="text-detail-managed-support-title" class="text-2xl font-bold mb-2 flex items-center">Managed Support
+          <h3 id="text-detail-managed-support-title" class="text-2xl text-[#009DAE] font-bold mb-2 flex items-center">Managed Support
           </h3>
           <p id="text-detail-managed-support-desc">Continuous monitoring and proactive support for all your Microsoft
             365 apps.</p>
         </div>
         <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl transition">
-          <h3 id="text-detail-adoption-training-title" class="text-2xl font-bold mb-2 flex items-center">Adoption &amp;
+          <h3 id="text-detail-adoption-training-title" class="text-2xl text-[#009DAE] font-bold mb-2 flex items-center">Adoption &amp;
             Training</h3>
           <p id="text-detail-adoption-training-desc">Workshops, webinars, and guides to maximize your team’s
             productivity.</p>
         </div>
         <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl transition">
-          <h3 id="text-detail-security-compliance-title" class="text-2xl font-bold mb-2 flex items-center">Security
+          <h3 id="text-detail-security-compliance-title" class="text-2xl text-[#009DAE] font-bold mb-2 flex items-center">Security
             &amp; Compliance</h3>
           <p id="text-detail-security-compliance-desc">Enhanced threat protection and compliance solutions to secure
             your business.</p>
         </div>
         <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl transition">
-          <h3 id="text-detail-licensing-cost-opt-title" class="text-2xl font-bold mb-2 flex items-center">Licensing
+          <h3 id="text-detail-licensing-cost-opt-title" class="text-2xl text-[#009DAE] font-bold mb-2 flex items-center">Licensing
             &amp; Cost Optimization</h3>
           <p id="text-detail-licensing-cost-opt-desc">Expert advice on selecting licenses and maximizing
             cost-efficiency.</p>
         </div>
         <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-xl transition md:col-span-2">
-          <h3 id="text-detail-custom-integration-title" class="text-2xl font-bold mb-2 flex items-center">Custom
+          <h3 id="text-detail-custom-integration-title" class="text-2xl text-[#009DAE] font-bold mb-2 flex items-center">Custom
             Integration/Workflow Automation</h3>
           <p id="text-detail-custom-integration-desc">Tailored automation using Microsoft Power Platform to streamline
             processes.</p>
@@ -310,30 +329,37 @@
     </div>
   </section>
 
-
   <!-- SOLUTIONS & APPROACH SECTION -->
-  <section id="solutions" class="section py-7 md:py-14 bg-[#F5F5F5]">
+  <section id="approach" class="section py-7 md:py-14 bg-[#F5F5F5]">
     <div class="container" data-aos="fade-up">
       <h2 id="text-our-approach-title" class="text-3xl font-bold text-center mb-12 text-[#003EAA]">Our Approach</h2>
-      <div class="max-w-4xl mx-auto">
+      <div class="mx-auto">
         <div class="flex flex-col md:flex-row items-center justify-between">
           <div class="flex-1 text-center md:text-left flex flex-col justify-center items-center">
-            <h3 id="text-proactive-methodology-title" class="text-2xl font-bold mb-4">Proactive Methodology</h3>
+            <!-- <h3 id="text-proactive-methodology-title" class="text-2xl font-bold mb-4">Proactive Methodology</h3> -->
             <!-- Replaced paragraph with a real flowchart using Mermaid -->
             <div id="flowchart-mermaid" class="mermaid mb-4">
               %%{init: {"theme": "base", "themeVariables": {"primaryTextColor": "#004767",
               "fontFamily": "Montserrat", "fontSize": "16px"}}}%%
               flowchart TD
-              A[Assessment & Planning] --&gt; B[Secure Implementation]
-              B --&gt; D[Optimization & Integration]
-              D --&gt; E[Ongoing Support & Quality Assurance]
-              style A fill:none,stroke:none,stroke-width:0,font-weight:bold,color:#004767
-              style B fill:none,stroke:none,stroke-width:0,font-weight:bold,color:#004767
-              style D fill:none,stroke:none,stroke-width:0,font-weight:bold,color:#004767
-              style E fill:none,stroke:none,stroke-width:0,font-weight:bold,color:#004767
+              X{Assessment & Planning} f1@==> Y[Professional Implementation]
+              Y f4@==> Z[Secure Integration]
+              Z f5@==> V[Ongoing Support & Quality Assurance]
+              W[Continuous Optimization] f3@==> X
+              V f6@==> W
+              f1@{ animate: true }
+              f3@{ animate: true }
+              f4@{ animate: true }
+              f5@{ animate: true }
+              f6@{ animate: true }
+              style X fill:none,stroke:#009DAE,stroke-width:2px,font-weight:bold,color:#004767, padding: 0px
+              style Y fill:none,stroke:#009DAE,stroke-width:2px,font-weight:bold,color:#004767
+              style Z fill:none,stroke:#009DAE,stroke-width:2px,font-weight:bold,color:#004767
+              style W fill:none,stroke:#009DAE,stroke-width:2px,font-weight:bold,color:#004767
+              style V fill:none,stroke:#009DAE,stroke-width:2px,font-weight:bold,color:#004767
             </div>
           </div>
-          <div class="flex-1 mt-8 md:mt-0">
+          <div class="flex-1 text-center md:text-left flex flex-col justify-center items-center relative object-cover">
             <img src="../assets/images/kelly-sikkema-Cg60_WXjvC4-unsplash.jpg" alt="Flowchart"
               class="mx-auto rounded-lg shadow-lg rotate-90">
           </div>
@@ -372,11 +398,13 @@
   <!-- ABOUT US & CULTURE SECTION -->
   <section id="about" class="section py-10 md:py-16 bg-gradient-to-r from-gray-50 to-white overflow-hidden">
     <div class="container mx-auto px-4" data-aos="fade-up">
-      <h2 id="text-company-info-title" class="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-800">About Us</h2>
+      <h2 id="text-company-info-title" class="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-800">About Us
+      </h2>
       <div class="md:flex md:space-x-12">
         <!-- Left column: Our Journey -->
         <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
-          <h3 id="text-company-journey-title" class="text-xl font-semibold text-gray-800 mb-6 md:text-3xl text-center">Our Story</h3>
+          <h3 id="text-company-journey-title" class="text-xl font-semibold text-gray-800 mb-6 md:text-3xl text-center">
+            Our Story</h3>
           <p id="text-company-journey-desc-1" class="mb-6 text-gray-700 leading-relaxed">
             At Erfolg 365, we're seasoned IT professionals dedicated to helping businesses unlock the full potential of
             Microsoft 365. Although we’re a boutique firm, our expertise is extensive, rooted in years of experience and
@@ -401,7 +429,8 @@
         </div>
         <!-- Right column: What Sets Us Apart -->
         <div class="md:w-1/2" data-aos="fade-left">
-          <h3 id="text-company-values-title" class="text-2xl md:text-3xl font-semibold mb-4 text-center text-gray-800">What
+          <h3 id="text-company-values-title" class="text-2xl md:text-3xl font-semibold mb-4 text-center text-gray-800">
+            What
             Sets Us Apart?</h3>
           <div class="space-y-2">
             <!-- Value Card 1 -->
@@ -410,7 +439,8 @@
                 class="rounded-full w-24 h-24 md:w-32 md:h-32 object-cover transform transition duration-300 ease-in-out group-hover:scale-150">
               <div class="ml-4">
                 <p id="text-company-value-1-title" class="font-bold text-lg text-gray-800">Certified Expertise</p>
-                <p id="text-company-value-1-desc" class="text-sm text-gray-600">Our certified specialists stay ahead with the
+                <p id="text-company-value-1-desc" class="text-sm text-gray-600">Our certified specialists stay ahead
+                  with the
                   latest Microsoft 365 technologies, ensuring industry-best expertise.</p>
               </div>
             </div>
@@ -432,7 +462,8 @@
                 class="rounded-full w-24 h-24 md:w-32 md:h-32 object-cover transform transition duration-300 ease-in-out group-hover:scale-150">
               <div class="ml-4">
                 <p id="text-company-value-3-title" class="font-bold text-lg text-gray-800">Reliable Efficiency</p>
-                <p id="text-company-value-3-desc" class="text-sm text-gray-600">Through proactive monitoring and optimized
+                <p id="text-company-value-3-desc" class="text-sm text-gray-600">Through proactive monitoring and
+                  optimized
                   workflows, we ensure your business runs smoothly with minimal downtime.</p>
               </div>
             </div>
@@ -442,7 +473,8 @@
                 class="rounded-full w-24 h-24 md:w-32 md:h-32 object-cover transform transition duration-300 ease-in-out group-hover:scale-150">
               <div class="ml-4">
                 <p id="text-company-value-4-title" class="font-bold text-lg text-gray-800">Personalized Service</p>
-                <p id="text-company-value-4-desc" class="text-sm text-gray-600">Your satisfaction is our priority. We provide
+                <p id="text-company-value-4-desc" class="text-sm text-gray-600">Your satisfaction is our priority. We
+                  provide
                   personalized support and transparent communication at every step.</p>
               </div>
             </div>
